@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Software engineering &#8211; antonymarcano.com</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/software-engineering/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Sat, 03 Sep 2016 10:48:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.14</generator>
+	<item>
+		<title>This is not a manifesto: Valuing Throughput over Utilisation</title>
+		<link>http://antonymarcano.com/blog/2012/02/throughput-over-utilisation/</link>
+		<comments>http://antonymarcano.com/blog/2012/02/throughput-over-utilisation/#comments</comments>
+		<pubDate>Sat, 11 Feb 2012 10:37:16 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[Lean]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[Agile software development]]></category>
+		<category><![CDATA[lean]]></category>
+		<category><![CDATA[scrum]]></category>
+		<category><![CDATA[Software developer]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[software development team]]></category>
+		<category><![CDATA[Software engineering]]></category>
+		<category><![CDATA[Sprint]]></category>
+		<category><![CDATA[Story points]]></category>
+		<category><![CDATA[this is not a manifesto]]></category>
+		<category><![CDATA[Throughput]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=431</guid>
+		<description><![CDATA[In a previous article, This is not a manifesto, I expressed the values I hold as a software development team member. Today, I’m going to talk about the first of these values. Before I do, I’d like to say what I mean by “software development team”. I mean a cross-discipline team with the combined skills &#8230; <a href="http://antonymarcano.com/blog/2012/02/throughput-over-utilisation/" class="more-link">Continue reading <span class="screen-reader-text">This is not a manifesto: Valuing Throughput over Utilisation</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>In a previous article, <a href="http://antonymarcano.com/blog/2012/02/this-is-not-a-manifesto/">This is not a manifesto</a>, I expressed the values I hold as a software development team member. Today, I’m going to talk about the first of these values.</p>
+<p>Before I do, I’d like to say what I mean by “software development team”. I mean a cross-discipline team with the combined skills to deliver a software product – product owner, user experience, business analysts, programmers, testers, dev-ops, etc.</p>
+<h2>A common problem</h2>
+<p>Many teams I encounter will, at least in the beginning, have team-members who specialise in a single role. Each team-member will rarely, if ever, step outside their job description <a href="#footnote-1">[1]</a>. This can cause a problem.</p>
+<p>Many teams find themselves in a situation where some team members have little to do on the current stories. At this point, the team has some choices, they can focus the under-utilised people on:</p>
+<ol>
+<li>Future user-stories, working on tasks most relevant to their job title</li>
+<li>Another team, working on tasks most relevant to their job title (e.g. ‘matrix management’)</li>
+<li>Current stories, taking on tasks that will take the story to completion sooner, even if it’s more relevant to someone else’s job title</li>
+<li>Things that will make the more utilised people get through their work faster, today and in the future.</li>
+</ol>
+<p>More often than not, I find teams taking option 1. I think that people choose this option because it feels like it should increase the throughput of the team – i.e. the amount of new features they can add to the product. In fact, it has the opposite effect.</p>
+<h2>Little’s law</h2>
+<p>Let’s consider a team that is working in time-boxes or ‘sprints’ (à la Scrum) and measures it’s throughput with ‘velocity’ (story-points per-sprint). Points are accrued as each user-story is completed – i.e. coded, tested and product-owner validated.</p>
+<p>In this particular team, it is able to complete an average of 10 points per sprint. Let’s say this is due to a bottleneck in the process. This bottleneck might limit the amount of testing that can be completed during the sprint. This is illustrated in fig.1 where each ball is a story point.</p>
+<p>&nbsp;</p>
+<p><img class="size-full wp-image-463 alignleft" style="border-style: initial; border-color: initial;" title="Throughput  fig1" alt="Shows a system through which a series of balls are being processed. Each ball represents one story point. It also shows that there is spare capacity in the team." src="http://antonymarcano.com/blog/wp-content/uploads/2012/02/Throughput-fig1.jpg" width="316" height="275" srcset="http://antonymarcano.com/blog/wp-content/uploads/2012/02/Throughput-fig1.jpg 316w, http://antonymarcano.com/blog/wp-content/uploads/2012/02/Throughput-fig1-300x261.jpg 300w" sizes="(max-width: 316px) 100vw, 316px" /></p>
+<p><img title="Throughput fig2" alt="Shows a system through which a series of balls are being processed. Each ball represents one story point. It also shows that the spare capacity in the team has been used up, even though it does nothing to increase throughput." src="http://antonymarcano.com/blog/wp-content/uploads/2012/02/Throughput-fig2a.jpg" width="308" height="275" /></p>
+<p><span style="line-height: 1.5em;">Little’s law </span><a style="line-height: 1.5em;" href="#footnote-2">[2]</a><span style="line-height: 1.5em;"> tells us that the amount of time it takes to complete an item of work (cycle-time) is:</span></p>
+<p style="text-align: center;"><em>     <span style="text-decoration: underline;">   Work in Progress (WIP)   </span><span style="text-decoration: underline;"><br />
+</span></em><em>Throughput</em></p>
+<p>Which we can read as:</p>
+<p style="text-align: center;"><span style="text-decoration: underline;"><em>   story points in progress<br />
+</em></span><em><em>  velocity</em></em><em> </em></p>
+<p><span style="line-height: 1.5em;">In this simplified example, WIP is 10 points and throughput is 10 points per sprint. The average cycle time of a story is therefore 10/10 = 1 sprint. Notice, however, there’s all that spare capacity.</span></p>
+<p>Let’s say this spare capacity is developers. So, the team starts taking on more user-stories from the backlog – increasing the number of story points in progress to 20 points (fig.2).</p>
+<p>Because the bottleneck remains, velocity remains the same – 10 points per sprint. The amount of flexibility that the team has, however, is now reduced because the average time required to get a story to completion has increased from 1 sprint to 20/10 = 2 sprints <a href="#footnote-3">[3]</a>.</p>
+<p>Often this will take the form of testers working a sprint behind the developers. Worse still, over 10 sprints, the team still only completes 100 story points (as they would have before) but is left with a lot of unfinished work. This ‘inventory’ of unfinished work carries overheads which can, ultimately, reduce the velocity of the team.</p>
+<p>The impact of filling capacity in this way has yet another effect.</p>
+<h2>Latency effect</h2>
+<p>As the developers get through more stories, a queue of stories that are “ready for testing” will build up. Testers working through these will, at least, have questions for the developer(s) or even find some defects. The developer, having moved on from that story, is now deep into the code and context of another story. When the tester has questions, or finds defects, relating to a story that the developer had worked on, say a week ago, then the developer has to reload their understanding of this old code and context in order to answer any questions or fix any defects. This context-switching carries significant overheads <a href="#footnote-4">[4]</a>.</p>
+<p>The end result is that the effort required to complete a story increases due to the repeated context switching, therefore reducing velocity.</p>
+<p>So, not only does filling the capacity with more work fail to increase throughput, it adds costly context-switching overheads – ultimately slowing everything down.</p>
+<p>This phenomenon is not unique to teams using fixed-length time-boxes, such as sprints. Strictly following Kanban avoids this problem, but what I’ve seen is some teams creating a ‘ready for testing’ queue – so that developers can start work on the next story. This has the same latency effect and turns a process designed for continuous flow into a batch and queue process. But, I digress.</p>
+<h2>What to do with the spare capacity?</h2>
+<p>The simple answer is to look at the whole approach and determine what is slowing things down. In the example above, I’d be wondering what’s slowing the testing down. Many of the things that hinder testing can be addressed by changing how we do things ‘upstream’.</p>
+<p>Are lots of defects being found, causing the testers to spend more time investigating and reproducing them? Can we get the testers involved earlier? Can any predictable tests be defined up front so that developers can make sure the code passes them before it even gets to the testers (e.g. Behaviour Driven Development)?</p>
+<p>Are the testers manually regression testing every sprint? Could the developers help by automating more of that? Are the testers having to perform repetitive tasks to get to the part of the user-journey they’re actually testing? Can that be automated by the developers?</p>
+<p>Is there anything else that is impacting them? Test data set-up and maintenance, product owner availability to answer questions? Anything else?</p>
+<p>Addressing any of these issues is likely to speed up the testing process and increase throughput of the entire team as a result. One solution is to put these types of tasks onto the product backlog. This is fine but if we assign point values to them it can give a skewed view of velocity. Or rather, velocity is no longer a measure of throughput. You won’t be able to see if these types of tasks are actually improving things unless you are also measuring what proportion of the points are delivering new product capabilities.</p>
+<p>The only good reason I can think of for story-pointing these throughput-enhancing tasks is if your focus is utilisation – i.e. maximising the number of story-points in progress. Personally, I care more about measuring and improving throughput. By doing so, we get the right utilisation for free and a faster, more capable team.</p>
+<p><strong>Up next:</strong> <em>Valuing Effectiveness over Efficiency.</em></p>
+<p><em><strong>Footnotes:</strong></em></p>
+<p><a name="footnote-1"></a>[1] “<a href="http://antonymarcano.com/blog/2011/05/updated-lessons-learned-in-close-quarters-battle/">Lessons Learned in Close Quarters Battle</a>” Illustrates how stepping outside our job descriptions can move the team through each story more quickly by using special-forces room-clearing as an analogy.</p>
+<p><a name="footnote-2"></a>[2] <a href="http://web.mit.edu/sgraves/www/papers/Little's%20Law-Published.pdf">Little’s law (PDF)</a> – the section “Evolution of Little&#8217;s Law in Operations Management” that references Hopp and Spearman’s observation about throughput (TH), work-in-progress (WIP) and cycle-time (CT) – i.e. TH=CT/WIP. And therefore we can say CT = WIP/TH.</p>
+<p><a name="footnote-3"></a>[3] Little’s law also illustrates that if we reduce the work in progress to one quarter, then the cycle time for each story reduces to one quarter of a sprint. We’ll still get through 10 points per sprint, but stories will be completed more as a continuous stream throughout the sprint rather than all at the end.</p>
+<p><a name="footnote-4"></a>[4] “<a href="http://www.codinghorror.com/blog/2006/09/the-multi-tasking-myth.html">The Multi-Tasking Myth</a>” by Jeff Atwood, talks about multi-tasking across projects and pulls together several resources to illustrate the impact of multitasking at various levels. This applies when multi-tasking across stories.</p>
+<div style="font-family: 'Times New Roman', Times, serif;">
+<p style="text-align: left;"><em><strong>Acknowledgements:</strong></em></p>
+<p style="text-align: left;"><em>I&#8217;d like to say a special thank you to my fellow <a href="http://riverglide.com">RiverGliders</a> – <a href="http://andypalmer.com">Andy Palmer</a> and <a href="http://jmrtn.com/">James Martin</a> – for the feedback that helped me refine this article.</em></p>
+</div>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2012/02/throughput-over-utilisation/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Old Favourite: Adaptive Budgets? &#8220;Pull&#8221; the other one!</title>
+		<link>http://antonymarcano.com/blog/2010/12/old-favourite-adaptive-budgets-pull-the-other-one/</link>
+		<comments>http://antonymarcano.com/blog/2010/12/old-favourite-adaptive-budgets-pull-the-other-one/#respond</comments>
+		<pubDate>Mon, 13 Dec 2010 13:04:38 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Business]]></category>
+		<category><![CDATA[Old Favourites]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Agile Planning]]></category>
+		<category><![CDATA[Agile software development]]></category>
+		<category><![CDATA[Information technology management]]></category>
+		<category><![CDATA[Non-estimating pull systems]]></category>
+		<category><![CDATA[project management]]></category>
+		<category><![CDATA[pull systems]]></category>
+		<category><![CDATA[Software engineering]]></category>
+		<category><![CDATA[Story points]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=167</guid>
+		<description><![CDATA[This was originally posted on my old blog on 10th April 2010 Recently, I wrote about my views on using and estimating with task-cards. I highlighted that tracking progress with burn-up/down charts showing effort completed/remaining is not a true measure of progress, especially if we subscribe to the idea that we measure progress with working-software. &#8230; <a href="http://antonymarcano.com/blog/2010/12/old-favourite-adaptive-budgets-pull-the-other-one/" class="more-link">Continue reading <span class="screen-reader-text">Old Favourite: Adaptive Budgets? &#8220;Pull&#8221; the other one!</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><em>This was originally posted on my old blog on 10th April 2010</em></p>
+<p>Recently, I wrote about my views on <a href="http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/">using and estimating with task-cards</a>. I highlighted that tracking progress with burn-up/down charts showing effort completed/remaining is not a true measure of progress, especially if we subscribe to the idea that we measure progress with working-software.</p>
+<p>I also highlighted how tasks &#8220;horizontally slice&#8221; a &#8220;vertically sliced&#8221; story.</p>
+<p>This inspired <a href="http://www.infoq.com/news/2010/04/repititive-tasksR">an article on infoq by Mark Levison</a>. Since its publication, there have been several comments.</p>
+<p>There are some specific points I&#8217;ll be answering on infoq, but some general points are more easily answered here&#8230;</p>
+<p><strong>True measures of progress</strong><br />
+One of the key points I was trying to make in my first post (linked to above) is that if &#8220;working software&#8221; is our measure of progress then tracking task completion is not consistent with that.</p>
+<p>One of the problems task-hours are trying to solve is to provide a visible indication of progress. It&#8217;s also something that many people find easier to understand. The idea of relative-points estimation seems to baffle many people when they first encounter it.</p>
+<p>In my original post (linked above) I referenced an approach, blogged about by Jason Gorman, outlining a solution to providing a visible indication of progress that is compatible with the idea of measuring progress with working software. It also works more seamlessly with the solution of measuring throughput trends of the team (e.g. with story points) so that the team can estimate how much can be done in the next iteration.</p>
+<p><strong>Value Points &amp; Task Points</strong><br />
+Value points were mentioned in the infoq comments. Value points are solving a different problem and don&#8217;t help the team estimate what can be done. The value of a story isn&#8217;t an indication of its complexity. Value, combined with complexity points, can help determine priorities. <a href="http://blog.goneopen.com/2008/11/naked-planning-arlo-belshee-from-agile-2008/">Arlo Belshey explains some interesting views on this</a>.</p>
+<p>Prioritisation is, in my view, one of the few reasons to place some sort of estimate on value &amp; complexity. Unfortunately, it seems to be often used to establish a contract with the team for when something will be done and apply pressure when the estimates turn out to be inaccurate.</p>
+<p><strong>Non-estimating pull systems</strong><br />
+My preference is to use such estimates only for prioritisation&#8230; after that, things just take as long as they take. There is some benefit in tracking accuracy trends so that we can learn from them, however, spending too much time on these things simply slows down the process of getting things done. Interestingly, I have not yet seen the business be quite so passionate about evaluating whether their value estimates were accurate when the product makes it to the real world. Funny that.</p>
+<p>Instead, I prefer to leave estimation behind once we&#8217;ve prioritised things and pull stories or customer valued work items through the system without using previous estimates to predict their completion date. With the way that most budgets are determined and allocated, this idea isn&#8217;t compatible with the way much of the business world works. For pull systems that eliminate estimation as a means of predicting the future to work (such as Kanban), we need a more adaptive approach to budgetary spend. Business needs to find a way to adapt budget allocation more frequently, perhaps as frequently as monthly, perhaps more frequently still. The business now needs to look at how <em>it</em> can respond to change rather than focus on following a budget-plan.</p>
+<p><strong>Business-world: now it&#8217;s your turn</strong><br />
+Budget holders now need to be more agile. We, those who evolve the implementation of the ideas of the business, have responded to their demands to be able to respond to rapidly changing markets and <a href="http://riverglide.com/clients/youdevise">provide that competitive edge</a>. For the more mature implementation teams, the hindrance now is no longer how we make the products, but the business culture of inflexible and predictive budget allocation.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/12/old-favourite-adaptive-budgets-pull-the-other-one/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Old Favourite: Taking Repetition To Task</title>
+		<link>http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/</link>
+		<comments>http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/#comments</comments>
+		<pubDate>Mon, 13 Dec 2010 13:02:41 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Old Favourites]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Acceptance testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[Agile Planning]]></category>
+		<category><![CDATA[Agile QA]]></category>
+		<category><![CDATA[kanban]]></category>
+		<category><![CDATA[project management]]></category>
+		<category><![CDATA[Software engineering]]></category>
+		<category><![CDATA[Software testing]]></category>
+		<category><![CDATA[User story]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=168</guid>
+		<description><![CDATA[This originally appeared on my old blog on 16th March 2010&#8230; Others have talked about the virtues of stories as vertical slices of a problem (end-to-end capabilities) rather than horizontal slices (system layers or components). So, if we slice the problem with user stories, how do we slice the user-stories themselves? If, as I sometimes &#8230; <a href="http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/" class="more-link">Continue reading <span class="screen-reader-text">Old Favourite: Taking Repetition To Task</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><em>This originally appeared on my old blog on 16th March 2010&#8230;</em></p>
+<p>Others have talked about the virtues of <a href="http://blog.energizedwork.com/2005/05/slicing-cake.html">stories as vertical slices of a problem</a> (end-to-end capabilities) rather than horizontal slices (system layers or components). So, if we slice the problem <em>with</em> user stories, how do we slice the user-stories themselves?</p>
+<p>If, as I sometimes say, acceptance tests (a.k.a. examples/scenarios/acceptance-criteria) are the knife with which we slice a story into even thinner vertical slices, then I would say my observation of &#8216;tasks&#8217; is that they are used as the knife used to cut a story into horizontal slices. This feels wrong&#8230;</p>
+<p>Sometimes I also wonder, hasn&#8217;t anyone else noticed that the idea of counting the effort of completed tasks on burn-down/up charts is counter to the value that we measure progress only with working software? Surely it makes more sense to measure progress with passing tests (<a href="http://www.developsense.com/blog/2009/09/tests-vs-checks-should-we-call-test/">or &#8220;checks&#8221;</a> &#8211; whichever you prefer).</p>
+<p>These are two of the reasons I&#8217;ve never felt very comfortable with tasks, because:</p>
+<ul>
+<li>they&#8217;re often applied in such a way that the story is sliced horizontally</li>
+<li>they encourage measuring progress in a less meaningful way than working software</li>
+</ul>
+<p>Tasks are, however, very useful for teams at first. Just like anything else we learn how to do, learning how to do it on paper can often help us then discard the paper and do the workings in our heads. However, what I&#8217;ve noticed is that most teams I&#8217;ve worked with continue to write and estimate tasks long after the practice is useful or relevant to them.</p>
+<p>For example, there comes a time for many teams where tasks become repetitive. &#8220;Add x to the Model&#8221;, &#8220;Change View&#8221;&#8230; and so on. Is this adding value to the process or are you just doing it because the process says you should do it?</p>
+<p>Simply finding that your tasks are repetitive doesn&#8217;t mean the team is ready to stop using them. There is another important ingredient, meaningful acceptance criteria (scenarios / acceptance-tests / examples).</p>
+<p>I often see stories with acceptance criteria such as:</p>
+<ul>
+<li>Must have a link to save the profile</li>
+<li>Must have a drop down to select business sector</li>
+<li>Business sector must be mandatory</li>
+<li>&#8230;</li>
+</ul>
+<p>Although these are &#8220;acceptance criteria&#8221; they aren&#8217;t what we mean by acceptance criteria in the context of user stories. Firstly, they are talking about how the user interacts rather than what they need to achieve (I&#8217;ve <a href="http://www.testingreflections.com/node/view/6704">talked about this before</a>). Secondly, they aren&#8217;t examples. What we want are the variations that alter the behaviour or response of the product:</p>
+<ul>
+<li>Should create a new profile</li>
+<li>Profile cannot be saved with blank &#8220;business sector&#8221;</li>
+</ul>
+<p>As our product fulfils each of these criteria, we are making progress. Jason Gorman <a href="http://parlezuml.com/blog/?postid=683">illustrates one way of approaching this</a>.</p>
+<p>So, if you are using tasks, consider an alternative approach. First, look at your acceptance criteria, make sure they are more like examples and less like instructions. Once that&#8217;s achieved, consider slicing each criterion (or scenario) horizontally with the tasks rather than the story. Pretty soon, you&#8217;ll find that you don&#8217;t need tasks anymore and you can simply measure progress in terms of the new capabilities you add to your product.</p>
+<p><strong><em><br />
+</em></strong></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Monsters, Names, Pot-Roast &#038; The Waterfall Model</title>
+		<link>http://antonymarcano.com/blog/2010/07/monsters-names-pot-roast-the-waterfall-model/</link>
+		<comments>http://antonymarcano.com/blog/2010/07/monsters-names-pot-roast-the-waterfall-model/#comments</comments>
+		<pubDate>Mon, 12 Jul 2010 23:33:33 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[Agile software development]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[computing]]></category>
+		<category><![CDATA[Information technology management]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[Software engineering]]></category>
+		<category><![CDATA[Software project management]]></category>
+		<category><![CDATA[software requirements]]></category>
+		<category><![CDATA[TDD]]></category>
+		<category><![CDATA[Technology/Internet]]></category>
+		<category><![CDATA[Waterfall]]></category>
+		<category><![CDATA[Waterfall model]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=33</guid>
+		<description><![CDATA[&#8220;Antony&#8221; (without the &#8216;H&#8217;) is the anglicised version of Antonius. In victorian times (there or thereabouts I&#8217;m guessing), among those wishing to appear oh so intelligent, gossip spread that the spelling of &#8220;Antony&#8221; was wrong&#8230; For, so they would say, it is born of the greek word &#8220;anthos&#8221; (meaning &#8220;flower&#8221;) &#8211; oh dear&#8230; so many &#8230; <a href="http://antonymarcano.com/blog/2010/07/monsters-names-pot-roast-the-waterfall-model/" class="more-link">Continue reading <span class="screen-reader-text">Monsters, Names, Pot-Roast &#038; The Waterfall Model</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<div>&#8220;Antony&#8221; (without the &#8216;H&#8217;) is the anglicised version of Antonius. In victorian times (there or thereabouts I&#8217;m guessing), among those wishing to appear <em>oh so intelligent</em>, gossip spread that the spelling of &#8220;Antony&#8221; was wrong&#8230; For, so they would say, it is born of the greek word &#8220;anthos&#8221; (meaning &#8220;flower&#8221;) &#8211; oh dear&#8230; so many poor children with misspelt names&#8230;&nbsp;</p>
+<p>Despite being completely wrong, the world forgot of my name&#8217;s etruscan origin and spelt it with an &#8216;H&#8217;&#8230; This misinformation established itself through the eras so much so that, today, the de-facto spelling is &#8220;An<strong>th</strong>ony&#8221;. It has even found it&#8217;s way into the American pronunciation of the name as: &#8220;An-thon-ee&#8221;.</p>
+<p>Waterfall development has something in common with this story&#8230; somehow, through misinformation, what it once was has been warped, into something else.</p>
+<p>The key difference is that Waterfall is now increasingly represented as was originally intended. Unfortunately for me, my name is not&#8230;</p>
+<p>&nbsp;</p>
+</div>
+<p><strong>Monsters &amp; Legends</strong></p>
+<div id="_mcePaste">Some might think that the Waterfall Model is an approach to software development, first explained (but not named) in <a href="http://leadinganswers.typepad.com/leading_answers/files/original_waterfall_paper_winston_royce.pdf">Winston Royce&#8217;s 1970 Paper &#8220;Managing the Development of Large Software Systems&#8221; (PDF)</a>, but they could be wrong&#8230;</div>
+<p><img class="alignleft" src="http://farm1.static.flickr.com/154/352550317_b423336ea9_m.jpg" alt="" width="240" height="168" /></p>
+<div id="_mcePaste">Somehow, it seems to have become something else&#8230; it became the way (many) people thought software should be developed&#8230; the norm for software &#8216;professionals&#8217;. Years of anecdotal failure followed and Waterfall became a legend &#8211; told time and again much like a scary camp-fire story&#8230; The enemy of effective software development&#8230; A monster that will consume all the resources it can, spewing out nothing but documentation, rarely concluding in working software &#8211; at best 20% of the time.</div>
+<p>This negative view, to what was once the de-facto approach to software development, is actually far closer to Royce&#8217;s original words on Waterfall than many seem to know&#8230;</p>
+<p>&nbsp;</p>
+<p><strong>The Truth &amp; Technology</strong></p>
+<p>In Royce&#8217;s original paper, he shows a progression of activities, that came to be known as the waterfall model.</p>
+<p>What we rarely hear of is Royce&#8217;s original words on the subject:</p>
+<blockquote><p>&#8220;&#8230;the implementation described above is risky and invites failure.&#8221;</p></blockquote>
+<p>Further to this, Royce goes on to explain that the reason that this cannot work is because there are too many things we cannot analyse up-front:</p>
+<blockquote><p>&#8220;The testing phase which occurs at the end of the development cycle is the first event for which timing, storage, input/output transfers, etc., are experienced as distinguished from analyzed. These phenomena are not precisely analyzable. They are not the solutions to the standard partial differential equations of mathematical physics for instance.&#8221;</p></blockquote>
+<p>He explains that we need feedback loops. He goes on to warn of (a conservative) 100% overrun in schedule and costs:</p>
+<blockquote><p>&#8220;&#8230;invariably a major redesign is required. A simple octal patch or redo of some isolated code will not fix these kinds of difficulties. The required design changes are likely to be so disruptive that the software requirements upon which the design is based and which provides the rationale for everything are violated. Either the requirements must be modified, or a substantial change in the design is required. In effect the development process has returned to the origin and one can expect up to a 100-percent overrun in schedule and/or costs.&#8221;</p></blockquote>
+<p>Some of Royce&#8217;s strategies, like &#8220;Involve the customer&#8221; and obtaining early feedback, have lived on in modern (Agile) methodologies. Beyond that, we should remember that his specific recommendations on how to solve the problems of a waterfall model were all based on the technology of the time.</p>
+<p>&nbsp;</p>
+<p><strong>Pot-Roast &amp; The Cost of Change</strong></p>
+<p>In 1970, computing was much more expensive than it is today. In those days, changing software was far more expensive than changing pictures and words on paper. It was also much harder to express your design in a human-friendly way in the programming languages of that time. As a result of these and other factors, documentation was a major part of how Royce tried to solve the inherent problems of the Waterfall model.</p>
+<p>&nbsp;</p>
+<p>Technology, tools &amp; thinking have moved on and our documentation no longer needs to be static. It lives. It can breath. The specification can automatically verify that the implementation does what we said it should do (e.g. as in BDD Specs or ATDD/TDD Tests). Modern programming languages allow us to express the design and our understanding of the domain far more clearly, negating the need to first detail our thoughts on paper in natural language. We simply <a href="http://mikeschinkel.com/blog/conventionalwisdomassumptionsandpotroast/">don&#8217;t have to cut the ends off that pot-roast anymore</a>.</p>
+<p>&nbsp;</p>
+<p><strong>Only now, at the end&#8230;</strong></p>
+<p>Waterfall, thanks to the popularity of Agile, has gone from something I was shown at school as &#8220;how software is developed&#8221; to being seen in the light that it was originally presented &#8211; how software should <strong>not</strong> be implemented.</p>
+<p>This is despite those who still profess the legitimacy of Waterfall and those still shocked and surprised when they hear of Royce&#8217;s own words against the monster he unintentionally created.</p>
+<p>As for my name, I hold out little hope for change. I doubt that the world will use my name as it was originally intended and so I have resigned myself to needing two domain names&#8230; one with an &#8216;H&#8217; in it, and the correct one without &#8211; I wonder which one brought you here.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/07/monsters-names-pot-roast-the-waterfall-model/feed/</wfw:commentRss>
+		<slash:comments>11</slash:comments>
+		</item>
+	</channel>
+</rss>

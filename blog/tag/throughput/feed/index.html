@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>antonymarcano.com &#187; Throughput</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/throughput/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Fri, 22 May 2015 11:41:52 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.0.7</generator>
+	<item>
+		<title>This is not a manifesto: Valuing Throughput over Utilisation</title>
+		<link>http://antonymarcano.com/blog/2012/02/throughput-over-utilisation/</link>
+		<comments>http://antonymarcano.com/blog/2012/02/throughput-over-utilisation/#comments</comments>
+		<pubDate>Sat, 11 Feb 2012 10:37:16 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[Lean]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[Agile software development]]></category>
+		<category><![CDATA[lean]]></category>
+		<category><![CDATA[scrum]]></category>
+		<category><![CDATA[Software developer]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[software development team]]></category>
+		<category><![CDATA[Software engineering]]></category>
+		<category><![CDATA[Sprint]]></category>
+		<category><![CDATA[Story points]]></category>
+		<category><![CDATA[this is not a manifesto]]></category>
+		<category><![CDATA[Throughput]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=431</guid>
+		<description><![CDATA[In a previous article, This is not a manifesto, I expressed the values I hold as a software development team member. Today, I’m going to talk about the first of these values. Before I do, I’d like to say what I mean by “software development team”. I mean a cross-discipline team with the combined skills [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>In a previous article, <a href="http://antonymarcano.com/blog/2012/02/this-is-not-a-manifesto/">This is not a manifesto</a>, I expressed the values I hold as a software development team member. Today, I’m going to talk about the first of these values.</p>
+<p>Before I do, I’d like to say what I mean by “software development team”. I mean a cross-discipline team with the combined skills to deliver a software product – product owner, user experience, business analysts, programmers, testers, dev-ops, etc.</p>
+<h2>A common problem</h2>
+<p>Many teams I encounter will, at least in the beginning, have team-members who specialise in a single role. Each team-member will rarely, if ever, step outside their job description <a href="#footnote-1">[1]</a>. This can cause a problem.</p>
+<p>Many teams find themselves in a situation where some team members have little to do on the current stories. At this point, the team has some choices, they can focus the under-utilised people on:</p>
+<ol>
+<li>Future user-stories, working on tasks most relevant to their job title</li>
+<li>Another team, working on tasks most relevant to their job title (e.g. ‘matrix management’)</li>
+<li>Current stories, taking on tasks that will take the story to completion sooner, even if it’s more relevant to someone else’s job title</li>
+<li>Things that will make the more utilised people get through their work faster, today and in the future.</li>
+</ol>
+<p>More often than not, I find teams taking option 1. I think that people choose this option because it feels like it should increase the throughput of the team – i.e. the amount of new features they can add to the product. In fact, it has the opposite effect.</p>
+<h2>Little’s law</h2>
+<p>Let’s consider a team that is working in time-boxes or ‘sprints’ (à la Scrum) and measures it’s throughput with ‘velocity’ (story-points per-sprint). Points are accrued as each user-story is completed – i.e. coded, tested and product-owner validated.</p>
+<p>In this particular team, it is able to complete an average of 10 points per sprint. Let’s say this is due to a bottleneck in the process. This bottleneck might limit the amount of testing that can be completed during the sprint. This is illustrated in fig.1 where each ball is a story point.</p>
+<p>&nbsp;</p>
+<p><img class="size-full wp-image-463 alignleft" style="border-style: initial; border-color: initial;" title="Throughput  fig1" alt="Shows a system through which a series of balls are being processed. Each ball represents one story point. It also shows that there is spare capacity in the team." src="http://antonymarcano.com/blog/wp-content/uploads/2012/02/Throughput-fig1.jpg" width="316" height="275" /></p>
+<p><img title="Throughput fig2" alt="Shows a system through which a series of balls are being processed. Each ball represents one story point. It also shows that the spare capacity in the team has been used up, even though it does nothing to increase throughput." src="http://antonymarcano.com/blog/wp-content/uploads/2012/02/Throughput-fig2a.jpg" width="308" height="275" /></p>
+<p><span style="line-height: 1.5em;">Little’s law </span><a style="line-height: 1.5em;" href="#footnote-2">[2]</a><span style="line-height: 1.5em;"> tells us that the amount of time it takes to complete an item of work (cycle-time) is:</span></p>
+<p style="text-align: center;"><em>     <span style="text-decoration: underline;">   Work in Progress (WIP)   </span><span style="text-decoration: underline;"><br />
+</span></em><em>Throughput</em></p>
+<p>Which we can read as:</p>
+<p style="text-align: center;"><span style="text-decoration: underline;"><em>   story points in progress<br />
+</em></span><em><em>  velocity</em></em><em> </em></p>
+<p><span style="line-height: 1.5em;">In this simplified example, WIP is 10 points and throughput is 10 points per sprint. The average cycle time of a story is therefore 10/10 = 1 sprint. Notice, however, there’s all that spare capacity.</span></p>
+<p>Let’s say this spare capacity is developers. So, the team starts taking on more user-stories from the backlog – increasing the number of story points in progress to 20 points (fig.2).</p>
+<p>Because the bottleneck remains, velocity remains the same – 10 points per sprint. The amount of flexibility that the team has, however, is now reduced because the average time required to get a story to completion has increased from 1 sprint to 20/10 = 2 sprints <a href="#footnote-3">[3]</a>.</p>
+<p>Often this will take the form of testers working a sprint behind the developers. Worse still, over 10 sprints, the team still only completes 100 story points (as they would have before) but is left with a lot of unfinished work. This ‘inventory’ of unfinished work carries overheads which can, ultimately, reduce the velocity of the team.</p>
+<p>The impact of filling capacity in this way has yet another effect.</p>
+<h2>Latency effect</h2>
+<p>As the developers get through more stories, a queue of stories that are “ready for testing” will build up. Testers working through these will, at least, have questions for the developer(s) or even find some defects. The developer, having moved on from that story, is now deep into the code and context of another story. When the tester has questions, or finds defects, relating to a story that the developer had worked on, say a week ago, then the developer has to reload their understanding of this old code and context in order to answer any questions or fix any defects. This context-switching carries significant overheads <a href="#footnote-4">[4]</a>.</p>
+<p>The end result is that the effort required to complete a story increases due to the repeated context switching, therefore reducing velocity.</p>
+<p>So, not only does filling the capacity with more work fail to increase throughput, it adds costly context-switching overheads – ultimately slowing everything down.</p>
+<p>This phenomenon is not unique to teams using fixed-length time-boxes, such as sprints. Strictly following Kanban avoids this problem, but what I’ve seen is some teams creating a ‘ready for testing’ queue – so that developers can start work on the next story. This has the same latency effect and turns a process designed for continuous flow into a batch and queue process. But, I digress.</p>
+<h2>What to do with the spare capacity?</h2>
+<p>The simple answer is to look at the whole approach and determine what is slowing things down. In the example above, I’d be wondering what’s slowing the testing down. Many of the things that hinder testing can be addressed by changing how we do things ‘upstream’.</p>
+<p>Are lots of defects being found, causing the testers to spend more time investigating and reproducing them? Can we get the testers involved earlier? Can any predictable tests be defined up front so that developers can make sure the code passes them before it even gets to the testers (e.g. Behaviour Driven Development)?</p>
+<p>Are the testers manually regression testing every sprint? Could the developers help by automating more of that? Are the testers having to perform repetitive tasks to get to the part of the user-journey they’re actually testing? Can that be automated by the developers?</p>
+<p>Is there anything else that is impacting them? Test data set-up and maintenance, product owner availability to answer questions? Anything else?</p>
+<p>Addressing any of these issues is likely to speed up the testing process and increase throughput of the entire team as a result. One solution is to put these types of tasks onto the product backlog. This is fine but if we assign point values to them it can give a skewed view of velocity. Or rather, velocity is no longer a measure of throughput. You won’t be able to see if these types of tasks are actually improving things unless you are also measuring what proportion of the points are delivering new product capabilities.</p>
+<p>The only good reason I can think of for story-pointing these throughput-enhancing tasks is if your focus is utilisation – i.e. maximising the number of story-points in progress. Personally, I care more about measuring and improving throughput. By doing so, we get the right utilisation for free and a faster, more capable team.</p>
+<p><strong>Up next:</strong> <em>Valuing Effectiveness over Efficiency.</em></p>
+<p><em><strong>Footnotes:</strong></em></p>
+<p><a name="footnote-1"></a>[1] “<a href="http://antonymarcano.com/blog/2011/05/updated-lessons-learned-in-close-quarters-battle/">Lessons Learned in Close Quarters Battle</a>” Illustrates how stepping outside our job descriptions can move the team through each story more quickly by using special-forces room-clearing as an analogy.</p>
+<p><a name="footnote-2"></a>[2] <a href="http://web.mit.edu/sgraves/www/papers/Little's%20Law-Published.pdf">Little’s law (PDF)</a> – the section “Evolution of Little&#8217;s Law in Operations Management” that references Hopp and Spearman’s observation about throughput (TH), work-in-progress (WIP) and cycle-time (CT) – i.e. TH=CT/WIP. And therefore we can say CT = WIP/TH.</p>
+<p><a name="footnote-3"></a>[3] Little’s law also illustrates that if we reduce the work in progress to one quarter, then the cycle time for each story reduces to one quarter of a sprint. We’ll still get through 10 points per sprint, but stories will be completed more as a continuous stream throughout the sprint rather than all at the end.</p>
+<p><a name="footnote-4"></a>[4] “<a href="http://www.codinghorror.com/blog/2006/09/the-multi-tasking-myth.html">The Multi-Tasking Myth</a>” by Jeff Atwood, talks about multi-tasking across projects and pulls together several resources to illustrate the impact of multitasking at various levels. This applies when multi-tasking across stories.</p>
+<div style="font-family: 'Times New Roman', Times, serif;">
+<p style="text-align: left;"><em><strong>Acknowledgements:</strong></em></p>
+<p style="text-align: left;"><em>I&#8217;d like to say a special thank you to my fellow <a href="http://riverglide.com">RiverGliders</a> – <a href="http://andypalmer.com">Andy Palmer</a> and <a href="http://jmrtn.com/">James Martin</a> – for the feedback that helped me refine this article.</em></p>
+</div>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2012/02/throughput-over-utilisation/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

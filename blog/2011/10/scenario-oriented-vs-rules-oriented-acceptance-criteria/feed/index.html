@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Scenario-Oriented vs. Rules-Oriented Acceptance Criteria</title>
+	<atom:link href="http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Fri, 01 Nov 2019 00:08:00 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.14</generator>
+	<item>
+		<title>By: Antony Marcano</title>
+		<link>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/comment-page-1/#comment-380</link>
+		<dc:creator><![CDATA[Antony Marcano]]></dc:creator>
+		<pubDate>Fri, 14 Oct 2011 19:30:00 +0000</pubDate>
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=393#comment-380</guid>
+		<description><![CDATA[I can relate to what you describe here (as in the looser way of working). That&#039;s quite consistent with teams I would be a team-member of...  But then I wouldn&#039;t even be using terms like &quot;acceptance criteria&quot; in those situations. It would be little more than a card, the conversation and lots of collaboration - with whatever notes are necessary to aid our collective memory.
+
+For those teams that do place a high emphasis on capturing up-front acceptance-criteria and can relate to the problems I outlined, then moving in the direction of scenario-oriented acceptance criteria might prove a useful step towards not needing them at all.
+
+Thanks for your comments Liz.]]></description>
+		<content:encoded><![CDATA[<p>I can relate to what you describe here (as in the looser way of working). That&#8217;s quite consistent with teams I would be a team-member of&#8230;  But then I wouldn&#8217;t even be using terms like &#8220;acceptance criteria&#8221; in those situations. It would be little more than a card, the conversation and lots of collaboration &#8211; with whatever notes are necessary to aid our collective memory.</p>
+<p>For those teams that do place a high emphasis on capturing up-front acceptance-criteria and can relate to the problems I outlined, then moving in the direction of scenario-oriented acceptance criteria might prove a useful step towards not needing them at all.</p>
+<p>Thanks for your comments Liz.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Elizabeth Keogh</title>
+		<link>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/comment-page-1/#comment-379</link>
+		<dc:creator><![CDATA[Elizabeth Keogh]]></dc:creator>
+		<pubDate>Fri, 14 Oct 2011 09:31:00 +0000</pubDate>
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=393#comment-379</guid>
+		<description><![CDATA[I&#039;m a massive fan of BDD, yes. I like to talk about the behaviour we&#039;re expecting, then look particularly for *unusual* scenarios - edge-cases which aren&#039;t obvious.
+
+In the cases where the scenarios are obvious from the behaviour we&#039;ve discussed, I&#039;m happy to leave it at that, unless someone wants to automate it. An example might be:
+
+&quot;Replaced or refunded items should be added back into to stock unless faulty.&quot;
+
+The four scenarios you could associate with this are obvious.
+
+However, when I ask, &quot;Can you think of an example in which items aren&#039;t returned to stock even though they&#039;re not faulty?&quot; someone might say, &quot;Oh, do you remember that time when that mother came in to get a refund because the buggy was too small, but it had been recalled anyway? Yes, we need to check for recalls.&quot; And now we have another scenario. *That* one, I&#039;d want to write down - it&#039;s not obvious, and it&#039;s easy to forget. But I&#039;ll write down that specific scenario, with a title of &quot;Check for recalls&quot;. And then someone says, &quot;Oh, we can&#039;t even refund earrings for hygiene reasons, unless they&#039;re faulty!&quot; And now we have another. So I&#039;d write these down, but I wouldn&#039;t bother writing down the obvious ones.
+
+That&#039;s why I can say that I&#039;m into BDD, but not necessarily driven by specification by example - there *are* other ways to specify, and they&#039;re OK! I find the word &quot;specification&quot; stops people questioning quite so freely as well, so I don&#039;t tend to use it.
+
+I&#039;m very happy for people to have the conversations around as many scenarios as they want, and pretty much insist on it if it&#039;s something new or unusually complex, but I think people are starting to put *too much* emphasis on capturing every single scenario, when some of them are really obvious. In those situations, I&#039;m happy with rules being captured (as above) instead as proxies for the scenarios they generate. The scenarios will appear when and if we automate. In the meantime, the focus can fall on some of the unusual scenarios instead (which are frequently around new, differentiating and therefore highly valuable functionality). So we don&#039;t &quot;replace&quot; the rules, because often we don&#039;t even bother writing them down!
+
+The big difference for me is that where a scenario *needs* to be captured, I&#039;ll use specific, realistic, actual scenarios with realistic names and data, rather than capturing scenario-oriented acceptance criteria. I find it pings people&#039;s imagination more, and lets us come up with the other five scenarios that we *also* forgot about.
+
+I have done the kind of thing you&#039;re talking about before, capturing all the scenarios to use as acceptance criteria. I found it useful in low-discipline environments, where the developers sometimes forget to check what&#039;s working and what isn&#039;t. I&#039;ve got away from that recently by teaching Feature Injection instead, so that everyone has a clear idea of the value of what they&#039;re doing and the risks associated with it, and is motivated to understand their work better.
+
+I&#039;ve also done it when the scenarios have been discussed during planning meetings, and needed to be captured because the people doing the work weren&#039;t always the same as the ones doing the capturing, or enough time passed for them to forget. Persuading people to step away from fine-grained estimates (also using Feature Injection) and accept some discovery in the process of software development means we no longer have to do that either, and can talk through scenarios as and when it&#039;s needed, thereby keeping the knowledge fresh.
+
+As a result I suspect that I have a slightly looser process - and I don&#039;t think either of our approaches is necessarily wrong. We may just work in different contexts.
+
+Have a chat with Dan North about his &quot;Ginger Cake&quot; pattern some time, and please invite me for the conversation if I&#039;m around :)]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m a massive fan of BDD, yes. I like to talk about the behaviour we&#8217;re expecting, then look particularly for *unusual* scenarios &#8211; edge-cases which aren&#8217;t obvious.</p>
+<p>In the cases where the scenarios are obvious from the behaviour we&#8217;ve discussed, I&#8217;m happy to leave it at that, unless someone wants to automate it. An example might be:</p>
+<p>&#8220;Replaced or refunded items should be added back into to stock unless faulty.&#8221;</p>
+<p>The four scenarios you could associate with this are obvious.</p>
+<p>However, when I ask, &#8220;Can you think of an example in which items aren&#8217;t returned to stock even though they&#8217;re not faulty?&#8221; someone might say, &#8220;Oh, do you remember that time when that mother came in to get a refund because the buggy was too small, but it had been recalled anyway? Yes, we need to check for recalls.&#8221; And now we have another scenario. *That* one, I&#8217;d want to write down &#8211; it&#8217;s not obvious, and it&#8217;s easy to forget. But I&#8217;ll write down that specific scenario, with a title of &#8220;Check for recalls&#8221;. And then someone says, &#8220;Oh, we can&#8217;t even refund earrings for hygiene reasons, unless they&#8217;re faulty!&#8221; And now we have another. So I&#8217;d write these down, but I wouldn&#8217;t bother writing down the obvious ones.</p>
+<p>That&#8217;s why I can say that I&#8217;m into BDD, but not necessarily driven by specification by example &#8211; there *are* other ways to specify, and they&#8217;re OK! I find the word &#8220;specification&#8221; stops people questioning quite so freely as well, so I don&#8217;t tend to use it.</p>
+<p>I&#8217;m very happy for people to have the conversations around as many scenarios as they want, and pretty much insist on it if it&#8217;s something new or unusually complex, but I think people are starting to put *too much* emphasis on capturing every single scenario, when some of them are really obvious. In those situations, I&#8217;m happy with rules being captured (as above) instead as proxies for the scenarios they generate. The scenarios will appear when and if we automate. In the meantime, the focus can fall on some of the unusual scenarios instead (which are frequently around new, differentiating and therefore highly valuable functionality). So we don&#8217;t &#8220;replace&#8221; the rules, because often we don&#8217;t even bother writing them down!</p>
+<p>The big difference for me is that where a scenario *needs* to be captured, I&#8217;ll use specific, realistic, actual scenarios with realistic names and data, rather than capturing scenario-oriented acceptance criteria. I find it pings people&#8217;s imagination more, and lets us come up with the other five scenarios that we *also* forgot about.</p>
+<p>I have done the kind of thing you&#8217;re talking about before, capturing all the scenarios to use as acceptance criteria. I found it useful in low-discipline environments, where the developers sometimes forget to check what&#8217;s working and what isn&#8217;t. I&#8217;ve got away from that recently by teaching Feature Injection instead, so that everyone has a clear idea of the value of what they&#8217;re doing and the risks associated with it, and is motivated to understand their work better.</p>
+<p>I&#8217;ve also done it when the scenarios have been discussed during planning meetings, and needed to be captured because the people doing the work weren&#8217;t always the same as the ones doing the capturing, or enough time passed for them to forget. Persuading people to step away from fine-grained estimates (also using Feature Injection) and accept some discovery in the process of software development means we no longer have to do that either, and can talk through scenarios as and when it&#8217;s needed, thereby keeping the knowledge fresh.</p>
+<p>As a result I suspect that I have a slightly looser process &#8211; and I don&#8217;t think either of our approaches is necessarily wrong. We may just work in different contexts.</p>
+<p>Have a chat with Dan North about his &#8220;Ginger Cake&#8221; pattern some time, and please invite me for the conversation if I&#8217;m around 🙂</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Antony Marcano</title>
+		<link>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/comment-page-1/#comment-378</link>
+		<dc:creator><![CDATA[Antony Marcano]]></dc:creator>
+		<pubDate>Fri, 14 Oct 2011 07:21:00 +0000</pubDate>
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=393#comment-378</guid>
+		<description><![CDATA[Hi Liz,
+
+Some of the things you&#039;ve said don&#039;t make sense to me so either I&#039;ve not understood you, you&#039;ve not understood me, or a little bit of both.
+
+Hopefully we can do something about that... What I think I&#039;m saying, in relation to what you&#039;re saying is:
+
+* Your &quot;acceptance criteria&quot; are what I call &quot;rules-oriented acceptance criteria&quot;.
+* I find that you can also take a &quot;scenario-oriented&quot; approach to acceptance criteria and I favour that over &quot;rules-oriented acceptance criteria&quot;.
+* Your &quot;scenario titles&quot; are also my &quot;scenario titles&quot; but they can be the same as my &quot;scenario-oriented acceptance criteria&quot; but they can&#039;t be the same as the rules-oriented acceptance criteria.
+* Your &quot;scenarios&quot; are also what I call &quot;scenarios&quot; and I am in general agreement as to what goes into them (although our writing styles may be a little different).
+
+In more detail...
+&lt;blockquote&gt;
+Hi Antony, this makes sense. I think the only difference is that I&#039;m calling the examples at the bottom, where you actually have specific albums and people, &quot;scenarios&quot;, where as I&#039;d call the short-hand form for the scenarios you identified &quot;acceptance criteria phrased in scenario form&quot;. It isn&#039;t until we get &quot;visible to me, not to others&quot; that the scenarios start to emerge, and probably if we were talking through them we&#039;d find more (eg: what happens if Jane visits a page where Fred used to have a public album?)
+&lt;/blockquote&gt;
+I can see why you might think that calling the &quot;given-when-then&quot; parts scenarios is different to what I was saying since I&#039;ve re-read the post and it&#039;s not clear that I too also call those scenarios... Although I also acknowledged that some people also refer to them acceptance tests, so that&#039;s not different to what I was trying to say.
+
+How is calling the &quot;scenario-oriented acceptance criteria&quot; (the phrase I used) different to the phrase you&#039;ve used:  &quot;acceptance criteria phrased in scenario form&quot;?
+
+A better way of getting my point across might be that I call these &quot;scenario-oriented acceptance criteria&quot;:
+
+* Can create new private album (visible to me, not to others)
+* Can make public album private (visible to me, not to others)
+* Can make private album public (visible to me, &#038; others)
+
+And I call things like this scenarios:
+
+Scenario: Can Create new private album 
+When I create a new private album called &quot;Weekend in Brighton&quot; 
+Then I should be able to see the album And others should not be able to see it
+
+And, by using scenario oriented acceptance criteria, we can use the criteria as the scenario titles and the scenarios become an elaboration of the criteria, rather than mis-aligned derivatives of the &#039;rules-oriented acceptance criteria&quot;.
+&lt;blockquote&gt;
+I like to retain the acceptance criteria in some form, but often only as the title for a scenario or a short description of what we&#039;re trying to achieve in the scenario blurb. I&#039;ve found this useful in the past because we often miss scenarios (despite all the conversation, we don&#039;t know what we don&#039;t know). 
+&lt;/blockquote&gt;
+If a team found it valuable to retain the &#039;rules&#039; as notes or additional reference material, I&#039;m ok with that... but I&#039;d not want them to be regarded as acceptance criteria. 
+
+In order to demonstrate that the rules-oriented acceptance criteria in my &quot;private albums&quot; illustration have been met you&#039;d need all three scenarios anyway...  All the rules in my illustration apply in each scenario (i.e. the rules are cross-cutting) and are demonstrated by all three scenarios passing... so I&#039;m not sure what value keeping the rules-oriented acceptance criteria would add.
+Can you demonstrate how the acceptance criteria (as you describe them) or &quot;rules-oriented acceptance criteria&quot; as I describe them, can be used as scenario titles?
+&lt;blockquote&gt;
+I&#039;m not completely drawn in by Specification by Example as a result...
+&lt;/blockquote&gt;
+I am confused as to how you can not be drawn in by &quot;Specification by Example&quot; since you&#039;re such a strong advocate of Behaviour Driven Development... 
+
+Unless you have a completely different idea of either &quot;Specification by Example&quot; or &quot;Behaviour Driven Development&quot; to me...
+
+What I understand from &quot;Specification by Example&quot; is that it&#039;s a general term to describe approaches that use examples, rather than rules, as the basis of a specification. Examples can be any form of stimuli with an associated outcome. I also understand it to imply that we infer the implementation both incrementally and iteratively from the examples and test our understanding by being able to execute the examples against the implementation.
+
+Test-Driven Development and Behaviour Driven Development are forms of &quot;Specification by Example&quot; since we specify things by means of input-output examples (or stimuli-outcome examples). An input-output example may be very specific or more abstract, depending on what aspects of the input or stimuli is relevant to the scenario. From each example we infer the next evolution of the implemented algorithms to support these examples.
+&lt;blockquote&gt;
+...though I do very much like talking about behaviour and having examples of it. Using the desired behaviour (or &quot;acceptance criteria&quot;) as a title is a really lightweight way of getting the traceability, etc., that you mention.
+&lt;/blockquote&gt;
+I think what I&#039;m trying to say is that by reframing our rules-oriented acceptance criteria as scenario-oriented we negate the traceability concern. I wouldn&#039;t call it lightweight... maybe zero-weight because we demote the rules to no longer exist or into nothing more than notes - so there&#039;s not need for traceability.
+&lt;blockquote&gt;
+My post was mostly aimed at the opposite problem - when people were specifying scenarios too early and in too much detail, resulting in glazed eyes and boredom.
+&lt;/blockquote&gt;
+That&#039;s not the opposite problem. It&#039;s a related problem solved in a different way. My solution to that problem is expressed in the blog post as it&#039;s ok to discuss the criteria in terms of rules but (and this next part is where our approaches differ) replace those &quot;rules-oriented acceptance criteria&quot; with &quot;scenario-oriented acceptance criteria&quot; at the earliest opportunity. The key-word there being &quot;replace&quot;. In the context of this problem, I&#039;m only talking about going as far as writing the &quot;scenario-oriented acceptance criteria&quot; not the full scenario.
+
+As for the examples you gave... the scenarios are exactly the same but for some word-smithing. The final elaborated example you give is a good one... and similar to where I might end up if that was what we wanted to happen. In my example, we had decided in the conversation that the person would get a 404 when attempting to view someone else&#039; private album and that the scenario was adequate as it was.
+
+I hope that clarifies what I was trying to communicate a little more.]]></description>
+		<content:encoded><![CDATA[<p>Hi Liz,</p>
+<p>Some of the things you&#8217;ve said don&#8217;t make sense to me so either I&#8217;ve not understood you, you&#8217;ve not understood me, or a little bit of both.</p>
+<p>Hopefully we can do something about that&#8230; What I think I&#8217;m saying, in relation to what you&#8217;re saying is:</p>
+<p>* Your &#8220;acceptance criteria&#8221; are what I call &#8220;rules-oriented acceptance criteria&#8221;.<br />
+* I find that you can also take a &#8220;scenario-oriented&#8221; approach to acceptance criteria and I favour that over &#8220;rules-oriented acceptance criteria&#8221;.<br />
+* Your &#8220;scenario titles&#8221; are also my &#8220;scenario titles&#8221; but they can be the same as my &#8220;scenario-oriented acceptance criteria&#8221; but they can&#8217;t be the same as the rules-oriented acceptance criteria.<br />
+* Your &#8220;scenarios&#8221; are also what I call &#8220;scenarios&#8221; and I am in general agreement as to what goes into them (although our writing styles may be a little different).</p>
+<p>In more detail&#8230;</p>
+<blockquote><p>
+Hi Antony, this makes sense. I think the only difference is that I&#8217;m calling the examples at the bottom, where you actually have specific albums and people, &#8220;scenarios&#8221;, where as I&#8217;d call the short-hand form for the scenarios you identified &#8220;acceptance criteria phrased in scenario form&#8221;. It isn&#8217;t until we get &#8220;visible to me, not to others&#8221; that the scenarios start to emerge, and probably if we were talking through them we&#8217;d find more (eg: what happens if Jane visits a page where Fred used to have a public album?)
+</p></blockquote>
+<p>I can see why you might think that calling the &#8220;given-when-then&#8221; parts scenarios is different to what I was saying since I&#8217;ve re-read the post and it&#8217;s not clear that I too also call those scenarios&#8230; Although I also acknowledged that some people also refer to them acceptance tests, so that&#8217;s not different to what I was trying to say.</p>
+<p>How is calling the &#8220;scenario-oriented acceptance criteria&#8221; (the phrase I used) different to the phrase you&#8217;ve used:  &#8220;acceptance criteria phrased in scenario form&#8221;?</p>
+<p>A better way of getting my point across might be that I call these &#8220;scenario-oriented acceptance criteria&#8221;:</p>
+<p>* Can create new private album (visible to me, not to others)<br />
+* Can make public album private (visible to me, not to others)<br />
+* Can make private album public (visible to me, &amp; others)</p>
+<p>And I call things like this scenarios:</p>
+<p>Scenario: Can Create new private album <br />
+When I create a new private album called &#8220;Weekend in Brighton&#8221; <br />
+Then I should be able to see the album And others should not be able to see it</p>
+<p>And, by using scenario oriented acceptance criteria, we can use the criteria as the scenario titles and the scenarios become an elaboration of the criteria, rather than mis-aligned derivatives of the &#8216;rules-oriented acceptance criteria&#8221;.</p>
+<blockquote><p>
+I like to retain the acceptance criteria in some form, but often only as the title for a scenario or a short description of what we&#8217;re trying to achieve in the scenario blurb. I&#8217;ve found this useful in the past because we often miss scenarios (despite all the conversation, we don&#8217;t know what we don&#8217;t know). 
+</p></blockquote>
+<p>If a team found it valuable to retain the &#8216;rules&#8217; as notes or additional reference material, I&#8217;m ok with that&#8230; but I&#8217;d not want them to be regarded as acceptance criteria. </p>
+<p>In order to demonstrate that the rules-oriented acceptance criteria in my &#8220;private albums&#8221; illustration have been met you&#8217;d need all three scenarios anyway&#8230;  All the rules in my illustration apply in each scenario (i.e. the rules are cross-cutting) and are demonstrated by all three scenarios passing&#8230; so I&#8217;m not sure what value keeping the rules-oriented acceptance criteria would add.<br />
+Can you demonstrate how the acceptance criteria (as you describe them) or &#8220;rules-oriented acceptance criteria&#8221; as I describe them, can be used as scenario titles?</p>
+<blockquote><p>
+I&#8217;m not completely drawn in by Specification by Example as a result&#8230;
+</p></blockquote>
+<p>I am confused as to how you can not be drawn in by &#8220;Specification by Example&#8221; since you&#8217;re such a strong advocate of Behaviour Driven Development&#8230; </p>
+<p>Unless you have a completely different idea of either &#8220;Specification by Example&#8221; or &#8220;Behaviour Driven Development&#8221; to me&#8230;</p>
+<p>What I understand from &#8220;Specification by Example&#8221; is that it&#8217;s a general term to describe approaches that use examples, rather than rules, as the basis of a specification. Examples can be any form of stimuli with an associated outcome. I also understand it to imply that we infer the implementation both incrementally and iteratively from the examples and test our understanding by being able to execute the examples against the implementation.</p>
+<p>Test-Driven Development and Behaviour Driven Development are forms of &#8220;Specification by Example&#8221; since we specify things by means of input-output examples (or stimuli-outcome examples). An input-output example may be very specific or more abstract, depending on what aspects of the input or stimuli is relevant to the scenario. From each example we infer the next evolution of the implemented algorithms to support these examples.</p>
+<blockquote><p>
+&#8230;though I do very much like talking about behaviour and having examples of it. Using the desired behaviour (or &#8220;acceptance criteria&#8221;) as a title is a really lightweight way of getting the traceability, etc., that you mention.
+</p></blockquote>
+<p>I think what I&#8217;m trying to say is that by reframing our rules-oriented acceptance criteria as scenario-oriented we negate the traceability concern. I wouldn&#8217;t call it lightweight&#8230; maybe zero-weight because we demote the rules to no longer exist or into nothing more than notes &#8211; so there&#8217;s not need for traceability.</p>
+<blockquote><p>
+My post was mostly aimed at the opposite problem &#8211; when people were specifying scenarios too early and in too much detail, resulting in glazed eyes and boredom.
+</p></blockquote>
+<p>That&#8217;s not the opposite problem. It&#8217;s a related problem solved in a different way. My solution to that problem is expressed in the blog post as it&#8217;s ok to discuss the criteria in terms of rules but (and this next part is where our approaches differ) replace those &#8220;rules-oriented acceptance criteria&#8221; with &#8220;scenario-oriented acceptance criteria&#8221; at the earliest opportunity. The key-word there being &#8220;replace&#8221;. In the context of this problem, I&#8217;m only talking about going as far as writing the &#8220;scenario-oriented acceptance criteria&#8221; not the full scenario.</p>
+<p>As for the examples you gave&#8230; the scenarios are exactly the same but for some word-smithing. The final elaborated example you give is a good one&#8230; and similar to where I might end up if that was what we wanted to happen. In my example, we had decided in the conversation that the person would get a 404 when attempting to view someone else&#8217; private album and that the scenario was adequate as it was.</p>
+<p>I hope that clarifies what I was trying to communicate a little more.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Elizabeth Keogh</title>
+		<link>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/comment-page-1/#comment-376</link>
+		<dc:creator><![CDATA[Elizabeth Keogh]]></dc:creator>
+		<pubDate>Tue, 11 Oct 2011 08:06:00 +0000</pubDate>
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=393#comment-376</guid>
+		<description><![CDATA[Hi Antony, this makes sense. I think the only difference is that I&#039;m calling the examples at the bottom, where you actually have specific albums and people, &quot;scenarios&quot;, where as I&#039;d call the short-hand form for the scenarios you identified &quot;acceptance criteria phrased in scenario form&quot;. It isn&#039;t until we get &quot;visible to me, not to others&quot; that the scenarios start to emerge, and probably if we were talking through them we&#039;d find more (eg: what happens if Jane visits a page where Fred used to have a public album?)
+
+I like to retain the acceptance criteria in some form, but often only as the title for a scenario or a short description of what we&#039;re trying to achieve in the scenario blurb. I&#039;ve found this useful in the past because we often miss scenarios (despite all the conversation, we don&#039;t know what we don&#039;t know). I&#039;m not completely drawn in by Specification by Example as a result, though I do very much like talking about behaviour and having examples of it. Using the desired behaviour (or &quot;acceptance criteria&quot;) as a title is a really lightweight way of getting the traceability, etc., that you mention.
+
+My post was mostly aimed at the opposite problem - when people were specifying scenarios too early and in too much detail, resulting in glazed eyes and boredom. I reckon it&#039;s probably OK in that context to capture the acceptance criteria and just talk through scenarios until they&#039;re automated, while also capturing any unusual edge-cases that come up. So in that situation I&#039;d have:
+
+    Make a private album public, 
+    Make a new private album, 
+    Make a public album private - Given Fred has a public album, when Fred makes the album private and Jane goes to look at it, then Jane should see &quot;This album has been made private&quot;.
+
+I think we both agree that whatever helps people talk, in their context, is fantastic. It&#039;s been a while since I&#039;ve worked on a project where the testers haven&#039;t *wanted* to be more involved, so thank you for reminding me that this happens.
+]]></description>
+		<content:encoded><![CDATA[<p>Hi Antony, this makes sense. I think the only difference is that I&#8217;m calling the examples at the bottom, where you actually have specific albums and people, &#8220;scenarios&#8221;, where as I&#8217;d call the short-hand form for the scenarios you identified &#8220;acceptance criteria phrased in scenario form&#8221;. It isn&#8217;t until we get &#8220;visible to me, not to others&#8221; that the scenarios start to emerge, and probably if we were talking through them we&#8217;d find more (eg: what happens if Jane visits a page where Fred used to have a public album?)</p>
+<p>I like to retain the acceptance criteria in some form, but often only as the title for a scenario or a short description of what we&#8217;re trying to achieve in the scenario blurb. I&#8217;ve found this useful in the past because we often miss scenarios (despite all the conversation, we don&#8217;t know what we don&#8217;t know). I&#8217;m not completely drawn in by Specification by Example as a result, though I do very much like talking about behaviour and having examples of it. Using the desired behaviour (or &#8220;acceptance criteria&#8221;) as a title is a really lightweight way of getting the traceability, etc., that you mention.</p>
+<p>My post was mostly aimed at the opposite problem &#8211; when people were specifying scenarios too early and in too much detail, resulting in glazed eyes and boredom. I reckon it&#8217;s probably OK in that context to capture the acceptance criteria and just talk through scenarios until they&#8217;re automated, while also capturing any unusual edge-cases that come up. So in that situation I&#8217;d have:</p>
+<p>    Make a private album public, <br />
+    Make a new private album, <br />
+    Make a public album private &#8211; Given Fred has a public album, when Fred makes the album private and Jane goes to look at it, then Jane should see &#8220;This album has been made private&#8221;.</p>
+<p>I think we both agree that whatever helps people talk, in their context, is fantastic. It&#8217;s been a while since I&#8217;ve worked on a project where the testers haven&#8217;t *wanted* to be more involved, so thank you for reminding me that this happens.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

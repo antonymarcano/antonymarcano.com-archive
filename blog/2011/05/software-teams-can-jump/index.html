@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Software Teams can Jump | antonymarcano.com</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://antonymarcano.com/blog/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://antonymarcano.com/blog/wp-content/themes/twentyfourteen/js/html5.js"></script>
+	<![endif]-->
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="antonymarcano.com &raquo; Feed" href="http://antonymarcano.com/blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="antonymarcano.com &raquo; Comments Feed" href="http://antonymarcano.com/blog/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="antonymarcano.com &raquo; Software Teams can Jump Comments Feed" href="http://antonymarcano.com/blog/2011/05/software-teams-can-jump/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/antonymarcano.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.24"}};
+			!function(t,a,e){var r,i,n,o=a.createElement("canvas"),l=o.getContext&&o.getContext("2d");function c(t){var e=a.createElement("script");e.src=t,e.defer=e.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(e)}for(n=Array("flag","emoji4"),e.supports={everything:!0,everythingExceptFlag:!0},i=0;i<n.length;i++)e.supports[n[i]]=function(t){var e,a=String.fromCharCode;if(!l||!l.fillText)return!1;switch(l.clearRect(0,0,o.width,o.height),l.textBaseline="top",l.font="600 32px Arial",t){case"flag":return(l.fillText(a(55356,56826,55356,56819),0,0),e=o.toDataURL(),l.clearRect(0,0,o.width,o.height),l.fillText(a(55356,56826,8203,55356,56819),0,0),e===o.toDataURL())?!1:(l.clearRect(0,0,o.width,o.height),l.fillText(a(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),e=o.toDataURL(),l.clearRect(0,0,o.width,o.height),l.fillText(a(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),e!==o.toDataURL());case"emoji4":return l.fillText(a(55358,56794,8205,9794,65039),0,0),e=o.toDataURL(),l.clearRect(0,0,o.width,o.height),l.fillText(a(55358,56794,8203,9794,65039),0,0),e!==o.toDataURL()}return!1}(n[i]),e.supports.everything=e.supports.everything&&e.supports[n[i]],"flag"!==n[i]&&(e.supports.everythingExceptFlag=e.supports.everythingExceptFlag&&e.supports[n[i]]);e.supports.everythingExceptFlag=e.supports.everythingExceptFlag&&!e.supports.flag,e.DOMReady=!1,e.readyCallback=function(){e.DOMReady=!0},e.supports.everything||(r=function(){e.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",r,!1),t.addEventListener("load",r,!1)):(t.attachEvent("onload",r),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&e.readyCallback()})),(r=e.source||{}).concatemoji?c(r.concatemoji):r.wpemoji&&r.twemoji&&(c(r.twemoji),c(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='font-awesome-css'  href='http://antonymarcano.com/blog/wp-content/plugins/tagaroo/vendor/font-awesome/css/font-awesome.min.css?ver=4.8.24' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfourteen-lato-css'  href='https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://antonymarcano.com/blog/wp-content/themes/twentyfourteen/genericons/genericons.css?ver=3.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfourteen-style-css'  href='http://antonymarcano.com/blog/wp-content/themes/twentyfourteen/style.css?ver=4.8.24' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfourteen-ie-css'  href='http://antonymarcano.com/blog/wp-content/themes/twentyfourteen/css/ie.css?ver=20131205' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><script type='text/javascript' src='http://antonymarcano.com/blog/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://antonymarcano.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://antonymarcano.com/blog/wp-content/plugins/wp-google-analytics/wp-google-analytics.js?ver=0.0.3'></script>
+<link rel='https://api.w.org/' href='http://antonymarcano.com/blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://antonymarcano.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://antonymarcano.com/blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Old Favourite: Feature Injection User Stories on a Business Value Theme' href='http://antonymarcano.com/blog/2011/03/fi_stories/' />
+<link rel='next' title='Cucumber &#8211; with step-free access' href='http://antonymarcano.com/blog/2011/05/introducing_cukesalad/' />
+<meta name="generator" content="WordPress 4.8.24" />
+<link rel="canonical" href="http://antonymarcano.com/blog/2011/05/software-teams-can-jump/" />
+<link rel='shortlink' href='http://antonymarcano.com/blog/?p=263' />
+<link rel="alternate" type="application/json+oembed" href="http://antonymarcano.com/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fantonymarcano.com%2Fblog%2F2011%2F05%2Fsoftware-teams-can-jump%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://antonymarcano.com/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fantonymarcano.com%2Fblog%2F2011%2F05%2Fsoftware-teams-can-jump%2F&#038;format=xml" />
+<style type="text/css">
+.oc-external-link {
+	padding-left: 5px;
+}
+.oc-trlogo {
+	float: right;
+	height: auto;
+	padding: 0 10px 10px 0;
+	width: 113px;
+}
+.oc-hr {
+	clear: both;
+}
+</style>
+</head>
+
+<body class="post-template-default single single-post postid-263 single-format-standard masthead-fixed full-width singular">
+<div id="page" class="hfeed site">
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-main">
+			<h1 class="site-title"><a href="http://antonymarcano.com/blog/" rel="home">antonymarcano.com</a></h1>
+
+			<div class="search-toggle">
+				<a href="#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container">Search</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<button class="menu-toggle">Primary Menu</button>
+				<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+				<div id="primary-menu" class="nav-menu"></div>
+			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<form role="search" method="get" class="search-form" action="http://antonymarcano.com/blog/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			
+<article id="post-263" class="post-263 post type-post status-publish format-standard hentry category-agile-2 tag-agile-software-development tag-basketball tag-business tag-coach tag-management tag-project-management tag-scrum tag-software-project-management tag-software-teams">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="http://antonymarcano.com/blog/category/agile-2/" rel="category tag">Agile</a></span>
+		</div>
+		<h1 class="entry-title">Software Teams can Jump</h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="http://antonymarcano.com/blog/2011/05/software-teams-can-jump/" rel="bookmark"><time class="entry-date" datetime="2011-05-18T14:38:49+00:00">May 18, 2011</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="http://antonymarcano.com/blog/author/antonymarcano/" rel="author">AntonyMarcano</a></span></span>			<span class="comments-link"><a href="http://antonymarcano.com/blog/2011/05/software-teams-can-jump/#comments"><span class="dsq-postid" data-dsqidentifier="263 http://antonymarcano.com/blog/?p=263">14 Comments</span></a></span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<div class='wdgpo wdgpo_standard_count'><g:plusone size='standard' count='true' href='http://antonymarcano.com/blog/2011/05/software-teams-can-jump/' ></g:plusone></div> <p>For many years I&#8217;ve been coaching software teams in various things such as Example Driven Methods (xDD), including BDD and TDD; pair-programming; programming; testing; retrospectives; Scrum, kanban and various other ways of getting the most out of a development team. One thing that I notice is that while the teams are being coached, they do amazing things. They are more happy, more productive, fast to improve as if there are no limits to what they can achieve.<br />
+<a title="Michael Jordan, Blue Dunk, Lisle, IL, 1987 by cliff1066™, on Flickr" href="http://www.flickr.com/photos/nostri-imago/4439636726/"><img class="alignleft" style="margin: 10px;" src="http://farm5.static.flickr.com/4043/4439636726_a8e5ae9bff.jpg" alt="Michael Jordan, Blue Dunk, Lisle, IL, 1987" width="320" height="214" /></a><br />
+Then, at some point they decide that it&#8217;s time to go it alone. I always say to my clients to keep at least one day in their budget for me to go away and come back some time later. Usually within a month or two to see how things are going. Inevitably when I return, the team is doing reasonably well, but not as well as if I&#8217;d stayed involved, even if I was just popping in once every couple of weeks.</p>
+<p>Some say that this is what the Scrum master is there for, however, I&#8217;ve noticed that this is something that the Scrum master doesn&#8217;t get to do much of as they are are often dealing with external pressures &#8220;to get things done&#8221;&#8230;</p>
+<p>On many teams, once I move on, there is a coaching void. Despite my pleas and efforts to encourage them to at least establish a coach from someone in-house, the team is often left to just get on with it.</p>
+<p>This isn&#8217;t a new idea. For example, <strong><em>Extreme Programming highlights &#8220;the coach&#8221; as a key role in the team</em></strong>.</p>
+<p>In sports, teams have coaches. <strong><em>Have you ever heard of a professional sports team without a coach? </em></strong>Can you imagine a professional sports team hiring a coach for a while and then saying &#8211; &#8220;we think we&#8217;re ready to compete on our own now so thanks for your help but you&#8217;re not needed anymore&#8221;. No, I don&#8217;t think so. This is unheard of in competitive sports, yet all too common in competitive business.</p>
+<p>Even my 12 year old son&#8217;s basketball team, <a title="Islington Panthers Basketball Club" href="http://islingtonpanthers.co.uk/">the Islington Panthers</a>, has a coach. He trains them 2-3 times per week and he (or an acting coach from the seniors) attends all of their games. In some training sessions he gets a member of the under 21s team to coach the under 13s training session &#8211; so there is always a coach even if they&#8217;re just borrowed from another of the club&#8217;s teams. Without him, do you think any of the club&#8217;s teams would make the national play-offs as they regularly do? Very unlikely.</p>
+<p>So, <strong>competitive sports teams always have a coach</strong>. Temporary coaching in a professional sports team is almost unheard of&#8230; Sure, they could get by but would they be taken seriously? Would they be competitive? Would they save money by not having a coach or would this be an obvious false economy? What are their chances of generating sponsorship revenue if they are not winning games? What are their chances of winning games without a coach?</p>
+<p>The same applies in software teams. For example, I worked with a client recently and helped a team of 6 people double their output in one day. They&#8217;d have to hire another 7-10 people in order to achieve that but instead, one good coach was enough.</p>
+<p>So, if you have a professional software team without a coach, consider, are you really helping your business save money by going it alone? Or, like the professional sports team, is having a professional development team without a coach another example of a false economy.</p>
+<p>&nbsp;</p>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="http://antonymarcano.com/blog/tag/agile-software-development/" rel="tag">Agile software development</a><a href="http://antonymarcano.com/blog/tag/basketball/" rel="tag">basketball</a><a href="http://antonymarcano.com/blog/tag/business/" rel="tag">business</a><a href="http://antonymarcano.com/blog/tag/coach/" rel="tag">Coach</a><a href="http://antonymarcano.com/blog/tag/management/" rel="tag">Management</a><a href="http://antonymarcano.com/blog/tag/project-management/" rel="tag">project management</a><a href="http://antonymarcano.com/blog/tag/scrum/" rel="tag">scrum</a><a href="http://antonymarcano.com/blog/tag/software-project-management/" rel="tag">Software project management</a><a href="http://antonymarcano.com/blog/tag/software-teams/" rel="tag">software teams</a></span></footer></article><!-- #post-## -->
+	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<a href="http://antonymarcano.com/blog/2011/03/fi_stories/" rel="prev"><span class="meta-nav">Previous Post</span>Old Favourite: Feature Injection User Stories on a Business Value Theme</a><a href="http://antonymarcano.com/blog/2011/05/introducing_cukesalad/" rel="next"><span class="meta-nav">Next Post</span>Cucumber &#8211; with step-free access</a>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-179">
+        <div id="dsq-comment-header-179" class="dsq-comment-header">
+            <cite id="dsq-cite-179">
+                <a id="dsq-author-user-179" href="http://www.facebook.com/people/Stefano-Capuzzimato/612245489" target="_blank" rel="nofollow">Stefano Capuzzimato</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-179" class="dsq-comment-body">
+            <div id="dsq-comment-message-179" class="dsq-comment-message"><p>Very insightful. There should be a more straightforward and accessible way to &#8220;become&#8221; coach, IMHO &#8211; for those of us that feel they have what it takes to do so, and would love the challenge.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-182">
+        <div id="dsq-comment-header-182" class="dsq-comment-header">
+            <cite id="dsq-cite-182">
+                <a id="dsq-author-user-182" href="http://antonymarcano.com/about" target="_blank" rel="nofollow">Antony Marcano</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-182" class="dsq-comment-body">
+            <div id="dsq-comment-message-182" class="dsq-comment-message"><p>Thanks for the feedback Stefano.I&#8217;m not sure that it&#8217;s very complicated to &#8220;become&#8221; a coach&#8230; But like anything else, to become good at it takes learning, practice, experience, reflection and more learning. You&#8217;re probably doing some coaching already&#8230; you might not realise it yet.</p>
+<p>I fell into coaching by accident. I happened to have a lot of experience in Agile when it started to become popular and coaches were hard to find so I was asked to coach a team of beginners. At first I wasn&#8217;t very good at coaching but I learned from experience and from a great mentor &#8211; Rachel Davies.Whether I&#8217;m any good now, I&#8217;ll let others decide.</p>
+<p>I&#8217;ve been particular to maintain my technical skills development and my appreciation of the daily challenges teams face by working as a team member on real projects for at least a quarter of the year&#8230; Not to mention background projects like JNarrate and CukeSalad. I&#8217;ve also developed my coaching skills through practice, reflection, feedback, reading and workshops. This combination allows me to move comfortably between more directive coaching to more non-directive coaching &#8211; see this post:<a href="http://agilecoach.typepad.com/agile-coaching/2010/10/agile-coaching-zone.html" rel="nofollow">http://agilecoach.typepad.com/agile-coaching/2010/10/agile-coaching-zone.html</a></p>
+<p>Today there are great resources that weren&#8217;t there when I got started. There&#8217;s Rachel Davies and Liz Sedley&#8217;s superb book on Agile Coaching &#8211; http://pragprog.com/titles/sdcoach/agile-coaching(Which I&#8217;m honoured to have made a small contribution to)Rachel helps to organise the Agile Coaches Gathering where anyone who registers is welcome <a href="http://www.agilecoachesgathering.org/" rel="nofollow">http://www.agilecoachesgathering.org/</a></p>
+<p>Rachel also has an excellent blog http://agilecoach.typepad.com/ A google search on &#8220;Agile Coaching&#8221; returns a whole host of resources, including Lyssa Adkin&#8217;s book on Agile Coaching&#8230; </p>
+<p>There&#8217;s so much to read and absorb now that you can avoid having to learn many of the lessons the hard way as I did.</p>
+<p>Best of luck on your journey.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-191">
+        <div id="dsq-comment-header-191" class="dsq-comment-header">
+            <cite id="dsq-cite-191">
+                <a id="dsq-author-user-191" href="http://twitter.com/pauldyson" target="_blank" rel="nofollow">Paul Dyson</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-191" class="dsq-comment-body">
+            <div id="dsq-comment-message-191" class="dsq-comment-message"><p>Have you ever heard of a self-organising professional sports team? Have you ever heard of a successful professional sports coach who doesn&#8217;t impose rigorous hierarchical structures, often supported by draconian &#8216;club rules&#8217; and fines?</p>
+<p>And to ask another question: how many software coaches do you know who are the first in line to be fired if their team fails to deliver against short-term goals?</p>
+<p>Your analogy and the conclusions you draw from it are fundamentally flawed. Professional sports teams play very simple physical games and benefit from constant drilling, simplistic instruction and very little intellectual consideration. That sound like many software teams you know?</p>
+<p>It sounds like you&#8217;ve done some good work as a coach &#8211; that&#8217;s great to hear. But your conclusion that a professional software team without a coach is inefficient or in some way flawed is extremely wide of the mark.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-192">
+        <div id="dsq-comment-header-192" class="dsq-comment-header">
+            <cite id="dsq-cite-192">
+                <a id="dsq-author-user-192" href="http://antonymarcano.com/about" target="_blank" rel="nofollow">Antony Marcano</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-192" class="dsq-comment-body">
+            <div id="dsq-comment-message-192" class="dsq-comment-message"><p>Hi Paul,</p>
+<p>Thanks for your feedback 🙂 Somehow my words have allowed you to misunderstand my point and read far beyond my actual words&#8230; So I&#8217;ll try to address the misunderstanding&#8230;</p>
+<p>&#8220;Have you ever heard of a self-organising professional sports team? Have you ever heard of a successful professional sports coach who doesn&#8217;t impose rigorous hierarchical structures, often supported by draconian &#8216;club rules&#8217; and fines?&#8230;&#8221;</p>
+<p>The message I tried to convey was that successful pro sports-teams /have/ coaches&#8230; and the most successful software teams I&#8217;ve worked with /have/ coaches. </p>
+<p>That&#8217;s as far as the metaphor goes&#8230; I&#8217;m not saying anywhere in this post that software-teams or their coaches should behave in the same way, or use the same coaching techniques, or be organised in the same way. I hope I&#8217;ve addressed that misunderstanding.</p>
+<p>&#8220;But your conclusion that a professional software team without a coach is inefficient or in some way flawed is extremely wide of the mark.&#8221;</p>
+<p>I can kind-of see how you might infer that this was the conclusion but I&#8217;m not making that assertion at all.</p>
+<p>The key take-away from my post should not be a conclusion&#8230; but a question&#8230; &#8220;By not having a coach, are we saving money or is it a false economy?&#8221; For some it will be a saving, for others it will be a false economy&#8230; In my experience, it&#8217;s more often the latter.</p>
+<p>For the record, a professional software team without a coach is not [inherently] inefficient nor are they [inherently] flawed. However, in 16 years in the software industry and 11years of &#8216;Agile&#8217; projects (as a team member or a coach or both), my experience has been that  even the best teams without a good coach can be even better with a good coach.Sometimes that coach comes from the outside&#8230; other times they are found within&#8230; And on the most elite teams I&#8217;ve been on, everyone does a little coaching &#8211; depending on each person&#8217;s area of expertise&#8230; and even then an outside coach visiting periodically brings a valued fresh perspective.</p>
+<p>I hope you better understand the message I was trying to convey.</p>
+<p>Best regards</p>
+<p>Antony</p>
+<p>🙂</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-194">
+        <div id="dsq-comment-header-194" class="dsq-comment-header">
+            <cite id="dsq-cite-194">
+                <a id="dsq-author-user-194" href="http://twitter.com/pauldyson" target="_blank" rel="nofollow">Paul Dyson</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-194" class="dsq-comment-body">
+            <div id="dsq-comment-message-194" class="dsq-comment-message"><p>Thank you for the clarification &#8211; I now understand better the message you are trying to convey 🙂</p>
+<p>Perhaps I could offer an alternative message? I&#8217;ve worked in and with extreme programming teams since 1997 and not one of them had someone identified as &#8216;the coach&#8217; or &#8216;a coach&#8217;. There was a lot of learning and improvement driven from within the team, but that&#8217;s the standard emergent behaviour of self-organising teams: there is not &#8216;a coach&#8217; just a team working and continually improving. There was also a lot of learning and improvement coming from outside the team, as the result of reading about or hearing from other teams, sharing experience and so on. But never was some individual hired or identified as &#8216;a coach&#8217;.</p>
+<p>Could those teams have benefited from doing so? I honestly don&#8217;t believe so.</p>
+<p>You see I believe there&#8217;s a contradiction in your message: in the &#8220;elite teams&#8221; where &#8220;everyone does a little coaching&#8221; there *is no coach*. There is a self organising team with emerging behaviour and a focus on continual improvement. Bringing in an external coach may bring a valued fresh perspective, or may just prove disruptive and distracting. Either way, a focus on self-organisation and self-determination has, in my experience, far more influence on the efficiency, ability to learn, rate of improvement and general social wellbeing of a team than the presence or absence of a coach.</p>
+<p>Best,</p>
+<p>Paul</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-195">
+        <div id="dsq-comment-header-195" class="dsq-comment-header">
+            <cite id="dsq-cite-195">
+                <a id="dsq-author-user-195" href="http://antonymarcano.com/about" target="_blank" rel="nofollow">Antony Marcano</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-195" class="dsq-comment-body">
+            <div id="dsq-comment-message-195" class="dsq-comment-message"><p>Thanks for your comments Paul. They are really valuable&#8230;</p>
+<p>I accept that it is possible that there would have been no value in any coaching for any of your teams&#8230; but from what you tell me, there was lots of coaching&#8230; from inside and outside of them&#8230;</p>
+<p>With your extensive experience in XP, I suspect that you have frequently adopted the role of &#8220;coach&#8221; without even realising it. It was just something that you did without labelling it&#8230; And for you there was no need for a label. It was just what you did to help others around you learn&#8230; </p>
+<p>For others, the labels help them to slice up the areas in which they can develop their skills (à la Ambler&#8217;s &#8220;generalising specialist&#8221;)&#8230; For me, coaching was one of those areas &#8211; along side programming, architecture, testing&#8230;etc.</p>
+<p>I can see where you are coming from regarding the title of &#8220;coach&#8221;&#8230; I&#8217;ve worked with successful teams where there was no one with the title of &#8220;Tester&#8221;. People would switch seamlessly between programmer, architect, business-analyst and tester all in the blink of a red-green-refactor cycle. I see the same happen where people seamlessly switch into the role of &#8220;coach&#8221; &#8211; even though there is no one on the team with that as a title.</p>
+<p>My blog post wasn&#8217;t really about anyone having the title of &#8220;coach&#8221; it was about the value of &#8220;coaching&#8221; in my experience.</p>
+<p>The pro-sports team analogy was a way of showing how &#8220;normal&#8221; it is for us to see coaching as something that is invaluable. So much so that a pro-sports team wouldn&#8217;t be without someone &#8220;coaching&#8221;. Again, it wasn&#8217;t about having someone with the title of &#8220;coach&#8221; but was about the perceived value of coaching.</p>
+<p>So, do you still believe that coaching did not happen on your teams or was your objection only about the title?</p>
+<p>I hope your objection was just about the title&#8230; Otherwise we have one person with extensive experience of only non-coached teams apparently saying there is no value in something he has never experienced&#8230; While another person with extensive experience of both coached *and* non-coached teams is saying he has seen value in the same and it is something he has experienced 🙂</p>
+<p>I suspect we are actually in violent agreement on the principles but just bouncing off the terminology of &#8220;roles&#8221; vs. &#8220;titles&#8221;.</p>
+<p>Best regards,</p>
+<p>Antony<br />
+🙂</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-196">
+        <div id="dsq-comment-header-196" class="dsq-comment-header">
+            <cite id="dsq-cite-196">
+                <a id="dsq-author-user-196" href="http://twitter.com/pauldyson" target="_blank" rel="nofollow">Paul Dyson</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-196" class="dsq-comment-body">
+            <div id="dsq-comment-message-196" class="dsq-comment-message"><p>You know its funny, you&#8217;re the second professional coach I&#8217;ve had this<br />
+discussion with who has accused me of violently agreeing with them.<br />
+Either I&#8217;m not very good at putting my point across or you guys are so<br />
+attuned to conflict resolution that you find it hard to spot when<br />
+someone is genuinely disagreeing with you 🙂</p>
+<p>But lets start with what we agree on: in all good teams people learn<br />
+from each other all the time. On the teams I worked in sometimes I<br />
+brought something new that helped others, sometimes it was others<br />
+helping me. If you want to call that team learning activity &#8216;coaching&#8217;<br />
+then fine. Personally I prefer &#8217;emergent behaviour&#8217; because it is less<br />
+directed (and given your partnership in PairWithUs I&#8217;m sure you<br />
+understand the difference between coaching someone towards an outcome<br />
+and discovering the outcome together) but lets not argue about nuances<br />
+of terminology.</p>
+<p>Then there is having &#8216;a coach&#8217; &#8211; something I generally object to (and<br />
+your article is about having &#8216;a coach&#8217;). This is more than just titles,<br />
+although in a sense it *is* about the title; its about role and its<br />
+about responsibility. The wonderful thing about XP and the old-school<br />
+agile approaches was their emphasis on a &#8216;whole team&#8217; delivering<br />
+software. In an XP team, as I&#8217;m sure you know, the whole team works<br />
+together with a common goal &#8211; deliver valuable software to the customer &#8211;<br />
+ and you succeed as a team or you fail as a team. Then along came scrum<br />
+with its concept of Scrum Master (a certified qualification no less)<br />
+and, latterly, a whole slew of people who describe themselves primarily<br />
+as coaches &#8230; people whose role it is to &#8216;facilitate&#8217; the process, to<br />
+&#8216;support&#8217; the team, to &#8216;coach&#8217; the individuals. People whose goals are<br />
+not aligned to the rest of the team who are working to deliver software.</p>
+<p>But of course most coaches will say &#8220;Our goals ARE aligned. We help the<br />
+team to improve and by improving they get better at delivering<br />
+software.&#8221;.</p>
+<p>&#8220;We &#8230; and they&#8221;. All of a sudden the whole team isn&#8217;t so whole.</p>
+<p>Or they say &#8220;But I&#8217;m just part of the team&#8221;. Fine, so be part of the<br />
+team. Be responsible for delivering software and contribute to the<br />
+emergent behaviour by doing so. But don&#8217;t come with the title, or the<br />
+role, or the responsibility or even the attitude of being &#8216;a coach&#8217;.</p>
+<p>Just because the teams I work in or with don&#8217;t have coaches doesn&#8217;t mean<br />
+ I have no experience of coached teams. I used to run a business that<br />
+specialised in rescuing failing projects, usually brought in by the CEO<br />
+or CIO equivalent when a team wasn&#8217;t delivering to their business goals. In the<br />
+early days these were always waterfall style projects but from ~2005<br />
+onwards we saw plenty of failing agile projects with coaches and masters. I&#8217;m<br />
+not saying that all, or perhaps even any, of these projects failed<br />
+because of the coaches but I have seen how badly applied coaching can be<br />
+ disruptive and thoroughly unhelpful.</p>
+<p>So my view is simple: software teams should delight in the fact that,<br />
+unlike pro sports teams, they can excel without a coach. It&#8217;s not about<br />
+saving money but about allowing the team to self-organise and behaviour<br />
+to emerge&#8230; something that sports teams cannot do &#8230; which makes the<br />
+software team all the stronger. Anyone who relies on a software team for<br />
+ their competitive advantage should really think hard about having<br />
+someone working with the team whose goals are not aligned. If a team<br />
+*really* feels they need some outside coaching to improve in a specific<br />
+area they can&#8217;t, for some reason, cope with internally then make it a<br />
+temporary and specific engagement with very clear deliverables.</p>
+<p>I hope where we disagree is clearer now 😉</p>
+<p>BTW, I do seem to have somewhat hogged your blog comments, my apologies for that.</p>
+<p>Cheers,</p>
+<p>Paul</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-197">
+        <div id="dsq-comment-header-197" class="dsq-comment-header">
+            <cite id="dsq-cite-197">
+                <a id="dsq-author-user-197" href="http://antonymarcano.com/about" target="_blank" rel="nofollow">Antony Marcano</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-197" class="dsq-comment-body">
+            <div id="dsq-comment-message-197" class="dsq-comment-message"><p>Hi Paul,No problem about this discussion taking up the comments. I think this is a valuable debate and I think anyone reading the comments will be doing so because they want to&#8230; And they will only want to continue reading if they are gaining value from the discussion 🙂</p>
+<p>Ok, I accept that we have a difference of opinion. I acknowledge the validity of your opinion in the context of your experience. I hope you can acknowledge the validity of my opinion in the context of my experience.</p>
+<p>There is some agreement between our experiences and there is some disagreement between our experiences. I.e. our experiences have some things in common and some differences.</p>
+<p>The agreement between experiences includes the fact that teams can excel without someone labelled or named as a coach. The disagreement between our experiences appears to be that I have experienced teams excelling even more with good coaching (whether anyone happens to carry that label or not) than without and you appear to not have had that experience. </p>
+<p>It seems that because you&#8217;ve not had that experience you reject the idea that it is possible&#8230; If that is the case then I will say that you and I fundamentally disagree as I have seen it happen and therefore know that it is possible. </p>
+<p>If you accept that it is possible but reject the idea that it is likely and assert that most of the time good coaching on a team will make no difference to the pace at which most teams can grow it&#8217;s excellence then, I can neither agree nor disagree&#8230; I&#8217;ll only say that this is not consistent with my experience.</p>
+<p>I&#8217;d like to highlight that the nature of the work involved in saving failing projects is more likely to bring you closer to people doing a bad job of coaching than a good job. Combine that experience with the fact that you&#8217;ve not experienced any positive effects of someone knowingly coaching on a team and it might be worth asking yourself whether you are prejudiced against coaching and thus biased against anything I might say in favour of the idea. And, if that is the case, it might be that you are closed minded to learning anything from anything I have to say on the subject&#8230; and if that is the case further discussion is probably of little value to you.</p>
+<p>As someone who values shared discovery and learning, as I do, I hope you are open minded to the fact that just because you haven&#8217;t experienced something &#8211; doesn&#8217;t mean it isn&#8217;t possible.</p>
+<p>Because of my positive experience with people knowingly coaching, treating it as a legitimate skill-area (just like programming or testing or design), I admit that I may be biased towards the idea of good coaching adding value to a team&#8230; But because of that experience I reject the assertion that it *cannot* have a positive effect on the a teams growth and excellence and this is perhaps the basis of of our disagreement. You seem to be asserting that it makes no difference.</p>
+<p>And I think that maybe our understanding of roles is different&#8230; When I talk of roles, I think of it more in the dynamic sense&#8230; </p>
+<p>&#8220;Roles on a mature XP team aren&#8217;t fixed and rigid. The goal is to have everyone contribute the best he has to offer to the team&#8217;s success.&#8221; XP Explained, 2nd Edition, Beck, Andres</p>
+<p>In this sense, people switch into and out of roles dynamically and seamlessly. This is the situation you appear to be accustomed to and, perhaps, you are at the point where labels have become meaningless to you because you are able to perform all the roles on an XP team and apparently work with others who are as experienced as you and never have anyone on any of your teams for whom the labels are useful&#8230;</p>
+<p>&#8220;At first, fixed roles can help in learning new habits, like having technical people make technical decisions and business people make business decisions. After new, mutually respectful relationships are established among the team members, fixed roles interfere with the goal of having everyone do his best. Programmers can write a story if they are in the best position to write the story. Project managers can suggest architectural improvements if they are in the best position to suggest architectural improvements.&#8221; (continuation of Beck, Andres quote above)</p>
+<p>And it sounds like the latter part of this quote describes where you, and the teams you tend to work with, happen to be&#8230; the context you spend most of your time in.</p>
+<p>I spend my time in a variety of contexts. I spend time in a) teams just like that and b) in teams where people need fixed roles&#8230; and c) in teams transitioning from the latter to the former. In all of those situations, I&#8217;ve seen good coaching, appropriate to the maturity of the team add value. <br />
+See &#8220;Adapting your Coaching Style&#8221; by Rachel Davies <a href="http://agilecoach.typepad.com/agile-coaching/2010/10/agile-coaching-zone.html" rel="nofollow">http://agilecoach.typepad.com/agile-coaching/2010/10/agile-coaching-zone.html</a></p>
+<p>Also, in all cases, I&#8217;ve seen value in recognising and labelling the various skill areas that bring value to the team doing its best in both sustainably delivering products that matter and continuously improving how they do that.</p>
+<p>Programming, design, testing, coaching and so on are such labels. This is where the labels are useful &#8211; not as titles but as skill-areas that each person may wish to focus their personal development to improve the team&#8217;s capability.</p>
+<p>My article was indeed about teams having someone coaching. It was not my intention to imply that you need someone who is labelled as a coach.</p>
+<p>There is a significant flaw in one of your arguments against coaching&#8230; Your suggestion that &#8220;along came scrum with its concept of Scrum Master (a certified qualification no less) and, latterly, a whole slew of people who describe themselves primarily as coaches &#8230; people whose role it is to &#8216;facilitate&#8217; the process, to &#8216;support&#8217; the team, to &#8216;coach&#8217; the individuals. People whose goals are not aligned to the rest of the team who are working to deliver software.&#8221;</p>
+<p>It sounds like you are saying that all was right with the world while we were doing XP and then when Scrum became more popular, it ruined everything by introducing coaches&#8230; Yet, in XP Explained 1st edition, Kent Beck lists several roles: programmer, customer, tester, tracker, *coach*, consultant and big boss. So, if you want to blame any approach for the existence of coaches, perhaps it&#8217;s better to blame XP than Scrum.</p>
+<p>You also say &#8216;But of course most coaches will say &#8220;Our goals ARE aligned. We help the <br />
+team to improve and by improving they get better at delivering software.&#8221;&#8216; <br />
+Firstly, this is what you might hear from a team where there are fixed, labelled roles&#8230; and by contrast you might also hear a programmer say &#8220;Our goals are aligned. We help to implement the code that makes the customer&#8217;s vision a reality&#8221;.</p>
+<p>Secondly, whether the role is labelled or not, the goals of someone doing a good job of coaching is always aligned with their fellow team members (assuming that those goals are about sustainably delivering the products their customers need/want and continuously improving the quality of that service).</p>
+<p>Thirdly, when a team recognises a weakness and calls in someone external to help, I would use the 1st Edition XP label of &#8220;Consultant&#8221; for that service, not the label of &#8220;Coach&#8221;. And I would say that I have seen teams realise that they need that help sooner with the help of someone &#8220;coaching&#8221; than when the team has no-one coaching them.</p>
+<p>Fourth, in my experience, the satellite view reveals things that the &#8216;troops on the ground&#8217; will often not see. The person coaching from this perspective can sometimes just be a colleague from another team&#8230; or someone on exchange or visiting from another organisation doing similar things&#8230; or from a new team-member who has joined or rotated into the team&#8230; or from a person like me who is retained explicitly as a &#8220;coach&#8221;.</p>
+<p>And, finally let&#8217;s focus on teams, delivering stuff and the things that help them do that well, with ever-improving efficiency and effectiveness.I have experienced the positive effects of things that I label as &#8220;good coaching&#8221; on teams, sometimes performed by a person labelled as a coach, sometimes from people without a label. You cannot disagree with that experience because you are not me and have not had my experience. You can say that you have not had that experience or that you have had a different experience.</p>
+<p>I have experienced the value of recognising the skills areas that add value to a team so that we can use labels for those skills areas to target the skills development of the team. Again, you cannot disagree with that experience&#8230; You can however, have had a different experience where being able to recognise and articulate with a label that you solved a problem using something, say meta-programming, is of no value to help direct your learning or the learning of your team mates. To me, coaching is just another such label.</p>
+<p>But I accept that you might disagree with my assertion that ongoing coaching can deliver value to a team&#8230; and in that regard&#8230; I am more than willing to agree to disagree&#8230; I cannot agree with a statement that essentially says that something I&#8217;ve seen and directly experienced didn&#8217;t happen.</p>
+<p>Best regards,</p>
+<p>Antony</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-198">
+        <div id="dsq-comment-header-198" class="dsq-comment-header">
+            <cite id="dsq-cite-198">
+                <a id="dsq-author-user-198" href="http://antonymarcano.com/about" target="_blank" rel="nofollow">Antony Marcano</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-198" class="dsq-comment-body">
+            <div id="dsq-comment-message-198" class="dsq-comment-message"><p>P.S. &#8220;I&#8217;d have written a shorter letter, only I didn&#8217;t have the time&#8221; &#8211; Various<br />
+🙂 </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-200">
+        <div id="dsq-comment-header-200" class="dsq-comment-header">
+            <cite id="dsq-cite-200">
+                <a id="dsq-author-user-200" href="http://antonymarcano.com/about" target="_blank" rel="nofollow">Antony Marcano</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-200" class="dsq-comment-body">
+            <div id="dsq-comment-message-200" class="dsq-comment-message"><p>P.P.S. Paul, I hope my last significant comment addressed the key points of our disagreement and refined our understanding of that disagreement further&#8230;  It&#8217;s occurred to me that you are not really the target audience for this article. &#8220;Experts&#8221; (à la the Dreyfus Model of Skills Acquisition) generally find maxims and rules frustrating because an expert knows they don&#8217;t always apply. </p>
+<p>So, I guess the intended audience was the teams that drop any form of coaching way before they are ready because a manager somewhere wants to save money&#8230; not because the team elects to go it alone.So, the expert version would contain the sorts of things in my most recent comment to you&#8230; Essentially saying that I&#8217;ve found ongoing coaching valuable and I&#8217;ve seen value in recognising coaching as an area to develop skills in within the team&#8230; and that finding someone with those skills to come in periodically and tell you what they see from the satellite view can help you spot things that the team might not see.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-202">
+        <div id="dsq-comment-header-202" class="dsq-comment-header">
+            <cite id="dsq-cite-202">
+                <a id="dsq-author-user-202" href="http://twitter.com/pauldyson" target="_blank" rel="nofollow">Paul Dyson</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-202" class="dsq-comment-body">
+            <div id="dsq-comment-message-202" class="dsq-comment-message"><p>Hi Antony,</p>
+<p>a comprehensive and insightful response which I&#8217;d love to respond to in detail. But I&#8217;m going to resist &#8230; partly because I don&#8217;t have time to write a long letter, let alone a short one right now but mostly because I think detailed point-and-counter-point discussions are best done face-to-face. Maybe we&#8217;ll meet one day and can have that discussion.</p>
+<p>Instead I&#8217;m going to step back and try and explain the context in which I make my comments so you can see where I&#8217;m coming from. I&#8217;ve read your article four or five times now and it really is about having &#8216;a coach&#8217; (specifically you in most cases). A labelled individual with an identified role:</p>
+<p>&#8220;If you have a professional software team without *a coach*, consider &#8230;&#8221;</p>
+<p>&#8220;Competitive sports teams always have *a coach*. Temporary coaching in a professional sports team is almost unheard of&#8221;</p>
+<p>&#8220;On many teams, once *I* move on, there is a coaching void.&#8221;</p>
+<p>&#8220;I always say to my clients to keep at least one day in their budget for *me* to go away and come back some time later&#8221;</p>
+<p>You&#8217;re absolutely right when you say you are asking questions rather than offering conclusions, albeit with a bias based on your experience that having &#8216;a coach&#8217; is a good thing, and what I&#8217;m doing is positing a different set of questions with a bias based on my experience.</p>
+<p>Why?</p>
+<p>Two things make me feel uneasy about the growing &#8216;cult of coaching&#8217;. The first is that I&#8217;ve seen many teams thrive without &#8216;a coach&#8217;. Yes, Kent had coach down as a role in his first edition &#8211; I don&#8217;t blame him, he&#8217;s American, they see the whole of life as a sports metaphor &#8211; but none of us who started out in the early days took that too seriously. We couldn&#8217;t really because there were no coaches to call on; we all had to make our own discoveries and mistakes. Different teams talked to each other and learned from each other but I can&#8217;t remember a single one appointing a coach from inside or outside. And those teams all did great things partly, I believe, because their behaviour and learning emerged as a result of self-organisation and experimentation. </p>
+<p>[As an aside: some of the best-known coaches emerged from those teams and I wonder whether they are so well-known and talented because they have just been around for longer or because they got so much from learning it all for themselves?]</p>
+<p>As soon as you appoint &#8216;a coach&#8217;, no matter how experienced and talented, how well-meaning and adaptable, some of that self-organisation and emergent behaviour goes out the window. Its human nature: even in a team of experienced peers, identify someone as &#8216;the coach&#8217; and the team look to them for guidance. Remove that person and they feel they have lost that guidance (a &#8220;coaching void&#8221;). In other words you can take a team that would tend towards self-emergent behaviour, and be very strong for it and, by providing guidance, deny them that opportunity.</p>
+<p>And this is assuming the coach is a benign and benevolent presence (and something I want to say is none of this is an attack on you or any individual &#8230; I&#8217;m sure you&#8217;re a great person who adds a lot of value to any team you work with). If the coach is a bit naive, doesn&#8217;t understand the business domain well enough, hasn&#8217;t got the right techniques for this team, is having a bad week, whatever, then their guidance may take the team to a place it really doesn&#8217;t want to be. Either way, a question the team or the manager or the business owner should ask themselves, alongside the ones you pose, is &#8220;can my team self organise and can behaviour emerge or do they need a guide?&#8221; if the answer is they need a guide a further questions need to be asked: &#8220;are they the right team; is the coach the right coach?&#8221;.</p>
+<p>The second thing that makes me uneasy is an extension of the first. The more people &#8211; usually professional coaches &#8211; who say &#8220;you really need a coach&#8221;, the more this becomes accepted wisdom. Its an age-old pattern: want to do something different, get in an external guru. </p>
+<p>Now maybe you don&#8217;t mean it quite like that. Maybe you see all &#8216;good&#8217; coaches as experienced facilitators who don&#8217;t even provide something as directed as &#8216;guidance&#8217;. But that&#8217;s irrelevant because managers and business owners will always look to external gurus when they need to make a change and large consultancies are built on the back of providing those gurus. How long do you think it will be before IBM has a team of 3000 certified coaches? How will people distinguish between the good coaches and those peddling Agile Method/1? If the government decides they need to do 100 agile projects why would they come to the likes of you and Rachel and Liz (great people all) when they can go to KPMG and take advantage of their agreed rates and loss-leading prices?</p>
+<p>You see I think the sad thing in all this is that *the* truly great thing about XP and agile was that it started off being about teams discovering for themselves a new way of doing things that took complete advantage of the soft nature of software and the unique way in which people delivering software could organise themselves and work. I&#8217;m afraid that what I see with the establishment of Coach as a job title and Mastership certification is the erosion of that celebration of the uniqueness of software and software teams to something that is much more standardised, commoditised and off-the shelf. So my hope is more people ask themselves the question: &#8220;do we really need a coach or can we just do it for ourselves like so many others have?&#8221;</p>
+<p>Hmm, a longer letter than I&#8217;d hoped &#8230; as always. Will leave the final word to you.</p>
+<p>Cheers,</p>
+<p>Paul</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-203">
+        <div id="dsq-comment-header-203" class="dsq-comment-header">
+            <cite id="dsq-cite-203">
+                <a id="dsq-author-user-203" href="http://twitter.com/pauldyson" target="_blank" rel="nofollow">Paul Dyson</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-203" class="dsq-comment-body">
+            <div id="dsq-comment-message-203" class="dsq-comment-message"><p>Sorry &#8230; couldn&#8217;t resist &#8230; an hour after I posted this link popped into my twitter stream: </p>
+<p><a href="http://www.infoq.com/news/2011/05/agile-coach" rel="nofollow">http://www.infoq.com/news/2011/05/agile-coach</a></p>
+<p>From the first entry written by someone described as an Agile Coach:</p>
+<p>&#8220;Do you work hard to make them agile since this is what they&#8217;re paying you to do even though they really don&#8217;t want to change?&#8221;</p>
+<p>&#8220;Make them agile&#8221;, &#8220;what they&#8217;re paying you to do&#8221;, &#8220;they really don&#8217;t want to change&#8221;. Not much self-organisation and emergent behaviour going on here!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-1073">
+        <div id="dsq-comment-header-1073" class="dsq-comment-header">
+            <cite id="dsq-cite-1073">
+                <a id="dsq-author-user-1073" href="http://www.xbosoft.com/" target="_blank" rel="nofollow">Philip Hamilton</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1073" class="dsq-comment-body">
+            <div id="dsq-comment-message-1073" class="dsq-comment-message"><p>Very interesting the concept of a coach in a work environment. I guess you&#8217;ve been hired as a coach for a software dev team. How does a coach integrate into the team? and its a little different than a sports team because I would imagine you are not the boss whereas in sports the coach is the boss. So how do you define your role versus the boss/manager?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1074">
+        <div id="dsq-comment-header-1074" class="dsq-comment-header">
+            <cite id="dsq-cite-1074">
+                <a id="dsq-author-user-1074" href="http://antonymarcano.com/about" target="_blank" rel="nofollow">Antony Marcano</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1074" class="dsq-comment-body">
+            <div id="dsq-comment-message-1074" class="dsq-comment-message"><p>Yes, I&#8217;ve spent over half my time in the last 5 or so years working as a coach (the rest as a practitioner – keeping my skills current and relevant). The idea is very common on Agile development teams. I first read about the idea in the early 2000s in  Kent Beck&#8217;s book &#8220;Extreme Programming Explained&#8221;. I experienced it on a couple of teams I worked on and found it invaluable.</p>
+<p>How does it differ from a pro-sports coach? Well, I suppose I see myself a bit like a cross between a sports-coach and a life-coach. I gain my personal satisfaction by seeing peoples&#8217; work-lives improved through the gratification they get from excelling and extending the ways they excel.</p>
+<p>The worst coaches I&#8217;ve worked with act like the boss. The best coaches I&#8217;ve worked with create a trusting atmosphere for the teams to draw on the coach&#8217;s knowledge, experience and insight. The most awesome coaches I know can take a team on a journey of discovery about their untapped potential and help them continuously exploit more and more of it. These especially awesome coaches adapt their style depending on the team[1] and are skilled and versatile enough to work with any member of the team showing them how to do new things as well as learn new things alongside the team.</p>
+<p>If you are interested in learning more there are several books on the subject of &#8220;Agile Coaching&#8221; [2]. I&#8217;m also more than happy to have a chat. Get in touch[3] and we can set up a skype call.</p>
+<p>[1] http://agilecoach.typepad.com/agile-coaching/2010/10/agile-coaching-zone.html</p>
+<p>[2] http://www.amazon.co.uk/s/?field-keywords=agile+coaching</p>
+<p>[3] <a href="http://antonymarcano.com" rel="nofollow">http://antonymarcano.com</a></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'http://antonymarcano.com/blog/2011/05/software-teams-can-jump/';
+var disqus_identifier = '263 http://antonymarcano.com/blog/?p=263';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'antonymarcano';
+var disqus_title = "Software Teams can Jump";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=263';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="secondary">
+		<h2 class="site-description">Thinking through writing&#8230; on innovation, business, technology and more</h2>
+	
+	
+		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		<aside id="text-3" class="widget widget_text"><h1 class="widget-title">About</h1>			<div class="textwidget"><img style="float:left;padding-right:10px;" src="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Photo-1-e1306656178634.jpg" alt="photo of <p>Antony Marcano"/> Antony Marcano is a consultant in software craftsmanship, effective software processes, software quality and software testing. He has over fifteen years experience with... <a href="http://antonymarcano.com/about">(read more)</a></p>
+<br/><br/><br/>
+</div>
+		</aside><aside id="reallysimpletwitterwidget-2" class="widget widget_reallysimpletwitterwidget"><h1 class="widget-title"><a href="http://twitter.com/AntonyMarcano" class="twitter_title_link" ><img src="http://antonymarcano.com/blog/wp-content/plugins/really-simple-twitter-feed-widget/twitter_small.png" alt="Latest Tweets" title="Latest Tweets" /> Latest Tweets</a></h1>
+			<ul class="really_simple_twitter_widget"></ul><div class="rstw_link_user"><a href="http://twitter.com/AntonyMarcano" >Follow me on Twitter</a></div></aside><aside id="linkcat-2" class="widget widget_links"><h1 class="widget-title">Blogroll</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="http://testingreflections.com/blog/2" rel="me" title="My old blog has hundreds of articles. I&#8217;ll bring some of my favourites over to this one over time.">.My Old Blog</a></li>
+<li><a href="http://andypalmer.com">Andy Palmer</a></li>
+<li><a href="http://jmrtn.com/notes/" rel="friend co-worker colleague" title="@jmrtn &#8211; another RiverGlider">James Martin</a></li>
+<li><a href="http://testingreflections.com">testingReflections</a></li>
+
+	</ul>
+</aside>
+<aside id="linkcat-5" class="widget widget_links"><h1 class="widget-title">Pair With Us</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="http://pairwith.us/facebook">PairWith.Us on Facebook</a></li>
+<li><a href="http://pairwith.us/twitter">PairWith.Us on Twitter</a></li>
+<li><a href="http://pairwith.us/" rel="me">PairWith.Us: About</a></li>
+<li><a href="http://pairwith.us/live">PairWIth.Us: Live</a></li>
+<li><a href="http://pairwith.us/tv">PairWith.Us: TV</a></li>
+
+	</ul>
+</aside>
+<aside id="linkcat-4" class="widget widget_links"><h1 class="widget-title">RiverGlide</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.facebook.com/pages/RiverGlide/337928499545">RiverGlide on Facebook</a></li>
+<li><a href="http://twitter.com/RiverGlide">RiverGlide on Twitter</a></li>
+<li><a href="http://riverglide.com" rel="me">RiverGlide Website</a></li>
+
+	</ul>
+</aside>
+<aside id="tag_cloud-3" class="widget widget_tag_cloud"><h1 class="widget-title">Tags</h1><div class="tagcloud"><a href="http://antonymarcano.com/blog/tag/acceptance-testing/" class="tag-cloud-link tag-link-57 tag-link-position-1" style="font-size: 12.5161290323pt;" aria-label="Acceptance testing (3 items)">Acceptance testing</a>
+<a href="http://antonymarcano.com/blog/tag/agile/" class="tag-cloud-link tag-link-12 tag-link-position-2" style="font-size: 22pt;" aria-label="agile (16 items)">agile</a>
+<a href="http://antonymarcano.com/blog/tag/agile-planning/" class="tag-cloud-link tag-link-58 tag-link-position-3" style="font-size: 10.7096774194pt;" aria-label="Agile Planning (2 items)">Agile Planning</a>
+<a href="http://antonymarcano.com/blog/tag/agile-qa/" class="tag-cloud-link tag-link-48 tag-link-position-4" style="font-size: 10.7096774194pt;" aria-label="Agile QA (2 items)">Agile QA</a>
+<a href="http://antonymarcano.com/blog/tag/agile-software-development/" class="tag-cloud-link tag-link-32 tag-link-position-5" style="font-size: 20.7956989247pt;" aria-label="Agile software development (13 items)">Agile software development</a>
+<a href="http://antonymarcano.com/blog/tag/atdd/" class="tag-cloud-link tag-link-18 tag-link-position-6" style="font-size: 17.7849462366pt;" aria-label="ATDD (8 items)">ATDD</a>
+<a href="http://antonymarcano.com/blog/tag/automated-tests/" class="tag-cloud-link tag-link-20 tag-link-position-7" style="font-size: 10.7096774194pt;" aria-label="automated tests (2 items)">automated tests</a>
+<a href="http://antonymarcano.com/blog/tag/bdd/" class="tag-cloud-link tag-link-16 tag-link-position-8" style="font-size: 20.1935483871pt;" aria-label="BDD (12 items)">BDD</a>
+<a href="http://antonymarcano.com/blog/tag/boredom/" class="tag-cloud-link tag-link-22 tag-link-position-9" style="font-size: 8pt;" aria-label="Boredom (1 item)">Boredom</a>
+<a href="http://antonymarcano.com/blog/tag/business/" class="tag-cloud-link tag-link-7 tag-link-position-10" style="font-size: 15.2258064516pt;" aria-label="business (5 items)">business</a>
+<a href="http://antonymarcano.com/blog/tag/computing/" class="tag-cloud-link tag-link-31 tag-link-position-11" style="font-size: 10.7096774194pt;" aria-label="computing (2 items)">computing</a>
+<a href="http://antonymarcano.com/blog/tag/cucumber/" class="tag-cloud-link tag-link-40 tag-link-position-12" style="font-size: 14.0215053763pt;" aria-label="Cucumber (4 items)">Cucumber</a>
+<a href="http://antonymarcano.com/blog/tag/exception-handling/" class="tag-cloud-link tag-link-36 tag-link-position-13" style="font-size: 8pt;" aria-label="Exception handling (1 item)">Exception handling</a>
+<a href="http://antonymarcano.com/blog/tag/exception-handling-syntax/" class="tag-cloud-link tag-link-35 tag-link-position-14" style="font-size: 8pt;" aria-label="Exception handling syntax (1 item)">Exception handling syntax</a>
+<a href="http://antonymarcano.com/blog/tag/extreme-programming/" class="tag-cloud-link tag-link-15 tag-link-position-15" style="font-size: 12.5161290323pt;" aria-label="extreme programming (3 items)">extreme programming</a>
+<a href="http://antonymarcano.com/blog/tag/information-technology-management/" class="tag-cloud-link tag-link-26 tag-link-position-16" style="font-size: 10.7096774194pt;" aria-label="Information technology management (2 items)">Information technology management</a>
+<a href="http://antonymarcano.com/blog/tag/java/" class="tag-cloud-link tag-link-37 tag-link-position-17" style="font-size: 8pt;" aria-label="Java (1 item)">Java</a>
+<a href="http://antonymarcano.com/blog/tag/junit/" class="tag-cloud-link tag-link-38 tag-link-position-18" style="font-size: 8pt;" aria-label="junit (1 item)">junit</a>
+<a href="http://antonymarcano.com/blog/tag/kanban/" class="tag-cloud-link tag-link-10 tag-link-position-19" style="font-size: 10.7096774194pt;" aria-label="kanban (2 items)">kanban</a>
+<a href="http://antonymarcano.com/blog/tag/lean/" class="tag-cloud-link tag-link-11 tag-link-position-20" style="font-size: 16.2795698925pt;" aria-label="lean (6 items)">lean</a>
+<a href="http://antonymarcano.com/blog/tag/legacy-code/" class="tag-cloud-link tag-link-34 tag-link-position-21" style="font-size: 8pt;" aria-label="legacy code (1 item)">legacy code</a>
+<a href="http://antonymarcano.com/blog/tag/old-favourites/" class="tag-cloud-link tag-link-6 tag-link-position-22" style="font-size: 16.2795698925pt;" aria-label="old favourites (6 items)">old favourites</a>
+<a href="http://antonymarcano.com/blog/tag/project-management/" class="tag-cloud-link tag-link-9 tag-link-position-23" style="font-size: 15.2258064516pt;" aria-label="project management (5 items)">project management</a>
+<a href="http://antonymarcano.com/blog/tag/risk-management/" class="tag-cloud-link tag-link-8 tag-link-position-24" style="font-size: 8pt;" aria-label="risk management (1 item)">risk management</a>
+<a href="http://antonymarcano.com/blog/tag/riverglide/" class="tag-cloud-link tag-link-109 tag-link-position-25" style="font-size: 8pt;" aria-label="RiverGlide (1 item)">RiverGlide</a>
+<a href="http://antonymarcano.com/blog/tag/scrum/" class="tag-cloud-link tag-link-13 tag-link-position-26" style="font-size: 12.5161290323pt;" aria-label="scrum (3 items)">scrum</a>
+<a href="http://antonymarcano.com/blog/tag/software-development/" class="tag-cloud-link tag-link-27 tag-link-position-27" style="font-size: 15.2258064516pt;" aria-label="Software development (5 items)">Software development</a>
+<a href="http://antonymarcano.com/blog/tag/software-economics/" class="tag-cloud-link tag-link-78 tag-link-position-28" style="font-size: 10.7096774194pt;" aria-label="software economics (2 items)">software economics</a>
+<a href="http://antonymarcano.com/blog/tag/software-engineering/" class="tag-cloud-link tag-link-29 tag-link-position-29" style="font-size: 14.0215053763pt;" aria-label="Software engineering (4 items)">Software engineering</a>
+<a href="http://antonymarcano.com/blog/tag/software-project-management/" class="tag-cloud-link tag-link-25 tag-link-position-30" style="font-size: 12.5161290323pt;" aria-label="Software project management (3 items)">Software project management</a>
+<a href="http://antonymarcano.com/blog/tag/software-requirements/" class="tag-cloud-link tag-link-30 tag-link-position-31" style="font-size: 8pt;" aria-label="software requirements (1 item)">software requirements</a>
+<a href="http://antonymarcano.com/blog/tag/software-teams/" class="tag-cloud-link tag-link-64 tag-link-position-32" style="font-size: 10.7096774194pt;" aria-label="software teams (2 items)">software teams</a>
+<a href="http://antonymarcano.com/blog/tag/software-testing/" class="tag-cloud-link tag-link-21 tag-link-position-33" style="font-size: 12.5161290323pt;" aria-label="Software testing (3 items)">Software testing</a>
+<a href="http://antonymarcano.com/blog/tag/story-points/" class="tag-cloud-link tag-link-59 tag-link-position-34" style="font-size: 10.7096774194pt;" aria-label="Story points (2 items)">Story points</a>
+<a href="http://antonymarcano.com/blog/tag/tdd/" class="tag-cloud-link tag-link-110 tag-link-position-35" style="font-size: 17.7849462366pt;" aria-label="TDD (8 items)">TDD</a>
+<a href="http://antonymarcano.com/blog/tag/technology/" class="tag-cloud-link tag-link-62 tag-link-position-36" style="font-size: 10.7096774194pt;" aria-label="Technology (2 items)">Technology</a>
+<a href="http://antonymarcano.com/blog/tag/technologyinternet/" class="tag-cloud-link tag-link-28 tag-link-position-37" style="font-size: 16.2795698925pt;" aria-label="Technology/Internet (6 items)">Technology/Internet</a>
+<a href="http://antonymarcano.com/blog/tag/testing/" class="tag-cloud-link tag-link-19 tag-link-position-38" style="font-size: 12.5161290323pt;" aria-label="testing (3 items)">testing</a>
+<a href="http://antonymarcano.com/blog/tag/testingreflections/" class="tag-cloud-link tag-link-3 tag-link-position-39" style="font-size: 15.2258064516pt;" aria-label="testingReflections (5 items)">testingReflections</a>
+<a href="http://antonymarcano.com/blog/tag/this-is-not-a-manifesto/" class="tag-cloud-link tag-link-90 tag-link-position-40" style="font-size: 10.7096774194pt;" aria-label="this is not a manifesto (2 items)">this is not a manifesto</a>
+<a href="http://antonymarcano.com/blog/tag/user-stories/" class="tag-cloud-link tag-link-14 tag-link-position-41" style="font-size: 10.7096774194pt;" aria-label="user stories (2 items)">user stories</a>
+<a href="http://antonymarcano.com/blog/tag/user-story/" class="tag-cloud-link tag-link-56 tag-link-position-42" style="font-size: 10.7096774194pt;" aria-label="User story (2 items)">User story</a>
+<a href="http://antonymarcano.com/blog/tag/values/" class="tag-cloud-link tag-link-52 tag-link-position-43" style="font-size: 10.7096774194pt;" aria-label="Values (2 items)">Values</a>
+<a href="http://antonymarcano.com/blog/tag/waterfall/" class="tag-cloud-link tag-link-23 tag-link-position-44" style="font-size: 8pt;" aria-label="Waterfall (1 item)">Waterfall</a>
+<a href="http://antonymarcano.com/blog/tag/waterfall-model/" class="tag-cloud-link tag-link-24 tag-link-position-45" style="font-size: 8pt;" aria-label="Waterfall model (1 item)">Waterfall model</a></div>
+</aside><aside id="calendar-3" class="widget widget_calendar"><h1 class="widget-title">Archive</h1><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>May 2011</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://antonymarcano.com/blog/2011/03/">&laquo; Mar</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="http://antonymarcano.com/blog/2011/06/">Jun &raquo;</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="6" class="pad">&nbsp;</td><td>1</td>
+	</tr>
+	<tr>
+		<td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+	</tr>
+	<tr>
+		<td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+	</tr>
+	<tr>
+		<td>16</td><td>17</td><td><a href="http://antonymarcano.com/blog/2011/05/18/" aria-label="Posts published on May 18, 2011">18</a></td><td>19</td><td>20</td><td>21</td><td>22</td>
+	</tr>
+	<tr>
+		<td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td><a href="http://antonymarcano.com/blog/2011/05/29/" aria-label="Posts published on May 29, 2011">29</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://antonymarcano.com/blog/2011/05/30/" aria-label="Posts published on May 30, 2011">30</a></td><td>31</td>
+		<td class="pad" colspan="5">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></aside>	</div><!-- #primary-sidebar -->
+	</div><!-- #secondary -->
+<script type='text/javascript'>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-17391315-1']);
+_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+		</div><!-- #main -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+			<div class="site-info">
+								<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+	        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'antonymarcano';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1 && nodes[i].parentNode.tagName == 'A') {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type='text/javascript' src='http://antonymarcano.com/blog/wp-content/themes/twentyfourteen/js/functions.js?ver=20150315'></script>
+<script type='text/javascript' src='http://antonymarcano.com/blog/wp-includes/js/wp-embed.min.js?ver=4.8.24'></script>
+</body>
+</html>

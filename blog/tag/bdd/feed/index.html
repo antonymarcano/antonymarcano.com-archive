@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>BDD &#8211; antonymarcano.com</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/bdd/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Sat, 03 Sep 2016 10:48:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.14</generator>
+	<item>
+		<title>Segue Steps</title>
+		<link>http://antonymarcano.com/blog/2014/05/segue-steps/</link>
+		<comments>http://antonymarcano.com/blog/2014/05/segue-steps/#comments</comments>
+		<pubDate>Fri, 02 May 2014 12:25:06 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[gherkin]]></category>
+		<category><![CDATA[specflow]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=556</guid>
+		<description><![CDATA[Sometimes customer scenarios using Gherkin (Cucumber, SpecFlow etc.) can be harder to read than necessary. Once there&#8217;s more than one &#8220;And&#8221; line in a row, I find that there&#8217;s more clutter than I&#8217;d like and it doesn&#8217;t flow as well when I read it. Let&#8217;s take this example scenario of upgrading a fremium service. Scenario: &#8230; <a href="http://antonymarcano.com/blog/2014/05/segue-steps/" class="more-link">Continue reading <span class="screen-reader-text">Segue Steps</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Sometimes customer scenarios using Gherkin (Cucumber, SpecFlow etc.) can be harder to read than necessary. Once there&#8217;s more than one &#8220;And&#8221; line in a row, I find that there&#8217;s more clutter than I&#8217;d like and it doesn&#8217;t flow as well when I read it. Let&#8217;s take this example scenario of upgrading a fremium service.</p>
+<p><code>Scenario: Upgrade my SomeService subscription from Basic to Pro.<br />
+Given I am on the Basic plan<br />
+When I upgrade to the Pro plan<br />
+Then I see a message confirming the upgrade<br />
+And I see that I am now on the Pro plan<br />
+And I receive a personal thank you by email<br />
+And SomeService keeps a record of when the upgrade happened<br />
+And SomeService keeps a record of payment</code></p>
+<p>There&#8217;s a feature I rarely see used, the ability to use bullets (with asterisks &#8216;*&#8217;). I&#8217;ve found that using this among steps with Given/When/Then can remove some of the clutter, making the scenario easier on the eye&#8230;</p>
+<p><code>Scenario: Upgrade my SomeService subscription from Basic to Pro.<br />
+Given I am on the Basic plan<br />
+When I upgrade to the Pro plan<br />
+Then I see a message confirming the upgrade, and:<br />
+* I see that I am now on the Pro plan<br />
+* I receive a personal thank you by email<br />
+* SomeService keeps a record of when the upgrade happened<br />
+* SomeService keeps a record of payment</code></p>
+<p>What I don&#8217;t like about this, however, is how the &#8216;Then&#8217; step appears in a different context to the bullets and seems less important. To make sure that all the steps are seen as equally important, I can do this:</p>
+<p><code>Scenario: Upgrade my SomeService subscription from Basic to Pro.<br />
+Given I am on the Basic plan<br />
+When I upgrade to the Pro plan<br />
+Then the following occurs:<br />
+* I see a message confirming the upgrade<br />
+* I see that I am now on the Pro plan<br />
+* I receive a personal thank you by email<br />
+* SomeService keeps a record of when the upgrade happened<br />
+* SomeService keeps a record of payment</code></p>
+<p>Note how I&#8217;ve put in a &#8220;Then&#8221; step that segues from the &#8220;When&#8221; to the actual expectations.<br />
+A &#8216;Segue Step&#8217; doesn&#8217;t have to do anything, other than transition the reader from the previous steps to a list of expectations:</p>
+<p><code>Then /^the following occurs:$/ do #nothing<br />
+  #just segue to the next step<br />
+end</code></p>
+<p>Another way of using a Segue Step could be like this:</p>
+<p><code>Then I should:<br />
+* See a message confirming the upgrade<br />
+* See that I am now on the Pro plan<br />
+* Receive a personal thank you by email<br />
+And SomeService should:<br />
+* Keep a record of when the upgrade happened<br />
+* Keep a record of payment</code></p>
+<p>Asterisks can replace the opening keyword of any type of step, but using them in this way for Given or When steps could be a scenario-smell, suggesting that the scenario has too much detail or those steps are at the wrong level of abstraction. Using asterisks and Segue Steps are most appropriate in &#8220;Then&#8221; statements with two or more &#8220;And&#8221; lines.</p>
+<p>After doing this, reading scenarios without asterisks and &#8216;Segue Steps&#8217; now feels like the &#8220;And Then&#8221; scene from &#8220;Dude, Where&#8217;s my Car&#8221;&#8230;And then? I hope you find it useful to write better scenarios too&#8230; And then? And then? And theeeeeeeeeeeeen! And thenandthenandthen!<br />
+<iframe src="//www.youtube.com/embed/Kp5nUQkgWIc" height="315" width="420" allowfullscreen="" frameborder="0"></iframe></p>
+<p>&nbsp;</p>
+<p>Special thanks to <a href="https://twitter.com/andypalmer">Andy Palmer</a> for reviewing this blog post and helping me say it with fewer words.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2014/05/segue-steps/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Scenario-Oriented vs. Rules-Oriented Acceptance Criteria</title>
+		<link>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/</link>
+		<comments>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/#comments</comments>
+		<pubDate>Sun, 02 Oct 2011 13:59:19 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Acceptance testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[extreme programming]]></category>
+		<category><![CDATA[Software testing]]></category>
+		<category><![CDATA[TDD]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=393</guid>
+		<description><![CDATA[Acceptance Criteria, Scenarios, Acceptance Tests are, in my experience, often a source of confusion. Such confusion results in questions like the one asked of Rachel Davies recently, i.e. &#8220;When to write story tests&#8221; (sometimes also known as &#8220;Acceptance Tests&#8221; or in BDD parlance &#8220;Scenarios&#8221;). In her answer, Rachel highlighted that: &#8220;&#8230;acceptance criteria and example scenarios &#8230; <a href="http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/" class="more-link">Continue reading <span class="screen-reader-text">Scenario-Oriented vs. Rules-Oriented Acceptance Criteria</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Acceptance Criteria, Scenarios, Acceptance Tests are, in my experience, often a source of confusion.</p>
+<p>Such confusion results in questions like the one <a href="http://agilecoach.typepad.com/agile-coaching/2011/07/when-to-write-story-tests.html ">asked of Rachel Davies recently</a>, i.e. &#8220;When to write story tests&#8221; (sometimes also known as &#8220;Acceptance Tests&#8221; or in BDD parlance &#8220;Scenarios&#8221;).</p>
+<p>In her answer, Rachel highlighted that:</p>
+<blockquote><p><em>&#8220;</em><em>&#8230;acceptance criteria and example scenarios are a bit like the chicken and the egg &#8211; it&#8217;s not always clear which comes first so iterate!&#8221;</em></p></blockquote>
+<p>In that article, Rachel distinguishes between acceptance criteria and example scenarios by reference to <a href="http://lizkeogh.com/2011/06/20/acceptance-criteria-vs-scenarios/">Liz Keogh&#8217;s blog post on the subject of &#8220;Acceptance Criteria vs. Scenarios&#8221;</a>:</p>
+<blockquote><p><em>&#8220;</em><em>where she explains that acceptance criteria are general rules covering system behaviour from which executable examples (Scenarios) can be derived</em>&#8220;</p></blockquote>
+<p>Seeing the acceptance criteria as rules and the scenarios as something else, is one way of looking at it. There&#8217;s another way too&#8230;</p>
+<p>Instead of Acceptance Criteria that are rules and Acceptance Tests that are scenarios&#8230; I often find it useful to arrive at Acceptance Criteria that are scenarios, of which the Acceptance Tests are just a more detailed expression.</p>
+<p>I.e. Scenario-Oriented Acceptance Criteria.</p>
+<h3>Expressing the Intent of the Story</h3>
+<p>Many teams I encounter, especially newer ones, place higher importance on the things we label &#8220;acceptance criteria&#8221; than on the things we label &#8220;acceptance tests&#8221; or &#8220;scenarios&#8221;.</p>
+<p>By this I mean that, such a team might ultimately determine whether the intent of the story was fulfilled by evaluating the product against these rules-oriented criteria. Worse still, I&#8217;ve observed some teams also have:</p>
+<ul>
+<li>Overheads of checking that these rule-based criteria are fulfilled as well as the scenario-oriented acceptance tests</li>
+<li>Teams working in silos where BAs take sole responsibility of criteria and testers take sole responsibility for scenarios</li>
+<li>A desire to have traceability from the acceptance tests back to the acceptance criteria</li>
+<li>Rules expressed as rules in two places &#8211; the criteria and the code</li>
+<li>Criteria treated as the specification, rather than using specification by example</li>
+</ul>
+<p>If we take the approach of not distinguishing between acceptance criteria and acceptance tests (i.e. see the acceptance tests as the acceptance criteria) then we can encourage teams away from these kinds of problems.</p>
+<p>I&#8217;m not saying it solves the problem &#8211; it&#8217;s just easier, in my experience, to move the team towards collaboratively arriving at a shared understanding of the intent of the story this way.</p>
+<p>To do this, we need to iteratively evolve our acceptance criteria from rules-oriented to scenario-oriented criteria.</p>
+<h3>Acceptance Criteria: from rules-oriented to scenario-oriented:</h3>
+<p>Let&#8217;s say we had this user story:</p>
+<pre>As a snapshot photographer</pre>
+<pre>I want some photo albums to be private</pre>
+<pre>So that I have a backup of my personal photos online</pre>
+<p>And let&#8217;s say the product owner first expresses the Acceptance Criteria as rules:</p>
+<ul>
+<li>Must have a way to set the privacy of photo albums</li>
+<li>Private albums must be visible to me</li>
+<li>Private albums must not be visible to others</li>
+</ul>
+<p>We might discuss those to identify scenarios (as vertical slices through the above criteria):</p>
+<ul>
+<li>Create new private album</li>
+<li>Make public album private</li>
+<li>Make private album public</li>
+</ul>
+<p>Here, many teams would retain both acceptance criteria and scenarios. That&#8217;s ok but I&#8217;d only do that if we collectively understood that the information from these two will come together in the acceptance tests&#8230; And that whatever we agree in those acceptance tests supersede the previously discussed criteria.</p>
+<p>This understanding tends to occur in highly collaborative teams. In newer teams, where disciplines (Business Analysts, Testers, Developers) are working more independently this tends to be harder to achieve.</p>
+<p>In those situations (and often even in highly collaborative teams) I&#8217;d continue the discussion to iterate over the rules-oriented criteria to arrive at scenario-oriented criteria, carrying over any information captured in the rules, discarding the original rules-based criteria as we go. This might leave me with the following scenarios:</p>
+<ul>
+<li>Create new private album (visible to me, not to others)</li>
+<li>Make public album private (visible to me, not to others)</li>
+<li>Make private album public (visible to me, &amp; others)</li>
+</ul>
+<p>Which, with a subtle change to the wording, become the acceptance criteria. I.e. the story is complete when we:</p>
+<ul>
+<li>Can create new private album (visible to me, not to others)</li>
+<li>Can make public album private (visible to me, not to others)</li>
+<li>Can make private album public (visible to me, &amp; others)</li>
+</ul>
+<p>Once the story is &#8216;in-play&#8217; (e.g. during a time-box/iteration/sprint) I&#8217;d elaborate these one at a time, implementing just enough to get each one passing as I go. By doing this we might arrive at:</p>
+<pre>Scenario: Can Create new private album
+When I create a new private album called "Weekend in Brighton"
+Then I should be able to see the album
+And others should not be able to see it
+
+Scenario: Can Make public album private
+Given there is a public album called "Friday Night"
+When I make that album private
+Then I should be able to see the album
+And others should not be able to see it
+
+Scenario: Can Make private album public
+Given there is a private album called "Friday Night"
+When I make that album public
+Then I should be able to see the album
+And others should be able to see it</pre>
+<p>By being an elaboration of the scenario-oriented acceptance criteria there&#8217;s no implied need to also check the implementation against the original &#8216;rules-oriented&#8217; criteria.</p>
+<p>Agreeing that this is how we&#8217;ll work, it encourages more collaborative working &#8211; at least between the Business Analysts and Testers.</p>
+<p>These new scenario-based criteria become the only means of determining whether the intent of the story has been fulfilled, avoiding much of the confusion that can occur when we have rules-oriented acceptance criteria as well as separate acceptance test scenarios.</p>
+<p>In short, more often than not, I find these things much easier when the criteria and the scenarios are essentially one and the same.</p>
+<p>Why not  give it a try?</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>Old Favourite &#8211; More Sharks and Delaying Critical Mass</title>
+		<link>http://antonymarcano.com/blog/2011/06/old-favourite-more-sharks-and-delaying-critical-mass/</link>
+		<comments>http://antonymarcano.com/blog/2011/06/old-favourite-more-sharks-and-delaying-critical-mass/#respond</comments>
+		<pubDate>Tue, 07 Jun 2011 10:26:41 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[Business]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Old Favourites]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[agile project management]]></category>
+		<category><![CDATA[Agile software development]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[TDD]]></category>
+		<category><![CDATA[technical debt]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=352</guid>
+		<description><![CDATA[This article originally featured on my old blog on 19th January 2010. In a previous post I talked about Critical Mass of software. I showed how an ever-increasing cost of change resulted in it becoming more economical to completely rewrite the system than to enhance and maintain the original. I explained how this could be &#8230; <a href="http://antonymarcano.com/blog/2011/06/old-favourite-more-sharks-and-delaying-critical-mass/" class="more-link">Continue reading <span class="screen-reader-text">Old Favourite &#8211; More Sharks and Delaying Critical Mass</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><em>This article <a href="http://www.testingreflections.com/node/view/8430">originally featured on my old blog on 19th January 2010</a>.</em></p>
+<p>In a previous post <a href="http://antonymarcano.com/blog/2011/06/sharks-debts-critical-mass/">I talked about Critical Mass of software</a>. I showed how an ever-increasing cost of change resulted in it becoming more economical to completely rewrite the system than to enhance and maintain the original.</p>
+<p><img src="http://img.skitch.com/20100119-dg68er7jrum9gp2jbwm3cjyuwh.jpg" alt="" /></p>
+<p>I explained how this could be avoided by using practices that sustain a consistent and flat cost of change. I also mentioned that you could defer reaching critical mass. Some teams find it difficult to get the time to do this because &#8220;the business&#8221; always has &#8220;more important&#8221; or &#8220;higher-value&#8221; things on their backlog.</p>
+<p>What are the implications of reaching critical mass? Well, depending on what the software does and whether the rewritten version still has to do all of those things, it could cost millions&#8230; or more.</p>
+<p>Presented with the situation that the product could reach critical mass within a year &#8211; costing millions to replace &#8211; do you think &#8220;the business&#8221; would start to think it is worth investing in reducing the cost of change? Obviously, I would advise teams to avoid this situation in the first place:</p>
+<p><img src="http://img.skitch.com/20100119-8r1gf1x3mkm3b14jp9hrsa9r66.jpg" alt="" /></p>
+<p>The reality for many teams I&#8217;ve encountered is that they don&#8217;t feel empowered to push back on the business&#8217; demands for that next feature in half the time it takes to do it properly. If we could present back the impact of that choice as shortening the time to Critical Mass and bringing about costs to replace the software far in excess of the value gained by delivering that feature a month early then perhaps the business would be better informed.</p>
+<p><img src="http://img.skitch.com/20100119-t8ja7txse61akjrpren2g3jhy1.jpg" alt="" /></p>
+<p>A big visible chart on the wall, showing the estimated point at which Critical Mass was reached could play a big role in getting the business more interested in sustainable change, or at least inspire a conversation on the subject.</p>
+<p>Convincing &#8220;the business&#8221; to invest in some remedial refactoring or allowing three times as long for each feature to facilitate enough remedial refactoring for each new feature and refactoring-as-we-go for the new feature might be easier if we could represent this idea visually:</p>
+<p><img src="http://img.skitch.com/20100119-bfqa6xmexm3qjk5kh19issd1mc.jpg" alt="" /></p>
+<p>The problem with this idea is how do we credibly determine when Critical Mass is going to be reached? Many experienced practitioners could probably reasonably accurately estimate when that was going to happen purely on gut feel but this would be torn to pieces by many product managers. I&#8217;ve not solved this problem yet because doing this would require a mathematical model, determined by empirical data.</p>
+<p>Perhaps someone will take inspiration from the ideas in these blog posts and find a solution. Perhaps someone has already done this or maybe this is an idea for a future PhD I might undertake? Maybe someone else will take inspiration from this article and undertake that work before I do. If so, they&#8217;re welcome to (with due attribution where applicable of course <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f609.png" alt="😉" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>I think it is possible, however, to come up with a simple model based on the average complexity per unit of value (assuming that the team is using value and complexity). Trending this and keeping an estimate of a complete re-write up to date might allow the simple charts above to be maintained along side release-level burn-down charts.</p>
+<p>These ideas are still in their infancy for me. Has this problem been solved already? If not, I encourage others to explore my hypothesis and help take it from just an interesting idea to something more useful.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/06/old-favourite-more-sharks-and-delaying-critical-mass/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Old Favourite &#8211; Sharks, Debts, Critical Mass and other reasons to Sustain Quality</title>
+		<link>http://antonymarcano.com/blog/2011/06/sharks-debts-critical-mass/</link>
+		<comments>http://antonymarcano.com/blog/2011/06/sharks-debts-critical-mass/#respond</comments>
+		<pubDate>Tue, 07 Jun 2011 10:23:16 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Old Favourites]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[Agile software development]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[software economics]]></category>
+		<category><![CDATA[TDD]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=350</guid>
+		<description><![CDATA[This article originally featured on my old blog on 18th January 2010. A while back I tweeted about critical mass of software: Critical Mass of Code &#8211; past which the changeability of the code is infeasible, requiring that it be completely rewritten. An elaboration of this might be: Critical Mass of Software: the state of &#8230; <a href="http://antonymarcano.com/blog/2011/06/sharks-debts-critical-mass/" class="more-link">Continue reading <span class="screen-reader-text">Old Favourite &#8211; Sharks, Debts, Critical Mass and other reasons to Sustain Quality</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><em>This article <a href="http://www.testingreflections.com/node/view/8429">originally featured on my old blog on 18th January 2010</a>.</em></p>
+<p>A while back I <a href="http://twitter.com/AntonyMarcano/status/6060148855">tweeted about critical mass of software</a>:</p>
+<blockquote><p>Critical Mass of Code &#8211; past which the changeability of the code is infeasible, requiring that it be completely rewritten.</p></blockquote>
+<p>An elaboration of this might be:</p>
+<p><em>Critical Mass of Software: the state of a software system when the cost of changing it (enhancement or correcting defects) is less economical than re-writing it.</em></p>
+<p>This graph illustrates a hypothetical project where the cost of change increases over time (the shape of which reminds me of a thresher shark):<!--break--></p>
+<p><img src="http://img.skitch.com/20100119-dg68er7jrum9gp2jbwm3cjyuwh.jpg" alt="" /></p>
+<p><em><strong>Note:</strong>The cost of a rewrite gradually grows at first to account for the delay between starting the re-write and achieving the same amount of functionality in the original version of the software at the same point in time. The gap between the cost-of-change and the cost-of-rewrite begins to decrease as the time it takes to implement each feature of comparable benefit in the original version grows.</em></p>
+<p>It was just one of those thoughts that popped into my head. I soon discovered that <a href="http://catb.org/jargon/html/C/critical-mass.html">critical mass of software is not a new idea.</a></p>
+<p>One opportunity that I feel organisations miss out on is that this can be used as a financial justification for repaying technical debt, thus preventing or delaying the point at which software reaches its Critical Mass, or avoiding it altogether.</p>
+<p>Maintaining quality combined with practices that keep the effort involved in completing each feature from growing over time can defer critical mass indefinitely:</p>
+<p><img src="http://img.skitch.com/20100118-kfgmsy8aj5yajyfw4dsr3xkp4y.jpg" alt="" /></p>
+<p><em><strong>Note:</strong> The cost of a rewrite is slightly less at first assuming that we are doing a little extra work to ensure that we get the infrastructure we need up and running to support sustainable change (e.g. continuous integration etc.)</em></p>
+<p>This flat cost of change curve is one of the motivations of many agile practices and software craftsmanship techniques, such as continuous integration, test-driven-development, behaviour driven development and the continuous refactoring inherent in the latter two. A flat cost-of-change trend is good for the business, as they have more predictable expenditure.</p>
+<p>The behaviour I&#8217;ve noticed with some teams is to knowingly accrue technical debt to shorten time to a near-future delivery in order to capitalise on an opportunity and then pay it back soon after:</p>
+<p><img src="http://img.skitch.com/20100118-t53mqajsmm8y4n8d1abpiwb65b.jpg" alt="" /></p>
+<p>This certainly defers reaching critical mass but it doesn&#8217;t prevent it.</p>
+<p>Unfortunately, I see more teams taking on technical debt and not repaying it (for various reasons, often blamed on &#8220;the business&#8221; putting pressure on delivery dates).</p>
+<p>If we had a way of estimating the point at which we&#8217;d reach critical mass, we&#8217;d be able to compare the benefit of repaying technical debt now in order to avoid or delay the cost of a rewrite&#8230; or even better, demonstrate the value of achieving a flatter cost of change.</p>
+<p>I&#8217;m not sure that we have the data or the means of predicting it, but perhaps these illustrations of a hypothetical scenario will help you explain why sustaining constant quality, automating repeatable tests (or checking as some prefer to call it) wherever technically possible and, on those occasions when we do need to make a conscious choice to compromise quality to capitalise on an opportunity, that the debt is repaid soon after.</p>
+<p>One company I know reached this point a couple of years ago and embarked on a department wide transformation to grow their skills in agile methods so that they not only re-wrote the software but could also avoid ever reaching critical mass again. A bold move, but one that paid off within a year. Even for them, they&#8217;ll need to avoid complacency as time goes on and not forget the lessons of the past. Let&#8217;s hope they do.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/06/sharks-debts-critical-mass/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Old Favourite &#8211; Developer Race-Tech: Continuous Testing</title>
+		<link>http://antonymarcano.com/blog/2011/06/developer-race-tech/</link>
+		<comments>http://antonymarcano.com/blog/2011/06/developer-race-tech/#comments</comments>
+		<pubDate>Mon, 06 Jun 2011 09:36:08 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Old Favourites]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[continuous testing tools]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[TDD]]></category>
+		<category><![CDATA[Technology/Internet]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=332</guid>
+		<description><![CDATA[The original version of this article appeared on my old blog on 28th April 2010. This version has had some edits&#8230; Gearboxes in competitive motor racing are designed to shift as fast as possible. A competitive race-car has computer controlled, hydraulically activated gear shifts that change gears up or down faster than you can blink &#8230; <a href="http://antonymarcano.com/blog/2011/06/developer-race-tech/" class="more-link">Continue reading <span class="screen-reader-text">Old Favourite &#8211; Developer Race-Tech: Continuous Testing</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><em>The original version of this article <a href="http://www.testingreflections.com/node/view/8537">appeared on my old blog on 28th April 2010</a>. This version has had some edits&#8230;</em></p>
+<p>Gearboxes in competitive motor racing are designed to shift as fast as possible. A competitive race-car has computer controlled, hydraulically activated gear shifts that change gears up or down faster than you can blink (literally)! In Formula One, each shift is so fast that the gearbox systems have been dubbed &#8220;seamless shift&#8221; gearboxes and can <a href="http://www.f1technical.net/articles/66">shift gear in around 2-4 100ths (0.02 &#8211; 0.04) of a second</a>. Compare that to the circa 1-2 second gear-shift a competent driver takes to manually de-clutch, change gear and re-clutch on a road car. Even automatic gearboxes on road cars can&#8217;t keep pace with the rapid gear changes that a race car delivers.</p>
+<h2>Competitive Edge</h2>
+<p>The race car is only saving fractions of a second with each accelerated up-shift, but the race-driver changes gear so often per lap and there are so many laps in a race that these fractions of a second can add up to a vital and significant lead over their competitors.<a href="#footnotes">[1]</a><br />
+<a title="mclaren-mercedes by thebestial_bultaco, on Flickr" href="http://www.flickr.com/photos/8289905@N04/497958556/"><img class="alignright" src="http://farm1.static.flickr.com/227/497958556_d2766839c2.jpg" alt="mclaren-mercedes" width="340" height="220" /></a></p>
+<p>Set aside the lap-time improvements for a moment from spending at least half a second more on the power per up-shift than with a manual box&#8230; The modern F1 driver has much more to do in the cockpit too than the comparative tedium of changing gear <a href="#footnotes">[2]</a>.</p>
+<h2>Developer race-tech</h2>
+<p>Now, in motor racing, such gearboxes are taken for granted. No serious Formula One racing team would put their car on the track without one.</p>
+<p>In a world where a lot of software development is for companies competing in the economical equivalent of a race, it seems that development teams aren&#8217;t taking full advantage of their own metaphorical millisecond gear-shifts.</p>
+<p>There are tools that are a developer&#8217;s equivalent of a racing gearbox. The simplest example is background compilation. Other examples are refactoring tools that make widespread changes with a simple key-stroke. What once took minutes or hours with global find &amp; replace or even scripting, we can complete in seconds. IDEs that automatically complete class-names and method names are another example. These are tools that many of us take for granted, like the racing driver and automated gear-shift.</p>
+<h2>Falling behind</h2>
+<p>But there are other places where we are still not taking full advantage of the technology. I am still encountering surprisingly few people using <strong>continuous testing tools</strong>, where tests are run automatically in the background every time a file is saved, and not just the test I&#8217;m working on, all my tests. There are a few tools available for this, including <a href="http://improvingworks.com/products/infinitest/">Infinitest</a> and <a href="http://rubygems.org/gems/ZenTest">ZenTest</a>.</p>
+<p>Despite the availability of such tools, I still see many developers using keyboard shortcuts to execute tests. Or, worse, reaching for the mouse, right-clicking, navigating another menu level down and running the tests with a left-click, or worse still, forgetting to run them altogether. I want rapid feedback with minimum friction to obtaining it. Much like background compilation, unit tests should just run, and run often, alerting us when a problem occurs. The easier they are to run, the more likely we are to run them&#8230; How much easier could it be than it happening automagically each time we save a file?</p>
+<h2>Need for Speed</h2>
+<p>Try it for a while and, like me, even keyboard-shortcut executed tests start to feel like you&#8217;re stuck in traffic rather than being in a competitive race to the finish&#8230; Or, maybe it&#8217;s just me and my <a href="http://www.youtube.com/watch?v=bKPSEIpEx0U">need for speed</a>&#8230;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p><iframe width="560" height="349" src="http://www.youtube.com/embed/bKPSEIpEx0U?rel=0" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align: center;"><em>The video is of me on the Silverstone Southern Circuit (part of the F1 GP circuit) taking my UK National Class B Racing License Test in a Nissan R35 GTR &#8211; approx 480+bhp, 0-62mph (0-100kmh) in 3.5secs, using it&#8217;s double-clutch, paddle-operated gear-shift providing gear changes in about 0.2 of a second. I passed&#8230; despite being very cautious on the brakes&#8230; and was noticeably quicker than the other person doing their test&#8230; which you see towards the end as I pass them <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></em></p>
+<p><a name="footnotes"></a></p>
+<p>[1] At the Monaco GP, an F1 driver will change gear around 50-60 times in one lap. Over 78 laps, this adds up to as many as 4680 gear changes over the whole race (up and down-shifts).</p>
+<p>[2] The comparative tedium of de-clutching, shifting and re-engaging the clutch is something that a race-driver should not need to worry about as they approach 200mph while adjusting the brake-balance lever, switching to a new fuel-air mixture setting, pressing the KERS boost button and/or deactivating the Drag Reduction System.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/06/developer-race-tech/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Cucumber &#8211; with step-free access</title>
+		<link>http://antonymarcano.com/blog/2011/05/introducing_cukesalad/</link>
+		<comments>http://antonymarcano.com/blog/2011/05/introducing_cukesalad/#respond</comments>
+		<pubDate>Sun, 29 May 2011 09:35:58 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Acceptance Test Driven Development]]></category>
+		<category><![CDATA[Acceptance testing]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Behaviour Driven Development]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[Cukes]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=273</guid>
+		<description><![CDATA[A while back I wrote about writing feature specs (acceptance tests) at the right level of abstraction. I explained how we want to pitch our scenarios at the &#8220;task&#8221; level&#8230; Goal: What we’re trying to achieve which has one or more… Tasks: The high-level work-item that we complete to fulfil the goal, each having one &#8230; <a href="http://antonymarcano.com/blog/2011/05/introducing_cukesalad/" class="more-link">Continue reading <span class="screen-reader-text">Cucumber &#8211; with step-free access</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>A while back I wrote about <a href="http://antonymarcano.com/blog/2011/03/goals-tasks-action/">writing feature specs (acceptance tests) at the right level of abstraction</a>. I explained how we want to pitch our scenarios at the &#8220;task&#8221; level&#8230;</p>
+<blockquote><p><strong>Goal:</strong> What we’re trying to achieve which has one or more…<br />
+<strong>Tasks:</strong> The high-level work-item that we complete to fulfil the goal, each having one or more…<br />
+<strong>Actions:</strong> The specific steps or interactions we execute to complete the task.</p></blockquote>
+<p>I showed how many scenarios (acceptance tests) are pitched at too low a level. They&#8217;re often at the <strong>action </strong>level, detailing every field filled in and every button clicked. This is too low-level.</p>
+<p>Instead, we want to express the business process&#8230; the tasks involved in fulfilling a goal. The actions should be expressed in the code (or step-definitions), not the plain-text scenarios. Pitching the scenarios at the <strong>action</strong> level makes scenarios much harder to maintain &#8211; especially when the user-interface changes. But, perhaps more importantly, they don&#8217;t express what&#8217;s of interest to the business.</p>
+<p>There are other <a href="https://github.com/RiverGlide/CukeSalad/wiki/Who-is-this-for">challenges faced by teams using cucumber</a>:</p>
+<blockquote>
+<ul>
+<li>Over-wordsmithing scenarios</li>
+<li>Limited regular-expression expertise</li>
+<li>Unmaintainably large step-definition files</li>
+<li>Fragmented step-definition files</li>
+<li>Coverage vs. Speed tradeoffs of running scenarios through or below the GUI (respectively)</li>
+</ul>
+</blockquote>
+<p>We&#8217;ve taken many of the lessons we&#8217;ve learned using BDD tools to address these problems and begun to distill the various heuristics and design ideas (patterns) that emerged into a single open-source extension to cucumber &#8211; <a href="http://cukesalad.info">cukesalad</a>.</p>
+<p><a href="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1.jpg"><img class="size-full wp-image-274 alignnone" title="GitHub Snapshot" src="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1.jpg" alt="Photo of the github page" width="664" height="310" srcset="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1.jpg 664w, http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1-300x140.jpg 300w" sizes="(max-width: 664px) 100vw, 664px" /></a></p>
+<p>Many of the heuristics and design ideas expressed in the project can be used on your existing projects without using cukesalad:</p>
+<ul>
+<li>Treat each step-definition as a class of task. Like other classes, have one file per step-definition and organise them so they&#8217;re easy to find. Name each file using the text used in the scenario.</li>
+<p><a href="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Gist.jpg"><img class="alignnone size-full wp-image-281" title="Task Tree" src="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Gist.jpg" alt="Screen Capture of Task folder Hierarchy" width="229" height="169" /></a></p>
+<li>Abstract the API that drives your application behind something representing the role or type of role involved in the story</li>
+<li>Write scenarios like a narrative for someone in the role relevant to the user-story</li>
+<li>Write the actions within the task (or step-definition) as if they&#8217;re instructions on how to complete that task</li>
+<li>And more&#8230;</li>
+</ul>
+<p>Cukesalad is the ongoing expression of us mercilessly refactoring a &#8216;typical&#8217; Cucumber project. At the moment, it is more of an illustration of the concepts and ideas&#8230; but some are already using it on their day-to-day projects. Check it out&#8230; try it out&#8230; and let us know what you think.</p>
+<p>Go to <a href="http://cukesalad.info">http://cukesalad.info</a> &#8211; for more info, or checkout the <a href="http://skillsmatter.com/podcast/agile-testing/marcano-cukesalad">talk I gave at CukeUp, hosted at SkillsMatter</a>.</p>
+<p>And if you&#8217;re wondering why it&#8217;s called cukesalad&#8230; It&#8217;s cucumber, washed and ready to eat.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/05/introducing_cukesalad/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Putting Cucumber where it&#8217;s not supposed to go will hurt!</title>
+		<link>http://antonymarcano.com/blog/2011/03/cucumber-pains/</link>
+		<comments>http://antonymarcano.com/blog/2011/03/cucumber-pains/#respond</comments>
+		<pubDate>Mon, 07 Mar 2011 13:24:25 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[automated tests]]></category>
+		<category><![CDATA[BDD]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=244</guid>
+		<description><![CDATA[Today, I came across this post by Ryan Bigg where he talks of the pains he&#8217;s experienced with Cucumber. Fortunately for Ryan, the outcome was a positive one, he ended up finding what appears to be a nice looking API for automating test-execution. The experience he had with Cucumber, however, is a common one. Often &#8230; <a href="http://antonymarcano.com/blog/2011/03/cucumber-pains/" class="more-link">Continue reading <span class="screen-reader-text">Putting Cucumber where it&#8217;s not supposed to go will hurt!</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Today, I came across <a href="http://ryanbigg.com/2011/03/when-to-cuke">this post by Ryan Bigg</a> where he talks of the pains he&#8217;s experienced with Cucumber.</p>
+<p>Fortunately for Ryan, the outcome was a positive one, he ended up finding what appears to be a nice looking API for automating test-execution.</p>
+<p>The experience he had with Cucumber, however, is a common one. Often teams start using Cucumber in an effort to reduce the need for programming skills when writing automated tests.</p>
+<p>This isn&#8217;t the problem that Cucumber and other BDD tools are trying to solve and this is why so many teams who misuse it in this way experience difficulty and frustration.</p>
+<p>BDD tools like Cucumber are designed to help teams and their customers arrive at a shared understanding of the problem they wish to solve (in terms of the user&#8217;s goals and tasks). It&#8217;s not really intended to describe the solution (i.e. step-by-step interactions with the GUI).</p>
+<p>If your Cucumber scenarios have words such as &#8220;click&#8221; or &#8220;type&#8221; or mention field names and the like, it&#8217;s probable that you&#8217;re either:<br />
+a) Using Cucumber to automate test-execution (not what it was intended for) or<br />
+b) Trying to do BDD but writing the scenarios at too low a level of detail.</p>
+<p>If you&#8217;re doing the latter (b)&#8230; then you may find <a href="http://antonymarcano.com/blog/2011/03/goals-tasks-action/">the post I wrote over the weekend useful</a>.</p>
+<p>If what you&#8217;re doing is (a) then <a href="http://antonymarcano.com/blog/2011/03/goals-tasks-action/">the post I wrote over the weekend</a> might help you go down a path where automating your tests will make the transition to BDD that much easier.</p>
+<p>If you really, really only want to automate test-execution then you might find that you&#8217;re putting Cucumber where it&#8217;s not supposed to go&#8230; and just so you know &#8211; that&#8217;s probably going to hurt <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/03/cucumber-pains/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>A bit of UCD for BDD &#038; ATDD: Goals -&gt; Tasks -&gt; Actions</title>
+		<link>http://antonymarcano.com/blog/2011/03/goals-tasks-action/</link>
+		<comments>http://antonymarcano.com/blog/2011/03/goals-tasks-action/#comments</comments>
+		<pubDate>Sun, 06 Mar 2011 20:01:22 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[lean]]></category>
+		<category><![CDATA[Technology]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=209</guid>
+		<description><![CDATA[There&#8217;s something wrong with many behaviour specs (or acceptance tests). It&#8217;s been this way for some time. I&#8217;ve written about this once or twice before, referencing this post by Kevin Lawrence from 2007. So, first things first, I want to take this opportunity to update the terminology I use&#8230; Goals -&#62; Tasks -&#62; Actions A &#8230; <a href="http://antonymarcano.com/blog/2011/03/goals-tasks-action/" class="more-link">Continue reading <span class="screen-reader-text">A bit of UCD for BDD &#038; ATDD: Goals -> Tasks -> Actions</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>There&#8217;s something wrong with many behaviour specs (or acceptance tests). It&#8217;s been this way for some time. I&#8217;ve written about this <a href="http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/">once</a> or <a href="http://www.testingreflections.com/node/view/6704">twice</a> before, referencing this <a href="http://www.developertesting.com/archives/month200710/20071013-In%20Praise%20of%20Abstraction.html">post by Kevin Lawrence from 2007</a>.</p>
+<p>So, first things first, I want to take this opportunity to update the terminology I use&#8230;</p>
+<p><strong>Goals -&gt; Tasks -&gt; Actions</strong><br />
+A useful technique used in User-Centred Design (UCD) and Human Computer Interface (HCI) design is Task Analysis. There are three layers of detail often talked about in Task Analysis:</p>
+<p><strong>Goal:</strong> What we&#8217;re trying to achieve which has one or more&#8230;<br />
+<strong>Tasks:</strong> The high-level work-item that we complete to fulfil the goal, each having one or more&#8230;<br />
+<strong>Actions:</strong> The specific steps or interactions we execute to complete the task.</p>
+<p>Previously, the terms used by Kevin, myself (and several others) were Goal-&gt;Activities-&gt;Tasks. From now on, I&#8217;m going to use the UCD/HCI/Task Analysis terms Goal-&gt;Task-&gt;Action. It&#8217;s exactly the same model &#8211; just with different labels at the three layers of detail.</p>
+<p><strong>What&#8217;s wrong with your average behaviour spec?</strong><br />
+Let&#8217;s look at a common example&#8230; The calculator. For convenience, I&#8217;m going to borrow this one from <a href="http://cukes.info">the cucumber website[1]</a>.</p>
+<p><code>Scenario: Add two numbers<br />
+Given I have entered 10 into the calculator<br />
+And I have entered 5 into the calculator<br />
+When I press add<br />
+Then the result should be 15 on the screen<br />
+</code><br />
+[1]<em>note: I&#8217;m using this example for convenience and simplicity. The value of the example on the cucumber website is to demonstrate how easy cucumber is to use and not necessarily as an exemplar feature spec</em></p>
+<p>What would you say the scenario&#8217;s name and steps are representing? Goals and Tasks or Tasks and Actions?</p>
+<p>I’d argue that adding two numbers is a task and the steps shown above are actions.</p>
+<p>Instead, I try to write the spec (or test) with a scenario-specific goal and the steps as tasks.</p>
+<p><code>Scenario: sum of two numbers<br />
+When I add 10 and 5<br />
+Then I should see the answer 15<br />
+</code></p>
+<p>I.e.:<br />
+<code>Scenario: &lt;A scenario specific goal&gt;<br />
+Given &lt;Something that needs to have happened or be true&gt;<br />
+When &lt;Some task I must do&gt;<br />
+Then &lt;Some way I know I've achieved my goal&gt;<br />
+</code></p>
+<p><strong>Another Typical Example</strong><br />
+Let&#8217;s apply this to another typical example that might be closer to what some people are used to seeing:</p>
+<p><code>Scenario: Search for the cucumber homepage<br />
+Given I am at http://google.com<br />
+When I enter "cucumber" into the search field<br />
+and click "Search"<br />
+Then the top result should say "Cucumber - Making BDD fun"<br />
+</code></p>
+<p>Again this is talking in terms of <strong>actions</strong>. As soon as I&#8217;m talking in terms of click, enter, type or other user-action, I know I&#8217;m going into too much detail. Instead, I write this:</p>
+<p><code>Scenario: Find the Cucumber home page<br />
+When I search for "Cucumber"<br />
+Then the top result should say "Cucumber - Making BDD fun"<br />
+</code></p>
+<p><strong>Why does it matter?</strong><br />
+In the calculator example, the outcome the business is interested in for the first scenario is that we get the correct sum of two numbers. The steps in the scenario should help us arrive at a shared understanding of what &#8216;correct&#8217; means. How we solve the problem of getting the numbers into the calculator and choosing the operator is a separate issue. That&#8217;s detail we can defer. It may be better to explore the specifics of the workflow using, sketches, conversation, wire-frames or by seeing and using our new calculator.</p>
+<p>So, expressing our scenarios in terms of goals and tasks helps the delivery team and the business arrive at a shared understanding of the problem we&#8217;re trying to solve in that scenario.</p>
+<p>Expressing the scenario in terms of the clicks, presses and even fields we&#8217;re typing into is focusing on a solution, not the problem we&#8217;re trying to solve.</p>
+<p>But there&#8217;s another benefit to doing it this way&#8230;</p>
+<p><strong>A Practical Concern &#8211; Maintainability</strong><br />
+The first calculator example follows reverse-polish notation for the sequence of <strong>actions</strong>:</p>
+<ol>
+<li>enter the first number</li>
+<li>enter the second number</li>
+<li>press add</li>
+</ol>
+<p>If we put that detail in the scenarios, that workflow will be repeated everywhere &#8211; for addition, subtraction, division, multiplication&#8230; and anywhere any calculation is described.</p>
+<p>What happens if the workflow for this calculator (such as the UI or API) changes from a reverse-polish notation to a more conventional workflow for a calculator? Like this:</p>
+<ol>
+<li>enter the first number</li>
+<li>press add</li>
+<li>enter the second number</li>
+<li>press equals</li>
+</ol>
+<p>The correct answer hasn&#8217;t changed &#8211; i.e. the &#8216;business rule&#8217; is the same &#8211; it&#8217;s just the sequence of actions has changed.</p>
+<p>Now we have to go through all the feature files and update all the scenarios. In the case of our calculator that may only be a few files covering add, subtract, divide, multiply. For something larger and more complex this could be a lot of work.</p>
+<p>Instead, putting this in the code of the step-definition means that this:<br />
+<code><br />
+When ^I (add|subtract|divide|multiply) (.*) (?:and|from|by)? (.*) do |operator, first_number, second_number|<br />
+@calc = @calc ||= Calculator.new<br />
+@calc.enter first_number<br />
+@calc.enter second_number<br />
+@calc.send operator.to_sym<br />
+end<br />
+</code></p>
+<p>Would have to change to this:<br />
+<code><br />
+When ^I (add|subtract|divide|multiply) (.*) (?:and|from|by)? (.*) do |operator, first_number, second_number|<br />
+@calc = @calc ||= Calculator.new<br />
+@calc.enter first_number<br />
+@calc.send operator.to_sym #moved up from the bottom<br />
+@calc.enter second_number<br />
+@calc.calculate                     #new action for the conventional calculator workflow<br />
+end<br />
+</code></p>
+<p>Nothing else would need to change &#8211; other than the product of course. By writing the steps as tasks, all of our feature files would still accurately illustrate the business rule even though the workflow of the interface (gui or api) has changed.</p>
+<p><strong>Taking your scenario-steps to task</strong><br />
+So, taking this approach helps us to reduce our maintenance overheads. Putting the Actions inside the step definition makes our tests less brittle. When the workflow changes we only need to update our specs in one place &#8211; the step-definitions.</p>
+<p>Of, perhaps, greater importance &#8211; by capturing the user&#8217;s scenario-specific goal as the scenario name and the tasks as the steps, the team are working towards a shared understanding of the part of the problem we&#8217;re trying to solve not a solution we might be prematurely settling upon. When rolled up with the broader context (expressed in the user-story and its other scenarios) it gives us a focus on solving the wider problem rather than biasing the solution.</p>
+<p>Sometimes, at first, it&#8217;s hard to see how to express the scenario and is easier when people start by talking of clicks, presses and what they&#8217;re entering. And that&#8217;s ok. Maybe that&#8217;s where the team needs to start the conversation. Just because that&#8217;s where you start, ask &#8220;why are we doing those actions&#8221; a few times, and it doesn&#8217;t have to be where you end up.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/03/goals-tasks-action/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>You&#8217;re almost cuking it&#8230;</title>
+		<link>http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/</link>
+		<comments>http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/#comments</comments>
+		<pubDate>Wed, 25 Aug 2010 06:15:29 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[Software development]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=85</guid>
+		<description><![CDATA[In &#8220;You&#8217;re Cuking it Wrong&#8221;, Jonas Nicklas, shows several examples of bad scenarios (or acceptance tests whichever term you prefer) and demonstrates better approaches. This is an excellent post on common mistakes made when writing example scenarios with Cucumber. I think, however, he could have gone further in one case. One of his examples of &#8230; <a href="http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/" class="more-link">Continue reading <span class="screen-reader-text">You&#8217;re almost cuking it&#8230;</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><a title="cut cuke" href="http://flickr.com/photos/33602849@N00/11084274"><img class="alignleft" src="http://farm1.static.flickr.com/6/11084274_aa716b21eb_t.jpg" alt="" width="100" height="100" /></a> In <a href="http://elabs.se/b/15">&#8220;You&#8217;re Cuking it Wrong&#8221;</a>,  Jonas Nicklas, shows several examples of bad scenarios (or acceptance tests whichever term you prefer) and demonstrates better approaches. This is an excellent post on common mistakes made when writing example scenarios with Cucumber.</p>
+<p>I think, however, he could have gone further in one case. One of his examples of a bad scenario looks like this:</p>
+<blockquote><p><code>Scenario: Adding a subpage<br />
+Given I am logged in<br />
+Given a microsite with a Home page<br />
+When I click the Add Subpage button<br />
+And I fill in "Gallery" for "Title" within "#document_form_container"<br />
+And I press "Ok" within ".ui-dialog-buttonpane"<br />
+Then I should see /Gallery/ within "#documents"</code></p></blockquote>
+<p>(Dude &#8211; yep, seen these&#8230; I agree&#8230; not good). He goes on to suggest it should really look like this:</p>
+<blockquote><p><code>Scenario: Adding a subpage<br />
+Given I am logged in<br />
+Given a microsite with a home page<br />
+When I press "Add subpage"<br />
+And I fill in "Title" with "Gallery"<br />
+And I press "Ok"<br />
+Then I should see a document called "Gallery"</code></p></blockquote>
+<p>This is a massive improvement. It keeps the specifics that inform the reader and give them some context (like filling in the &#8220;Title&#8221; with &#8220;Gallery&#8221;) and takes them further away from the implementation. Although it gets closer to expressing customer intent, I think it could go further. At the moment, it is describing the &#8216;what&#8217; and some of the &#8216;how&#8217;. This example makes complete sense if what we are exploring is the design of the UI. I&#8217;ve not found these scenarios to be a good place to do that, however.</p>
+<p>Instead, in these specifications we want our examples to illustrate the customer intent. The &#8216;what&#8217; not the &#8216;how&#8217;. There are other places we can capture the &#8216;how&#8217; &#8211; i.e. in the step methods.</p>
+<p>Instead, I would write it like this:</p>
+<p><code>Scenario: Adding a subpage<br />
+Given a microsite with a home page<br />
+Given I am logged in<br />
+When I Add a Subpage with a Title of "Gallery"<br />
+Then I should see a document called "Gallery"</code></p>
+<p>I&#8217;ve removed all the &#8220;Tasks&#8221; and left only &#8220;Activities&#8221;. This leaves the user experience completely open. This ensures that when there are UI changes, I only change the code that performs the tasks (clicking, pressing, etc.) and my scenarios evaluate whether the customer intent is still fulfilled &#8211; without having to go back and change a lot of files.</p>
+<p>Otherwise &#8211; great post Jonas <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/feed/</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+		<item>
+		<title>Being a youDevise Developer &#8211; Week 1</title>
+		<link>http://antonymarcano.com/blog/2010/07/being-a-youdevise-developer-week-1/</link>
+		<comments>http://antonymarcano.com/blog/2010/07/being-a-youdevise-developer-week-1/#respond</comments>
+		<pubDate>Sun, 18 Jul 2010 10:09:24 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[legacy code]]></category>
+		<category><![CDATA[TDD]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=51</guid>
+		<description><![CDATA[In my previous post, I gave the background to me spending the next month or two as a developer on a youDevise product. I&#8217;ve just completed my first &#8216;official&#8217; week working with them. It was one of, if not, the smoothest of inductions I&#8217;ve ever experienced. I arrived and was shown a desk to work &#8230; <a href="http://antonymarcano.com/blog/2010/07/being-a-youdevise-developer-week-1/" class="more-link">Continue reading <span class="screen-reader-text">Being a youDevise Developer &#8211; Week 1</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>In my <a href="http://antonymarcano.com/blog/2010/07/being-a-youdevise-developer-introduction">previous post</a>, I gave the background to me spending the next month or two as a developer on a youDevise product.</p>
+<p>I&#8217;ve just completed my first &#8216;official&#8217; week working with them. It was one of, if not, <em>the</em> smoothest of inductions I&#8217;ve ever experienced. I arrived and was shown a desk to work at. There was a welcome letter in front of a dual screen developer machine with Ubuntu installed. The letter told me everything I needed to get logged in, access e-mail and wiki links telling me where to find the rest of the information I needed to configure the machine. For the project I was about to work on.</p>
+<p>Their CEO sent out an introduction e-mail telling everyone about me and others who started that day on the development team and in other non-technical departments. I also experienced a warm welcome from the team and was assigned a youDevise mentor to help me settle in.<br />
+My first few days involved several presentations &#8211; mostly demonstrative &#8211;  introducing me to youDevise products and their business model. Yet I still got to work on code almost immediately.</p>
+<p>I was very lucky to get to pair with their summer intern, Marius Cobzarenco, on a part of an all-new reporting capability for one of their products.  I am so impressed with Marius. He left Cambridge University only three weeks ago and I have to say he is one of the most competent graduates that I&#8217;ve ever met! He has a level of technical competence that rivals many much more experienced developers and he has a passion and aptitude for learning that is rare. He became competent in Behaviour Driven Development after working with me for only an hour or two and <a href="http://twitter.com/AntonyMarcano/status/18509864114">fell in love with the approach</a>. I was so impressed with him that I decided to sponsor his attendance at a TDD workshop this weekend with <a href="http://parlezuml.com/blog/">Jason Gorman</a>.</p>
+<p>Marius is a reflection of the high standards youDevise sets for itself. Whenever I&#8217;m there, I never feel like the smartest person in the room.</p>
+<p>Speaking of smart people, other youDevisers I&#8217;ve also had the opportunity to work with include <a href="http://www.exubero.com/joe/">Joe Schmetzer</a> and Stephen Siard.</p>
+<p>Joe is a great guy &#8211; extraordinarily capable yet incredibly humble. Joe really knows his stuff! I&#8217;m looking forward to sharing with him, but mostly, learning from him. Stephen &#8211; who I have secretly, in my mind, nicknamed &#8216;the professor&#8217; simply because his intellect is especially humbling for me &#8211; is another who I have been very lucky to work with. He has a way with algorithms that is tantamount to wizardry &#8211; but he is far too scientific to be called &#8220;the wizard&#8221; <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>These guys stand alongside other similarly impressive and diverse individuals that I&#8217;ll mention in future posts &#8211; each with their unique talents.</p>
+<p>Next week, we start a new iteration. I&#8217;ll be seeing what it&#8217;s like working with some of their legacy code. Based on what I&#8217;ve seen so far, at least I know they recognise where they have legacy and that they are passionate about writing tests and cleaning the code up as they go.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/07/being-a-youdevise-developer-week-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

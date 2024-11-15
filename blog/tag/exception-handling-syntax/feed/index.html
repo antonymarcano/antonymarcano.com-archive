@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Exception handling syntax &#8211; antonymarcano.com</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/exception-handling-syntax/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Sat, 03 Sep 2016 10:48:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.14</generator>
+	<item>
+		<title>Old Favourite: Expected Exceptions</title>
+		<link>http://antonymarcano.com/blog/2010/07/old-favourite-expected-exceptions/</link>
+		<comments>http://antonymarcano.com/blog/2010/07/old-favourite-expected-exceptions/#comments</comments>
+		<pubDate>Sat, 24 Jul 2010 21:03:48 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Exception handling]]></category>
+		<category><![CDATA[Exception handling syntax]]></category>
+		<category><![CDATA[extreme programming]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[junit]]></category>
+		<category><![CDATA[old favourites]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[TDD]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=76</guid>
+		<description><![CDATA[This first appeared on my old blog in November 2008. I&#8217;ve decided that I don&#8217;t like typical patterns for testing exceptions. I decided this a while ago as far as &#8220;Expected Exception&#8221; attributes/annotations are concerned and stuck with the traditional try/catch approach (I&#8217;ll explain why in a minute). Now, I&#8217;ve decided I don&#8217;t like the &#8230; <a href="http://antonymarcano.com/blog/2010/07/old-favourite-expected-exceptions/" class="more-link">Continue reading <span class="screen-reader-text">Old Favourite: Expected Exceptions</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><em>This first appeared on <a href="http://www.testingreflections.com/node/view/7585">my old blog in November 2008</a>.</em></p>
+<p><img class="alignleft" src="http://farm4.static.flickr.com/3557/3583874642_a3751d874c_m.jpg" alt="" width="240" height="159" /></p>
+<p>I&#8217;ve decided that I don&#8217;t like typical patterns for testing exceptions. I decided this a while ago as far as &#8220;Expected Exception&#8221; attributes/annotations are concerned and stuck with the traditional try/catch approach (I&#8217;ll explain why in a minute). Now, I&#8217;ve decided I don&#8217;t like the typical &#8220;try/fail or catch&#8221; approach and have started using a subtle evolution of it.</p>
+<p>First, let me explain why I don&#8217;t like Expected Exception attributes/annotations. The final nail in the coffin of this approach was hammered home for me when working with <a href="http://lizkeogh.com/">Liz Keogh</a> a while back.</p>
+<p>Here is an example in Java of your expected exception pattern (for brevity I won&#8217;t include assertions for e.getMessage()):</p>
+<p><code> </code></p>
+<p>&nbsp;</p>
+<p><code></p>
+<pre>@Test(expected=BeyondMyExpertiseException.class)
+public void shouldComplainWhenNotAClass() throws Exception {
+	DomainExpert expert = new DomainExpert();
+	String thisCheckpoint = nameOfSomeInterface();
+
+	expert.howDoIRestore(thisCheckpoint);
+}</pre>
+<p></code></p>
+<p>&nbsp;</p>
+<p>So, apart from the obvious fact that it is only implicit as to which method threw that exception (because I know that none of the other steps can throw that exception)&#8230; and we want our tests to communicate information explicitly, yes? The insight that Liz shared with me is that it changes the flow of information (ok, I&#8217;m paraphrasing now) compared to a test that doesn&#8217;t expect an exception.</p>
+<p>In a &#8216;positive&#8217; test, the flow of information that is expressed to the reader is <em>What I need-&gt;what I do-&gt;what I expect</em>. In an expected exception test, this is changed to <em>what I expect-&gt;what I need-&gt;what I do</em>. The latter just doesn&#8217;t flow very well and because it&#8217;s different to your positive tests there&#8217;s an overhead involved for the reader (me or someone else later on) to process this shift in structure&#8230; I&#8217;ve found that such tests just don&#8217;t jump out at me when I&#8217;m scanning the tests&#8230;</p>
+<p>Since then, despite fashion, I committed to the old-fashioned way of writing exceptions &#8211; &#8220;try/fail or catch&#8221;:</p>
+<p>&nbsp;</p>
+<p><code></p>
+<pre>@Test
+public void shouldComplainWhenNotAClass() throws Exception {
+	DomainExpert expert = new DomainExpert();
+	String thisCheckpoint = nameOfSomeInterface();
+
+	try {
+		expert.howDoIRestore(thisCheckpoint);
+		fail("Should have thrown " +
+			BeyondMyExpertiseException.class.getSimpleName());
+	} catch (BeyondMyExpertiseException e) {
+	}
+}</pre>
+<p></code></p>
+<p>&nbsp;</p>
+<p>Ok, I accept, it looks more cluttered by comparison but the flow of information makes more sense and I make it explicit that the expert.howDoIRestore(thisCheckpoint) method call is the one that should have thrown the exception. (Note: The idea here is not to reduce how much you type but to make the test more expressive). The &#8220;try/fail or catch approach only works when your code doesn&#8217;t throw an exception&#8230; If your code throws a different exception, the failure trace just tells you what exception was actually thrown, it doesn&#8217;t tell you what exception was expected. So, here is a slightly different way of writing it:</p>
+<p>&nbsp;</p>
+<p><code></p>
+<pre>@Test
+public void shouldComplainWhenNotAClass() throws Exception {
+	DomainExpert expert = new DomainExpert();
+	String thisCheckpoint = nameOfSomeInterface();
+	try {
+		expert.howDoIRestore(thisCheckpoint);
+		fail();
+	} catch (Exception e) {
+		assertThat(e,is(instanceOf(
+				BeyondMyExpertiseException.class)));
+	}
+}</pre>
+<p></code></p>
+<p>&nbsp;</p>
+<p>Notice that I&#8217;m only catching <code>Exception</code> now, not <code>BeyondMyExpertiseException</code>. This still feels a little jumbled&#8230; Because my assertion is inside the catch block, I have to have the fail() method call just after the call that should throw the exception. Hmmm&#8230; don&#8217;t like that&#8230; Instead, this makes more sense:</p>
+<p>&nbsp;</p>
+<p><code></p>
+<pre>@Test
+public void shouldComplainWhenNotAClass() throws Exception {
+	DomainExpert expert = new DomainExpert();
+	String thisCheckpoint = nameOfSomeInterface();
+	Exception thrownException = null;
+
+	try {
+		expert.howDoIRestore(thisCheckpoint);
+	} catch (Exception e) {
+		thrownException = e;
+	}
+	assertThat(thrownException,is(instanceOf(
+				BeyondMyExpertiseException.class)));
+}</pre>
+<p></code></p>
+<p>&nbsp;</p>
+<p>Giving this failure trace when it fails:</p>
+<p><code> </code></p>
+<p>&nbsp;</p>
+<p><code></p>
+<pre>java.lang.AssertionError:
+Expected: is an instance of
+com.testingreflections.atdd.expertise.
+    misunderstanding.BeyondMyExpertiseException
+        got: &lt; java.lang.UnsupportedOperationException &gt;</pre>
+<p></code></p>
+<p>&nbsp;</p>
+<p>So, for those who want to type as little as possible, this isn&#8217;t for you&#8230; But if you want tests that drive out your exception handling to be more expressive, then this is an alternative to the usual &#8220;try/fail or catch&#8221; approach. I think that perhaps there&#8217;s an even better way of doing this&#8230; maybe next I&#8217;ll see how approximating closures with an anonymous class might help improve the readability of this&#8230; Let me know if you know of a better way.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/07/old-favourite-expected-exceptions/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

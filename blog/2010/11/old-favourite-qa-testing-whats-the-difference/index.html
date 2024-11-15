@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Old Favourite: QA / Testing &#8211; what&#8217;s the difference? | antonymarcano.com</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://antonymarcano.com/blog/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://antonymarcano.com/blog/wp-content/themes/twentyfourteen/js/html5.js"></script>
+	<![endif]-->
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="antonymarcano.com &raquo; Feed" href="http://antonymarcano.com/blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="antonymarcano.com &raquo; Comments Feed" href="http://antonymarcano.com/blog/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="antonymarcano.com &raquo; Old Favourite: QA / Testing &#8211; what&#8217;s the difference? Comments Feed" href="http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/antonymarcano.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.14"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='font-awesome-css'  href='http://antonymarcano.com/blog/wp-content/plugins/tagaroo/vendor/font-awesome/css/font-awesome.min.css?ver=4.8.14' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfourteen-lato-css'  href='https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://antonymarcano.com/blog/wp-content/themes/twentyfourteen/genericons/genericons.css?ver=3.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfourteen-style-css'  href='http://antonymarcano.com/blog/wp-content/themes/twentyfourteen/style.css?ver=4.8.14' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfourteen-ie-css'  href='http://antonymarcano.com/blog/wp-content/themes/twentyfourteen/css/ie.css?ver=20131205' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><script type='text/javascript' src='http://antonymarcano.com/blog/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://antonymarcano.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://antonymarcano.com/blog/wp-content/plugins/wp-google-analytics/wp-google-analytics.js?ver=0.0.3'></script>
+<link rel='https://api.w.org/' href='http://antonymarcano.com/blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://antonymarcano.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://antonymarcano.com/blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='My Tack on Effective Change' href='http://antonymarcano.com/blog/2010/11/my-tack-on-effective-change/' />
+<link rel='next' title='Your Company Values What?' href='http://antonymarcano.com/blog/2010/12/your-company-values-what/' />
+<meta name="generator" content="WordPress 4.8.14" />
+<link rel="canonical" href="http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/" />
+<link rel='shortlink' href='http://antonymarcano.com/blog/?p=140' />
+<link rel="alternate" type="application/json+oembed" href="http://antonymarcano.com/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fantonymarcano.com%2Fblog%2F2010%2F11%2Fold-favourite-qa-testing-whats-the-difference%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://antonymarcano.com/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fantonymarcano.com%2Fblog%2F2010%2F11%2Fold-favourite-qa-testing-whats-the-difference%2F&#038;format=xml" />
+<style type="text/css">
+.oc-external-link {
+	padding-left: 5px;
+}
+.oc-trlogo {
+	float: right;
+	height: auto;
+	padding: 0 10px 10px 0;
+	width: 113px;
+}
+.oc-hr {
+	clear: both;
+}
+</style>
+</head>
+
+<body class="post-template-default single single-post postid-140 single-format-standard masthead-fixed full-width singular">
+<div id="page" class="hfeed site">
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-main">
+			<h1 class="site-title"><a href="http://antonymarcano.com/blog/" rel="home">antonymarcano.com</a></h1>
+
+			<div class="search-toggle">
+				<a href="#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container">Search</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<button class="menu-toggle">Primary Menu</button>
+				<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+				<div id="primary-menu" class="nav-menu"></div>
+			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<form role="search" method="get" class="search-form" action="http://antonymarcano.com/blog/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			
+<article id="post-140" class="post-140 post type-post status-publish format-standard hentry category-agile-2 category-project-management-2 category-software-development-2 category-software-testing-2 tag-agile-qa tag-old-favourites tag-qa tag-quality tag-testing">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="http://antonymarcano.com/blog/category/agile-2/" rel="category tag">Agile</a>, <a href="http://antonymarcano.com/blog/category/project-management-2/" rel="category tag">Project Management</a>, <a href="http://antonymarcano.com/blog/category/software-development-2/" rel="category tag">Software Development</a>, <a href="http://antonymarcano.com/blog/category/software-testing-2/" rel="category tag">Software Testing</a></span>
+		</div>
+		<h1 class="entry-title">Old Favourite: QA / Testing &#8211; what&#8217;s the difference?</h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/" rel="bookmark"><time class="entry-date" datetime="2010-11-19T13:03:45+00:00">November 19, 2010</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="http://antonymarcano.com/blog/author/antonymarcano/" rel="author">AntonyMarcano</a></span></span>			<span class="comments-link"><a href="http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/#comments"><span class="dsq-postid" data-dsqidentifier="140 http://antonymarcano.com/blog/?p=140">2 Comments</span></a></span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<div class='wdgpo wdgpo_standard_count'><g:plusone size='standard' count='true' href='http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/' ></g:plusone></div> <p>Software is <del datetime="2010-11-19T13:25:23+00:00">about the only industry</del> one of the few industries that lumps testing and QA under one banner. It&#8217;s one of those things where common misuse of a term results in the community changing it&#8217;s meaning&#8230; this happens in mainstream language all the time.</p>
+<p>Testing something is actually more analogous to quality control or, QC , [although it isn&#8217;t quality control].</p>
+<p>QA is more concerned with the process &#8211; collecting information about the performance of the process in order to determine if we are &#8216;assuring&#8217; (or more realistically increasing the probability of) quality. Statistical information about problems found in the product (during quality control) is just one of many pieces of info useful to someone concerned with QA (which really should be the whole project team)</p>
+<p>In short:</p>
+<p>QC helps us answer the question <em>&#8216;does our <strong>product</strong> work?&#8217;</em></p>
+<p>QA helps us answer the question <em>&#8216;does our <strong>process</strong> work?&#8217;</em></p>
+<p>Unfortunately, in the software industry, all too many teams don&#8217;t realise their <strong>process</strong> doesn&#8217;t work until the testers find all the ways in which the <strong>product</strong> doesn&#8217;t work&#8230; maybe that&#8217;s why software testing has come to be known as QA.</p>
+<p><em>This article originally appeared on my old blog in July 2008. I had already elaborated on this topic in <a href="http://antonymarcano.com/files/What's%20in%20a%20word%20-%20Marcano.pdf">the article &#8220;What&#8217;s in a word&#8221; in Better Software Magazine in March 2008</a>.</em></p>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="http://antonymarcano.com/blog/tag/agile-qa/" rel="tag">Agile QA</a><a href="http://antonymarcano.com/blog/tag/old-favourites/" rel="tag">old favourites</a><a href="http://antonymarcano.com/blog/tag/qa/" rel="tag">QA</a><a href="http://antonymarcano.com/blog/tag/quality/" rel="tag">Quality</a><a href="http://antonymarcano.com/blog/tag/testing/" rel="tag">testing</a></span></footer></article><!-- #post-## -->
+	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<a href="http://antonymarcano.com/blog/2010/11/my-tack-on-effective-change/" rel="prev"><span class="meta-nav">Previous Post</span>My Tack on Effective Change</a><a href="http://antonymarcano.com/blog/2010/12/your-company-values-what/" rel="next"><span class="meta-nav">Next Post</span>Your Company Values What?</a>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="post pingback">
+        <p>Pingback: <a href='http://topsy.com/antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/?utm_source=pingback&#038;utm_campaign=L2' rel='external nofollow' class='url'>Tweets that mention antonymarcano.com » Old Favourite: QA / Testing – what’s the difference? -- Topsy.com</a>()</p>
+    </li>
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-222">
+        <div id="dsq-comment-header-222" class="dsq-comment-header">
+            <cite id="dsq-cite-222">
+                <a id="dsq-author-user-222" href="http://antonymarcano.com/about" target="_blank" rel="nofollow">Antony Marcano</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-222" class="dsq-comment-body">
+            <div id="dsq-comment-message-222" class="dsq-comment-message"><p>There&#8217;s been a subtle evolution to how I express my thinking on this subject since I wrote these articles in 2008. ..</p>
+<p>Although &#8220;Testing&#8221; is more analogous to &#8220;Quality Control&#8221; it isn&#8217;t &#8220;Quality Control&#8221;.</p>
+<p>Quality Controllers have the ability to reject or accept a product based on a set of pre-set criteria (and perhaps a certain amount of their own judgement).</p>
+<p>In software teams, in my experience, this is rarely a decision made by the person(s) testing it&#8230; and rightly so.</p>
+<p>It is a decision made by the &#8216;product owner&#8217; or &#8216;product manager&#8217;, or others with more visibility of the business concerns.</p>
+<p>We are &#8216;developing&#8217; a product &#8211; not manufacturing one. Something being wrong with our product is analogous to something being wrong with the design or entire production line of a manufactured product &#8211; i.e. all instances of that product will be affected, not just one at the end of the production line.</p>
+<p>All affected stakeholders should have some influence on the decision and it should be decided based on a risk vs. reward basis (relevant to that the business or domain). Testers can tell the business folks what the deficiencies of the product are but the people with their finger on the pulse of the business and its market are best placed to decide whether going live is a risk worth taking.</p>
+<p>So, the only variation I would add to the above is to emphasise the word &#8220;more&#8221; in the statement &#8220;Testing is more analogous to Quality Control.&#8221; And I&#8217;d say &#8220;but Testing is not Quality Control&#8221;.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/';
+var disqus_identifier = '140 http://antonymarcano.com/blog/?p=140';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'antonymarcano';
+var disqus_title = "Old Favourite: QA \/ Testing &#8211; what&#8217;s the difference?";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=140';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="secondary">
+		<h2 class="site-description">Thinking through writing&#8230; on innovation, business, technology and more</h2>
+	
+	
+		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		<aside id="text-3" class="widget widget_text"><h1 class="widget-title">About</h1>			<div class="textwidget"><img style="float:left;padding-right:10px;" src="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Photo-1-e1306656178634.jpg" alt="photo of <p>Antony Marcano"/> Antony Marcano is a consultant in software craftsmanship, effective software processes, software quality and software testing. He has over fifteen years experience with... <a href="http://antonymarcano.com/about">(read more)</a></p>
+<br/><br/><br/>
+</div>
+		</aside><aside id="reallysimpletwitterwidget-2" class="widget widget_reallysimpletwitterwidget"><h1 class="widget-title"><a href="http://twitter.com/AntonyMarcano" class="twitter_title_link" ><img src="http://antonymarcano.com/blog/wp-content/plugins/really-simple-twitter-feed-widget/twitter_small.png" alt="Latest Tweets" title="Latest Tweets" /> Latest Tweets</a></h1>
+			<ul class="really_simple_twitter_widget"><li>Responding to a question doesn't mean you've answered the question.<span class="rstw_comma">,</span> <span class="twitter-timestamp" title="2023/03/15 07:58">20 hours ago</span></li><li>RT <a href="http://twitter.com/RiverGlide" class="twitter-user" >@RiverGlide</a>: Does it take weeks to add new capabilities to your product or can you have an idea in the morning &amp; see it in produ… <a href="https://t.co/VtSFs5nswY" class="twitter-link" >https://t.co/VtSFs5nswY</a><span class="rstw_comma">,</span> <span class="twitter-timestamp" title="2023/03/15 07:32">20 hours ago</span></li><li>Late to the party...
+But better late than never!
+→ <a href="https://t.co/PaKB0qoIAd" class="twitter-link" >https://t.co/PaKB0qoIAd</a><span class="rstw_comma">,</span> <span class="twitter-timestamp" title="2023/03/14 15:23">Mar 14</span></li><li><a href="http://twitter.com/tastapod" class="twitter-user" >@tastapod</a> Haha! Well, I'm very happy with RiverGlide...
+
+Just that I know a company that wanted to change, it was t… <a href="https://t.co/yRDtTl9Y8f" class="twitter-link" >https://t.co/yRDtTl9Y8f</a><span class="rstw_comma">,</span> <span class="twitter-timestamp" title="2023/03/14 14:59">Mar 14</span></li><li>RT <a href="http://twitter.com/jasongorman" class="twitter-user" >@jasongorman</a>: It's also interesting from a team perspective. If the team's disbanded after initial delivery, the "asset" will dep… <a href="https://t.co/m4kwxYVZpg" class="twitter-link" >https://t.co/m4kwxYVZpg</a><span class="rstw_comma">,</span> <span class="twitter-timestamp" title="2023/03/14 14:30">Mar 14</span></li></ul><div class="rstw_link_user"><a href="http://twitter.com/AntonyMarcano" >Follow me on Twitter</a></div></aside><aside id="linkcat-2" class="widget widget_links"><h1 class="widget-title">Blogroll</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="http://testingreflections.com/blog/2" rel="me" title="My old blog has hundreds of articles. I&#8217;ll bring some of my favourites over to this one over time.">.My Old Blog</a></li>
+<li><a href="http://andypalmer.com">Andy Palmer</a></li>
+<li><a href="http://jmrtn.com/notes/" rel="friend co-worker colleague" title="@jmrtn &#8211; another RiverGlider">James Martin</a></li>
+<li><a href="http://testingreflections.com">testingReflections</a></li>
+
+	</ul>
+</aside>
+<aside id="linkcat-5" class="widget widget_links"><h1 class="widget-title">Pair With Us</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="http://pairwith.us/facebook">PairWith.Us on Facebook</a></li>
+<li><a href="http://pairwith.us/twitter">PairWith.Us on Twitter</a></li>
+<li><a href="http://pairwith.us/" rel="me">PairWith.Us: About</a></li>
+<li><a href="http://pairwith.us/live">PairWIth.Us: Live</a></li>
+<li><a href="http://pairwith.us/tv">PairWith.Us: TV</a></li>
+
+	</ul>
+</aside>
+<aside id="linkcat-4" class="widget widget_links"><h1 class="widget-title">RiverGlide</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.facebook.com/pages/RiverGlide/337928499545">RiverGlide on Facebook</a></li>
+<li><a href="http://twitter.com/RiverGlide">RiverGlide on Twitter</a></li>
+<li><a href="http://riverglide.com" rel="me">RiverGlide Website</a></li>
+
+	</ul>
+</aside>
+<aside id="tag_cloud-3" class="widget widget_tag_cloud"><h1 class="widget-title">Tags</h1><div class="tagcloud"><a href="http://antonymarcano.com/blog/tag/acceptance-testing/" class="tag-cloud-link tag-link-57 tag-link-position-1" style="font-size: 12.5161290323pt;" aria-label="Acceptance testing (3 items)">Acceptance testing</a>
+<a href="http://antonymarcano.com/blog/tag/agile/" class="tag-cloud-link tag-link-12 tag-link-position-2" style="font-size: 22pt;" aria-label="agile (16 items)">agile</a>
+<a href="http://antonymarcano.com/blog/tag/agile-planning/" class="tag-cloud-link tag-link-58 tag-link-position-3" style="font-size: 10.7096774194pt;" aria-label="Agile Planning (2 items)">Agile Planning</a>
+<a href="http://antonymarcano.com/blog/tag/agile-qa/" class="tag-cloud-link tag-link-48 tag-link-position-4" style="font-size: 10.7096774194pt;" aria-label="Agile QA (2 items)">Agile QA</a>
+<a href="http://antonymarcano.com/blog/tag/agile-software-development/" class="tag-cloud-link tag-link-32 tag-link-position-5" style="font-size: 20.7956989247pt;" aria-label="Agile software development (13 items)">Agile software development</a>
+<a href="http://antonymarcano.com/blog/tag/atdd/" class="tag-cloud-link tag-link-18 tag-link-position-6" style="font-size: 17.7849462366pt;" aria-label="ATDD (8 items)">ATDD</a>
+<a href="http://antonymarcano.com/blog/tag/automated-tests/" class="tag-cloud-link tag-link-20 tag-link-position-7" style="font-size: 10.7096774194pt;" aria-label="automated tests (2 items)">automated tests</a>
+<a href="http://antonymarcano.com/blog/tag/bdd/" class="tag-cloud-link tag-link-16 tag-link-position-8" style="font-size: 20.1935483871pt;" aria-label="BDD (12 items)">BDD</a>
+<a href="http://antonymarcano.com/blog/tag/boredom/" class="tag-cloud-link tag-link-22 tag-link-position-9" style="font-size: 8pt;" aria-label="Boredom (1 item)">Boredom</a>
+<a href="http://antonymarcano.com/blog/tag/business/" class="tag-cloud-link tag-link-7 tag-link-position-10" style="font-size: 15.2258064516pt;" aria-label="business (5 items)">business</a>
+<a href="http://antonymarcano.com/blog/tag/computing/" class="tag-cloud-link tag-link-31 tag-link-position-11" style="font-size: 10.7096774194pt;" aria-label="computing (2 items)">computing</a>
+<a href="http://antonymarcano.com/blog/tag/cucumber/" class="tag-cloud-link tag-link-40 tag-link-position-12" style="font-size: 14.0215053763pt;" aria-label="Cucumber (4 items)">Cucumber</a>
+<a href="http://antonymarcano.com/blog/tag/exception-handling/" class="tag-cloud-link tag-link-36 tag-link-position-13" style="font-size: 8pt;" aria-label="Exception handling (1 item)">Exception handling</a>
+<a href="http://antonymarcano.com/blog/tag/exception-handling-syntax/" class="tag-cloud-link tag-link-35 tag-link-position-14" style="font-size: 8pt;" aria-label="Exception handling syntax (1 item)">Exception handling syntax</a>
+<a href="http://antonymarcano.com/blog/tag/extreme-programming/" class="tag-cloud-link tag-link-15 tag-link-position-15" style="font-size: 12.5161290323pt;" aria-label="extreme programming (3 items)">extreme programming</a>
+<a href="http://antonymarcano.com/blog/tag/information-technology-management/" class="tag-cloud-link tag-link-26 tag-link-position-16" style="font-size: 10.7096774194pt;" aria-label="Information technology management (2 items)">Information technology management</a>
+<a href="http://antonymarcano.com/blog/tag/java/" class="tag-cloud-link tag-link-37 tag-link-position-17" style="font-size: 8pt;" aria-label="Java (1 item)">Java</a>
+<a href="http://antonymarcano.com/blog/tag/junit/" class="tag-cloud-link tag-link-38 tag-link-position-18" style="font-size: 8pt;" aria-label="junit (1 item)">junit</a>
+<a href="http://antonymarcano.com/blog/tag/kanban/" class="tag-cloud-link tag-link-10 tag-link-position-19" style="font-size: 10.7096774194pt;" aria-label="kanban (2 items)">kanban</a>
+<a href="http://antonymarcano.com/blog/tag/lean/" class="tag-cloud-link tag-link-11 tag-link-position-20" style="font-size: 16.2795698925pt;" aria-label="lean (6 items)">lean</a>
+<a href="http://antonymarcano.com/blog/tag/legacy-code/" class="tag-cloud-link tag-link-34 tag-link-position-21" style="font-size: 8pt;" aria-label="legacy code (1 item)">legacy code</a>
+<a href="http://antonymarcano.com/blog/tag/old-favourites/" class="tag-cloud-link tag-link-6 tag-link-position-22" style="font-size: 16.2795698925pt;" aria-label="old favourites (6 items)">old favourites</a>
+<a href="http://antonymarcano.com/blog/tag/project-management/" class="tag-cloud-link tag-link-9 tag-link-position-23" style="font-size: 15.2258064516pt;" aria-label="project management (5 items)">project management</a>
+<a href="http://antonymarcano.com/blog/tag/risk-management/" class="tag-cloud-link tag-link-8 tag-link-position-24" style="font-size: 8pt;" aria-label="risk management (1 item)">risk management</a>
+<a href="http://antonymarcano.com/blog/tag/riverglide/" class="tag-cloud-link tag-link-109 tag-link-position-25" style="font-size: 8pt;" aria-label="RiverGlide (1 item)">RiverGlide</a>
+<a href="http://antonymarcano.com/blog/tag/scrum/" class="tag-cloud-link tag-link-13 tag-link-position-26" style="font-size: 12.5161290323pt;" aria-label="scrum (3 items)">scrum</a>
+<a href="http://antonymarcano.com/blog/tag/software-development/" class="tag-cloud-link tag-link-27 tag-link-position-27" style="font-size: 15.2258064516pt;" aria-label="Software development (5 items)">Software development</a>
+<a href="http://antonymarcano.com/blog/tag/software-economics/" class="tag-cloud-link tag-link-78 tag-link-position-28" style="font-size: 10.7096774194pt;" aria-label="software economics (2 items)">software economics</a>
+<a href="http://antonymarcano.com/blog/tag/software-engineering/" class="tag-cloud-link tag-link-29 tag-link-position-29" style="font-size: 14.0215053763pt;" aria-label="Software engineering (4 items)">Software engineering</a>
+<a href="http://antonymarcano.com/blog/tag/software-project-management/" class="tag-cloud-link tag-link-25 tag-link-position-30" style="font-size: 12.5161290323pt;" aria-label="Software project management (3 items)">Software project management</a>
+<a href="http://antonymarcano.com/blog/tag/software-requirements/" class="tag-cloud-link tag-link-30 tag-link-position-31" style="font-size: 8pt;" aria-label="software requirements (1 item)">software requirements</a>
+<a href="http://antonymarcano.com/blog/tag/software-teams/" class="tag-cloud-link tag-link-64 tag-link-position-32" style="font-size: 10.7096774194pt;" aria-label="software teams (2 items)">software teams</a>
+<a href="http://antonymarcano.com/blog/tag/software-testing/" class="tag-cloud-link tag-link-21 tag-link-position-33" style="font-size: 12.5161290323pt;" aria-label="Software testing (3 items)">Software testing</a>
+<a href="http://antonymarcano.com/blog/tag/story-points/" class="tag-cloud-link tag-link-59 tag-link-position-34" style="font-size: 10.7096774194pt;" aria-label="Story points (2 items)">Story points</a>
+<a href="http://antonymarcano.com/blog/tag/tdd/" class="tag-cloud-link tag-link-110 tag-link-position-35" style="font-size: 17.7849462366pt;" aria-label="TDD (8 items)">TDD</a>
+<a href="http://antonymarcano.com/blog/tag/technology/" class="tag-cloud-link tag-link-62 tag-link-position-36" style="font-size: 10.7096774194pt;" aria-label="Technology (2 items)">Technology</a>
+<a href="http://antonymarcano.com/blog/tag/technologyinternet/" class="tag-cloud-link tag-link-28 tag-link-position-37" style="font-size: 16.2795698925pt;" aria-label="Technology/Internet (6 items)">Technology/Internet</a>
+<a href="http://antonymarcano.com/blog/tag/testing/" class="tag-cloud-link tag-link-19 tag-link-position-38" style="font-size: 12.5161290323pt;" aria-label="testing (3 items)">testing</a>
+<a href="http://antonymarcano.com/blog/tag/testingreflections/" class="tag-cloud-link tag-link-3 tag-link-position-39" style="font-size: 15.2258064516pt;" aria-label="testingReflections (5 items)">testingReflections</a>
+<a href="http://antonymarcano.com/blog/tag/this-is-not-a-manifesto/" class="tag-cloud-link tag-link-90 tag-link-position-40" style="font-size: 10.7096774194pt;" aria-label="this is not a manifesto (2 items)">this is not a manifesto</a>
+<a href="http://antonymarcano.com/blog/tag/user-stories/" class="tag-cloud-link tag-link-14 tag-link-position-41" style="font-size: 10.7096774194pt;" aria-label="user stories (2 items)">user stories</a>
+<a href="http://antonymarcano.com/blog/tag/user-story/" class="tag-cloud-link tag-link-56 tag-link-position-42" style="font-size: 10.7096774194pt;" aria-label="User story (2 items)">User story</a>
+<a href="http://antonymarcano.com/blog/tag/values/" class="tag-cloud-link tag-link-52 tag-link-position-43" style="font-size: 10.7096774194pt;" aria-label="Values (2 items)">Values</a>
+<a href="http://antonymarcano.com/blog/tag/waterfall/" class="tag-cloud-link tag-link-23 tag-link-position-44" style="font-size: 8pt;" aria-label="Waterfall (1 item)">Waterfall</a>
+<a href="http://antonymarcano.com/blog/tag/waterfall-model/" class="tag-cloud-link tag-link-24 tag-link-position-45" style="font-size: 8pt;" aria-label="Waterfall model (1 item)">Waterfall model</a></div>
+</aside><aside id="calendar-3" class="widget widget_calendar"><h1 class="widget-title">Archive</h1><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>November 2010</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://antonymarcano.com/blog/2010/08/">&laquo; Aug</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="http://antonymarcano.com/blog/2010/12/">Dec &raquo;</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+	</tr>
+	<tr>
+		<td>8</td><td>9</td><td>10</td><td><a href="http://antonymarcano.com/blog/2010/11/11/" aria-label="Posts published on November 11, 2010">11</a></td><td>12</td><td>13</td><td>14</td>
+	</tr>
+	<tr>
+		<td>15</td><td>16</td><td>17</td><td>18</td><td><a href="http://antonymarcano.com/blog/2010/11/19/" aria-label="Posts published on November 19, 2010">19</a></td><td>20</td><td>21</td>
+	</tr>
+	<tr>
+		<td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+	</tr>
+	<tr>
+		<td>29</td><td>30</td>
+		<td class="pad" colspan="5">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></aside>	</div><!-- #primary-sidebar -->
+	</div><!-- #secondary -->
+<script type='text/javascript'>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-17391315-1']);
+_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+		</div><!-- #main -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+			<div class="site-info">
+								<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+	        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'antonymarcano';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1 && nodes[i].parentNode.tagName == 'A') {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type='text/javascript' src='http://antonymarcano.com/blog/wp-content/themes/twentyfourteen/js/functions.js?ver=20150315'></script>
+<script type='text/javascript' src='http://antonymarcano.com/blog/wp-includes/js/wp-embed.min.js?ver=4.8.14'></script>
+</body>
+</html>

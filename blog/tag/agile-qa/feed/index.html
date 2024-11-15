@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Agile QA &#8211; antonymarcano.com</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/agile-qa/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Sat, 03 Sep 2016 10:48:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.14</generator>
+	<item>
+		<title>Old Favourite: Taking Repetition To Task</title>
+		<link>http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/</link>
+		<comments>http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/#comments</comments>
+		<pubDate>Mon, 13 Dec 2010 13:02:41 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Old Favourites]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Acceptance testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[Agile Planning]]></category>
+		<category><![CDATA[Agile QA]]></category>
+		<category><![CDATA[kanban]]></category>
+		<category><![CDATA[project management]]></category>
+		<category><![CDATA[Software engineering]]></category>
+		<category><![CDATA[Software testing]]></category>
+		<category><![CDATA[User story]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=168</guid>
+		<description><![CDATA[This originally appeared on my old blog on 16th March 2010&#8230; Others have talked about the virtues of stories as vertical slices of a problem (end-to-end capabilities) rather than horizontal slices (system layers or components). So, if we slice the problem with user stories, how do we slice the user-stories themselves? If, as I sometimes &#8230; <a href="http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/" class="more-link">Continue reading <span class="screen-reader-text">Old Favourite: Taking Repetition To Task</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><em>This originally appeared on my old blog on 16th March 2010&#8230;</em></p>
+<p>Others have talked about the virtues of <a href="http://blog.energizedwork.com/2005/05/slicing-cake.html">stories as vertical slices of a problem</a> (end-to-end capabilities) rather than horizontal slices (system layers or components). So, if we slice the problem <em>with</em> user stories, how do we slice the user-stories themselves?</p>
+<p>If, as I sometimes say, acceptance tests (a.k.a. examples/scenarios/acceptance-criteria) are the knife with which we slice a story into even thinner vertical slices, then I would say my observation of &#8216;tasks&#8217; is that they are used as the knife used to cut a story into horizontal slices. This feels wrong&#8230;</p>
+<p>Sometimes I also wonder, hasn&#8217;t anyone else noticed that the idea of counting the effort of completed tasks on burn-down/up charts is counter to the value that we measure progress only with working software? Surely it makes more sense to measure progress with passing tests (<a href="http://www.developsense.com/blog/2009/09/tests-vs-checks-should-we-call-test/">or &#8220;checks&#8221;</a> &#8211; whichever you prefer).</p>
+<p>These are two of the reasons I&#8217;ve never felt very comfortable with tasks, because:</p>
+<ul>
+<li>they&#8217;re often applied in such a way that the story is sliced horizontally</li>
+<li>they encourage measuring progress in a less meaningful way than working software</li>
+</ul>
+<p>Tasks are, however, very useful for teams at first. Just like anything else we learn how to do, learning how to do it on paper can often help us then discard the paper and do the workings in our heads. However, what I&#8217;ve noticed is that most teams I&#8217;ve worked with continue to write and estimate tasks long after the practice is useful or relevant to them.</p>
+<p>For example, there comes a time for many teams where tasks become repetitive. &#8220;Add x to the Model&#8221;, &#8220;Change View&#8221;&#8230; and so on. Is this adding value to the process or are you just doing it because the process says you should do it?</p>
+<p>Simply finding that your tasks are repetitive doesn&#8217;t mean the team is ready to stop using them. There is another important ingredient, meaningful acceptance criteria (scenarios / acceptance-tests / examples).</p>
+<p>I often see stories with acceptance criteria such as:</p>
+<ul>
+<li>Must have a link to save the profile</li>
+<li>Must have a drop down to select business sector</li>
+<li>Business sector must be mandatory</li>
+<li>&#8230;</li>
+</ul>
+<p>Although these are &#8220;acceptance criteria&#8221; they aren&#8217;t what we mean by acceptance criteria in the context of user stories. Firstly, they are talking about how the user interacts rather than what they need to achieve (I&#8217;ve <a href="http://www.testingreflections.com/node/view/6704">talked about this before</a>). Secondly, they aren&#8217;t examples. What we want are the variations that alter the behaviour or response of the product:</p>
+<ul>
+<li>Should create a new profile</li>
+<li>Profile cannot be saved with blank &#8220;business sector&#8221;</li>
+</ul>
+<p>As our product fulfils each of these criteria, we are making progress. Jason Gorman <a href="http://parlezuml.com/blog/?postid=683">illustrates one way of approaching this</a>.</p>
+<p>So, if you are using tasks, consider an alternative approach. First, look at your acceptance criteria, make sure they are more like examples and less like instructions. Once that&#8217;s achieved, consider slicing each criterion (or scenario) horizontally with the tasks rather than the story. Pretty soon, you&#8217;ll find that you don&#8217;t need tasks anymore and you can simply measure progress in terms of the new capabilities you add to your product.</p>
+<p><strong><em><br />
+</em></strong></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Old Favourite: QA / Testing &#8211; what&#8217;s the difference?</title>
+		<link>http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/</link>
+		<comments>http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/#comments</comments>
+		<pubDate>Fri, 19 Nov 2010 13:03:45 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Agile QA]]></category>
+		<category><![CDATA[old favourites]]></category>
+		<category><![CDATA[QA]]></category>
+		<category><![CDATA[Quality]]></category>
+		<category><![CDATA[testing]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=140</guid>
+		<description><![CDATA[Software is about the only industry one of the few industries that lumps testing and QA under one banner. It&#8217;s one of those things where common misuse of a term results in the community changing it&#8217;s meaning&#8230; this happens in mainstream language all the time. Testing something is actually more analogous to quality control or, &#8230; <a href="http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/" class="more-link">Continue reading <span class="screen-reader-text">Old Favourite: QA / Testing &#8211; what&#8217;s the difference?</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Software is <del datetime="2010-11-19T13:25:23+00:00">about the only industry</del> one of the few industries that lumps testing and QA under one banner. It&#8217;s one of those things where common misuse of a term results in the community changing it&#8217;s meaning&#8230; this happens in mainstream language all the time.</p>
+<p>Testing something is actually more analogous to quality control or, QC , [although it isn&#8217;t quality control].</p>
+<p>QA is more concerned with the process &#8211; collecting information about the performance of the process in order to determine if we are &#8216;assuring&#8217; (or more realistically increasing the probability of) quality. Statistical information about problems found in the product (during quality control) is just one of many pieces of info useful to someone concerned with QA (which really should be the whole project team)</p>
+<p>In short:</p>
+<p>QC helps us answer the question <em>&#8216;does our <strong>product</strong> work?&#8217;</em></p>
+<p>QA helps us answer the question <em>&#8216;does our <strong>process</strong> work?&#8217;</em></p>
+<p>Unfortunately, in the software industry, all too many teams don&#8217;t realise their <strong>process</strong> doesn&#8217;t work until the testers find all the ways in which the <strong>product</strong> doesn&#8217;t work&#8230; maybe that&#8217;s why software testing has come to be known as QA.</p>
+<p><em>This article originally appeared on my old blog in July 2008. I had already elaborated on this topic in <a href="http://antonymarcano.com/files/What's%20in%20a%20word%20-%20Marcano.pdf">the article &#8220;What&#8217;s in a word&#8221; in Better Software Magazine in March 2008</a>.</em></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

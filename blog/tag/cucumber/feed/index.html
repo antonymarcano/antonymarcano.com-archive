@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Cucumber &#8211; antonymarcano.com</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/cucumber/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Sat, 03 Sep 2016 10:48:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.14</generator>
+	<item>
+		<title>Segue Steps</title>
+		<link>http://antonymarcano.com/blog/2014/05/segue-steps/</link>
+		<comments>http://antonymarcano.com/blog/2014/05/segue-steps/#comments</comments>
+		<pubDate>Fri, 02 May 2014 12:25:06 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[gherkin]]></category>
+		<category><![CDATA[specflow]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=556</guid>
+		<description><![CDATA[Sometimes customer scenarios using Gherkin (Cucumber, SpecFlow etc.) can be harder to read than necessary. Once there&#8217;s more than one &#8220;And&#8221; line in a row, I find that there&#8217;s more clutter than I&#8217;d like and it doesn&#8217;t flow as well when I read it. Let&#8217;s take this example scenario of upgrading a fremium service. Scenario: &#8230; <a href="http://antonymarcano.com/blog/2014/05/segue-steps/" class="more-link">Continue reading <span class="screen-reader-text">Segue Steps</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Sometimes customer scenarios using Gherkin (Cucumber, SpecFlow etc.) can be harder to read than necessary. Once there&#8217;s more than one &#8220;And&#8221; line in a row, I find that there&#8217;s more clutter than I&#8217;d like and it doesn&#8217;t flow as well when I read it. Let&#8217;s take this example scenario of upgrading a fremium service.</p>
+<p><code>Scenario: Upgrade my SomeService subscription from Basic to Pro.<br />
+Given I am on the Basic plan<br />
+When I upgrade to the Pro plan<br />
+Then I see a message confirming the upgrade<br />
+And I see that I am now on the Pro plan<br />
+And I receive a personal thank you by email<br />
+And SomeService keeps a record of when the upgrade happened<br />
+And SomeService keeps a record of payment</code></p>
+<p>There&#8217;s a feature I rarely see used, the ability to use bullets (with asterisks &#8216;*&#8217;). I&#8217;ve found that using this among steps with Given/When/Then can remove some of the clutter, making the scenario easier on the eye&#8230;</p>
+<p><code>Scenario: Upgrade my SomeService subscription from Basic to Pro.<br />
+Given I am on the Basic plan<br />
+When I upgrade to the Pro plan<br />
+Then I see a message confirming the upgrade, and:<br />
+* I see that I am now on the Pro plan<br />
+* I receive a personal thank you by email<br />
+* SomeService keeps a record of when the upgrade happened<br />
+* SomeService keeps a record of payment</code></p>
+<p>What I don&#8217;t like about this, however, is how the &#8216;Then&#8217; step appears in a different context to the bullets and seems less important. To make sure that all the steps are seen as equally important, I can do this:</p>
+<p><code>Scenario: Upgrade my SomeService subscription from Basic to Pro.<br />
+Given I am on the Basic plan<br />
+When I upgrade to the Pro plan<br />
+Then the following occurs:<br />
+* I see a message confirming the upgrade<br />
+* I see that I am now on the Pro plan<br />
+* I receive a personal thank you by email<br />
+* SomeService keeps a record of when the upgrade happened<br />
+* SomeService keeps a record of payment</code></p>
+<p>Note how I&#8217;ve put in a &#8220;Then&#8221; step that segues from the &#8220;When&#8221; to the actual expectations.<br />
+A &#8216;Segue Step&#8217; doesn&#8217;t have to do anything, other than transition the reader from the previous steps to a list of expectations:</p>
+<p><code>Then /^the following occurs:$/ do #nothing<br />
+  #just segue to the next step<br />
+end</code></p>
+<p>Another way of using a Segue Step could be like this:</p>
+<p><code>Then I should:<br />
+* See a message confirming the upgrade<br />
+* See that I am now on the Pro plan<br />
+* Receive a personal thank you by email<br />
+And SomeService should:<br />
+* Keep a record of when the upgrade happened<br />
+* Keep a record of payment</code></p>
+<p>Asterisks can replace the opening keyword of any type of step, but using them in this way for Given or When steps could be a scenario-smell, suggesting that the scenario has too much detail or those steps are at the wrong level of abstraction. Using asterisks and Segue Steps are most appropriate in &#8220;Then&#8221; statements with two or more &#8220;And&#8221; lines.</p>
+<p>After doing this, reading scenarios without asterisks and &#8216;Segue Steps&#8217; now feels like the &#8220;And Then&#8221; scene from &#8220;Dude, Where&#8217;s my Car&#8221;&#8230;And then? I hope you find it useful to write better scenarios too&#8230; And then? And then? And theeeeeeeeeeeeen! And thenandthenandthen!<br />
+<iframe src="//www.youtube.com/embed/Kp5nUQkgWIc" height="315" width="420" allowfullscreen="" frameborder="0"></iframe></p>
+<p>&nbsp;</p>
+<p>Special thanks to <a href="https://twitter.com/andypalmer">Andy Palmer</a> for reviewing this blog post and helping me say it with fewer words.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2014/05/segue-steps/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Cucumber &#8211; with step-free access</title>
+		<link>http://antonymarcano.com/blog/2011/05/introducing_cukesalad/</link>
+		<comments>http://antonymarcano.com/blog/2011/05/introducing_cukesalad/#respond</comments>
+		<pubDate>Sun, 29 May 2011 09:35:58 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Acceptance Test Driven Development]]></category>
+		<category><![CDATA[Acceptance testing]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Behaviour Driven Development]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[Cukes]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=273</guid>
+		<description><![CDATA[A while back I wrote about writing feature specs (acceptance tests) at the right level of abstraction. I explained how we want to pitch our scenarios at the &#8220;task&#8221; level&#8230; Goal: What we’re trying to achieve which has one or more… Tasks: The high-level work-item that we complete to fulfil the goal, each having one &#8230; <a href="http://antonymarcano.com/blog/2011/05/introducing_cukesalad/" class="more-link">Continue reading <span class="screen-reader-text">Cucumber &#8211; with step-free access</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>A while back I wrote about <a href="http://antonymarcano.com/blog/2011/03/goals-tasks-action/">writing feature specs (acceptance tests) at the right level of abstraction</a>. I explained how we want to pitch our scenarios at the &#8220;task&#8221; level&#8230;</p>
+<blockquote><p><strong>Goal:</strong> What we’re trying to achieve which has one or more…<br />
+<strong>Tasks:</strong> The high-level work-item that we complete to fulfil the goal, each having one or more…<br />
+<strong>Actions:</strong> The specific steps or interactions we execute to complete the task.</p></blockquote>
+<p>I showed how many scenarios (acceptance tests) are pitched at too low a level. They&#8217;re often at the <strong>action </strong>level, detailing every field filled in and every button clicked. This is too low-level.</p>
+<p>Instead, we want to express the business process&#8230; the tasks involved in fulfilling a goal. The actions should be expressed in the code (or step-definitions), not the plain-text scenarios. Pitching the scenarios at the <strong>action</strong> level makes scenarios much harder to maintain &#8211; especially when the user-interface changes. But, perhaps more importantly, they don&#8217;t express what&#8217;s of interest to the business.</p>
+<p>There are other <a href="https://github.com/RiverGlide/CukeSalad/wiki/Who-is-this-for">challenges faced by teams using cucumber</a>:</p>
+<blockquote>
+<ul>
+<li>Over-wordsmithing scenarios</li>
+<li>Limited regular-expression expertise</li>
+<li>Unmaintainably large step-definition files</li>
+<li>Fragmented step-definition files</li>
+<li>Coverage vs. Speed tradeoffs of running scenarios through or below the GUI (respectively)</li>
+</ul>
+</blockquote>
+<p>We&#8217;ve taken many of the lessons we&#8217;ve learned using BDD tools to address these problems and begun to distill the various heuristics and design ideas (patterns) that emerged into a single open-source extension to cucumber &#8211; <a href="http://cukesalad.info">cukesalad</a>.</p>
+<p><a href="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1.jpg"><img class="size-full wp-image-274 alignnone" title="GitHub Snapshot" src="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1.jpg" alt="Photo of the github page" width="664" height="310" srcset="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1.jpg 664w, http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1-300x140.jpg 300w" sizes="(max-width: 664px) 100vw, 664px" /></a></p>
+<p>Many of the heuristics and design ideas expressed in the project can be used on your existing projects without using cukesalad:</p>
+<ul>
+<li>Treat each step-definition as a class of task. Like other classes, have one file per step-definition and organise them so they&#8217;re easy to find. Name each file using the text used in the scenario.</li>
+<p><a href="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Gist.jpg"><img class="alignnone size-full wp-image-281" title="Task Tree" src="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Gist.jpg" alt="Screen Capture of Task folder Hierarchy" width="229" height="169" /></a></p>
+<li>Abstract the API that drives your application behind something representing the role or type of role involved in the story</li>
+<li>Write scenarios like a narrative for someone in the role relevant to the user-story</li>
+<li>Write the actions within the task (or step-definition) as if they&#8217;re instructions on how to complete that task</li>
+<li>And more&#8230;</li>
+</ul>
+<p>Cukesalad is the ongoing expression of us mercilessly refactoring a &#8216;typical&#8217; Cucumber project. At the moment, it is more of an illustration of the concepts and ideas&#8230; but some are already using it on their day-to-day projects. Check it out&#8230; try it out&#8230; and let us know what you think.</p>
+<p>Go to <a href="http://cukesalad.info">http://cukesalad.info</a> &#8211; for more info, or checkout the <a href="http://skillsmatter.com/podcast/agile-testing/marcano-cukesalad">talk I gave at CukeUp, hosted at SkillsMatter</a>.</p>
+<p>And if you&#8217;re wondering why it&#8217;s called cukesalad&#8230; It&#8217;s cucumber, washed and ready to eat.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/05/introducing_cukesalad/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>A bit of UCD for BDD &#038; ATDD: Goals -&gt; Tasks -&gt; Actions</title>
+		<link>http://antonymarcano.com/blog/2011/03/goals-tasks-action/</link>
+		<comments>http://antonymarcano.com/blog/2011/03/goals-tasks-action/#comments</comments>
+		<pubDate>Sun, 06 Mar 2011 20:01:22 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[lean]]></category>
+		<category><![CDATA[Technology]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=209</guid>
+		<description><![CDATA[There&#8217;s something wrong with many behaviour specs (or acceptance tests). It&#8217;s been this way for some time. I&#8217;ve written about this once or twice before, referencing this post by Kevin Lawrence from 2007. So, first things first, I want to take this opportunity to update the terminology I use&#8230; Goals -&#62; Tasks -&#62; Actions A &#8230; <a href="http://antonymarcano.com/blog/2011/03/goals-tasks-action/" class="more-link">Continue reading <span class="screen-reader-text">A bit of UCD for BDD &#038; ATDD: Goals -> Tasks -> Actions</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>There&#8217;s something wrong with many behaviour specs (or acceptance tests). It&#8217;s been this way for some time. I&#8217;ve written about this <a href="http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/">once</a> or <a href="http://www.testingreflections.com/node/view/6704">twice</a> before, referencing this <a href="http://www.developertesting.com/archives/month200710/20071013-In%20Praise%20of%20Abstraction.html">post by Kevin Lawrence from 2007</a>.</p>
+<p>So, first things first, I want to take this opportunity to update the terminology I use&#8230;</p>
+<p><strong>Goals -&gt; Tasks -&gt; Actions</strong><br />
+A useful technique used in User-Centred Design (UCD) and Human Computer Interface (HCI) design is Task Analysis. There are three layers of detail often talked about in Task Analysis:</p>
+<p><strong>Goal:</strong> What we&#8217;re trying to achieve which has one or more&#8230;<br />
+<strong>Tasks:</strong> The high-level work-item that we complete to fulfil the goal, each having one or more&#8230;<br />
+<strong>Actions:</strong> The specific steps or interactions we execute to complete the task.</p>
+<p>Previously, the terms used by Kevin, myself (and several others) were Goal-&gt;Activities-&gt;Tasks. From now on, I&#8217;m going to use the UCD/HCI/Task Analysis terms Goal-&gt;Task-&gt;Action. It&#8217;s exactly the same model &#8211; just with different labels at the three layers of detail.</p>
+<p><strong>What&#8217;s wrong with your average behaviour spec?</strong><br />
+Let&#8217;s look at a common example&#8230; The calculator. For convenience, I&#8217;m going to borrow this one from <a href="http://cukes.info">the cucumber website[1]</a>.</p>
+<p><code>Scenario: Add two numbers<br />
+Given I have entered 10 into the calculator<br />
+And I have entered 5 into the calculator<br />
+When I press add<br />
+Then the result should be 15 on the screen<br />
+</code><br />
+[1]<em>note: I&#8217;m using this example for convenience and simplicity. The value of the example on the cucumber website is to demonstrate how easy cucumber is to use and not necessarily as an exemplar feature spec</em></p>
+<p>What would you say the scenario&#8217;s name and steps are representing? Goals and Tasks or Tasks and Actions?</p>
+<p>I’d argue that adding two numbers is a task and the steps shown above are actions.</p>
+<p>Instead, I try to write the spec (or test) with a scenario-specific goal and the steps as tasks.</p>
+<p><code>Scenario: sum of two numbers<br />
+When I add 10 and 5<br />
+Then I should see the answer 15<br />
+</code></p>
+<p>I.e.:<br />
+<code>Scenario: &lt;A scenario specific goal&gt;<br />
+Given &lt;Something that needs to have happened or be true&gt;<br />
+When &lt;Some task I must do&gt;<br />
+Then &lt;Some way I know I've achieved my goal&gt;<br />
+</code></p>
+<p><strong>Another Typical Example</strong><br />
+Let&#8217;s apply this to another typical example that might be closer to what some people are used to seeing:</p>
+<p><code>Scenario: Search for the cucumber homepage<br />
+Given I am at http://google.com<br />
+When I enter "cucumber" into the search field<br />
+and click "Search"<br />
+Then the top result should say "Cucumber - Making BDD fun"<br />
+</code></p>
+<p>Again this is talking in terms of <strong>actions</strong>. As soon as I&#8217;m talking in terms of click, enter, type or other user-action, I know I&#8217;m going into too much detail. Instead, I write this:</p>
+<p><code>Scenario: Find the Cucumber home page<br />
+When I search for "Cucumber"<br />
+Then the top result should say "Cucumber - Making BDD fun"<br />
+</code></p>
+<p><strong>Why does it matter?</strong><br />
+In the calculator example, the outcome the business is interested in for the first scenario is that we get the correct sum of two numbers. The steps in the scenario should help us arrive at a shared understanding of what &#8216;correct&#8217; means. How we solve the problem of getting the numbers into the calculator and choosing the operator is a separate issue. That&#8217;s detail we can defer. It may be better to explore the specifics of the workflow using, sketches, conversation, wire-frames or by seeing and using our new calculator.</p>
+<p>So, expressing our scenarios in terms of goals and tasks helps the delivery team and the business arrive at a shared understanding of the problem we&#8217;re trying to solve in that scenario.</p>
+<p>Expressing the scenario in terms of the clicks, presses and even fields we&#8217;re typing into is focusing on a solution, not the problem we&#8217;re trying to solve.</p>
+<p>But there&#8217;s another benefit to doing it this way&#8230;</p>
+<p><strong>A Practical Concern &#8211; Maintainability</strong><br />
+The first calculator example follows reverse-polish notation for the sequence of <strong>actions</strong>:</p>
+<ol>
+<li>enter the first number</li>
+<li>enter the second number</li>
+<li>press add</li>
+</ol>
+<p>If we put that detail in the scenarios, that workflow will be repeated everywhere &#8211; for addition, subtraction, division, multiplication&#8230; and anywhere any calculation is described.</p>
+<p>What happens if the workflow for this calculator (such as the UI or API) changes from a reverse-polish notation to a more conventional workflow for a calculator? Like this:</p>
+<ol>
+<li>enter the first number</li>
+<li>press add</li>
+<li>enter the second number</li>
+<li>press equals</li>
+</ol>
+<p>The correct answer hasn&#8217;t changed &#8211; i.e. the &#8216;business rule&#8217; is the same &#8211; it&#8217;s just the sequence of actions has changed.</p>
+<p>Now we have to go through all the feature files and update all the scenarios. In the case of our calculator that may only be a few files covering add, subtract, divide, multiply. For something larger and more complex this could be a lot of work.</p>
+<p>Instead, putting this in the code of the step-definition means that this:<br />
+<code><br />
+When ^I (add|subtract|divide|multiply) (.*) (?:and|from|by)? (.*) do |operator, first_number, second_number|<br />
+@calc = @calc ||= Calculator.new<br />
+@calc.enter first_number<br />
+@calc.enter second_number<br />
+@calc.send operator.to_sym<br />
+end<br />
+</code></p>
+<p>Would have to change to this:<br />
+<code><br />
+When ^I (add|subtract|divide|multiply) (.*) (?:and|from|by)? (.*) do |operator, first_number, second_number|<br />
+@calc = @calc ||= Calculator.new<br />
+@calc.enter first_number<br />
+@calc.send operator.to_sym #moved up from the bottom<br />
+@calc.enter second_number<br />
+@calc.calculate                     #new action for the conventional calculator workflow<br />
+end<br />
+</code></p>
+<p>Nothing else would need to change &#8211; other than the product of course. By writing the steps as tasks, all of our feature files would still accurately illustrate the business rule even though the workflow of the interface (gui or api) has changed.</p>
+<p><strong>Taking your scenario-steps to task</strong><br />
+So, taking this approach helps us to reduce our maintenance overheads. Putting the Actions inside the step definition makes our tests less brittle. When the workflow changes we only need to update our specs in one place &#8211; the step-definitions.</p>
+<p>Of, perhaps, greater importance &#8211; by capturing the user&#8217;s scenario-specific goal as the scenario name and the tasks as the steps, the team are working towards a shared understanding of the part of the problem we&#8217;re trying to solve not a solution we might be prematurely settling upon. When rolled up with the broader context (expressed in the user-story and its other scenarios) it gives us a focus on solving the wider problem rather than biasing the solution.</p>
+<p>Sometimes, at first, it&#8217;s hard to see how to express the scenario and is easier when people start by talking of clicks, presses and what they&#8217;re entering. And that&#8217;s ok. Maybe that&#8217;s where the team needs to start the conversation. Just because that&#8217;s where you start, ask &#8220;why are we doing those actions&#8221; a few times, and it doesn&#8217;t have to be where you end up.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/03/goals-tasks-action/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>You&#8217;re almost cuking it&#8230;</title>
+		<link>http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/</link>
+		<comments>http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/#comments</comments>
+		<pubDate>Wed, 25 Aug 2010 06:15:29 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[Software development]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=85</guid>
+		<description><![CDATA[In &#8220;You&#8217;re Cuking it Wrong&#8221;, Jonas Nicklas, shows several examples of bad scenarios (or acceptance tests whichever term you prefer) and demonstrates better approaches. This is an excellent post on common mistakes made when writing example scenarios with Cucumber. I think, however, he could have gone further in one case. One of his examples of &#8230; <a href="http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/" class="more-link">Continue reading <span class="screen-reader-text">You&#8217;re almost cuking it&#8230;</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><a title="cut cuke" href="http://flickr.com/photos/33602849@N00/11084274"><img class="alignleft" src="http://farm1.static.flickr.com/6/11084274_aa716b21eb_t.jpg" alt="" width="100" height="100" /></a> In <a href="http://elabs.se/b/15">&#8220;You&#8217;re Cuking it Wrong&#8221;</a>,  Jonas Nicklas, shows several examples of bad scenarios (or acceptance tests whichever term you prefer) and demonstrates better approaches. This is an excellent post on common mistakes made when writing example scenarios with Cucumber.</p>
+<p>I think, however, he could have gone further in one case. One of his examples of a bad scenario looks like this:</p>
+<blockquote><p><code>Scenario: Adding a subpage<br />
+Given I am logged in<br />
+Given a microsite with a Home page<br />
+When I click the Add Subpage button<br />
+And I fill in "Gallery" for "Title" within "#document_form_container"<br />
+And I press "Ok" within ".ui-dialog-buttonpane"<br />
+Then I should see /Gallery/ within "#documents"</code></p></blockquote>
+<p>(Dude &#8211; yep, seen these&#8230; I agree&#8230; not good). He goes on to suggest it should really look like this:</p>
+<blockquote><p><code>Scenario: Adding a subpage<br />
+Given I am logged in<br />
+Given a microsite with a home page<br />
+When I press "Add subpage"<br />
+And I fill in "Title" with "Gallery"<br />
+And I press "Ok"<br />
+Then I should see a document called "Gallery"</code></p></blockquote>
+<p>This is a massive improvement. It keeps the specifics that inform the reader and give them some context (like filling in the &#8220;Title&#8221; with &#8220;Gallery&#8221;) and takes them further away from the implementation. Although it gets closer to expressing customer intent, I think it could go further. At the moment, it is describing the &#8216;what&#8217; and some of the &#8216;how&#8217;. This example makes complete sense if what we are exploring is the design of the UI. I&#8217;ve not found these scenarios to be a good place to do that, however.</p>
+<p>Instead, in these specifications we want our examples to illustrate the customer intent. The &#8216;what&#8217; not the &#8216;how&#8217;. There are other places we can capture the &#8216;how&#8217; &#8211; i.e. in the step methods.</p>
+<p>Instead, I would write it like this:</p>
+<p><code>Scenario: Adding a subpage<br />
+Given a microsite with a home page<br />
+Given I am logged in<br />
+When I Add a Subpage with a Title of "Gallery"<br />
+Then I should see a document called "Gallery"</code></p>
+<p>I&#8217;ve removed all the &#8220;Tasks&#8221; and left only &#8220;Activities&#8221;. This leaves the user experience completely open. This ensures that when there are UI changes, I only change the code that performs the tasks (clicking, pressing, etc.) and my scenarios evaluate whether the customer intent is still fulfilled &#8211; without having to go back and change a lot of files.</p>
+<p>Otherwise &#8211; great post Jonas <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/feed/</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+	</channel>
+</rss>

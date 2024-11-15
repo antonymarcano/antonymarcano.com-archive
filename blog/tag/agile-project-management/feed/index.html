@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>antonymarcano.com &#187; agile project management</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/agile-project-management/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Fri, 22 May 2015 11:41:52 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.0.7</generator>
+	<item>
+		<title>Old Favourite &#8211; More Sharks and Delaying Critical Mass</title>
+		<link>http://antonymarcano.com/blog/2011/06/old-favourite-more-sharks-and-delaying-critical-mass/</link>
+		<comments>http://antonymarcano.com/blog/2011/06/old-favourite-more-sharks-and-delaying-critical-mass/#comments</comments>
+		<pubDate>Tue, 07 Jun 2011 10:26:41 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[Business]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Old Favourites]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[agile project management]]></category>
+		<category><![CDATA[Agile software development]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[TDD]]></category>
+		<category><![CDATA[technical debt]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=352</guid>
+		<description><![CDATA[This article originally featured on my old blog on 19th January 2010. In a previous post I talked about Critical Mass of software. I showed how an ever-increasing cost of change resulted in it becoming more economical to completely rewrite the system than to enhance and maintain the original. I explained how this could be [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><em>This article <a href="http://www.testingreflections.com/node/view/8430">originally featured on my old blog on 19th January 2010</a>.</em></p>
+<p>In a previous post <a href="http://antonymarcano.com/blog/2011/06/sharks-debts-critical-mass/">I talked about Critical Mass of software</a>. I showed how an ever-increasing cost of change resulted in it becoming more economical to completely rewrite the system than to enhance and maintain the original.</p>
+<p><img src="http://img.skitch.com/20100119-dg68er7jrum9gp2jbwm3cjyuwh.jpg" alt="" /></p>
+<p>I explained how this could be avoided by using practices that sustain a consistent and flat cost of change. I also mentioned that you could defer reaching critical mass. Some teams find it difficult to get the time to do this because &#8220;the business&#8221; always has &#8220;more important&#8221; or &#8220;higher-value&#8221; things on their backlog.</p>
+<p>What are the implications of reaching critical mass? Well, depending on what the software does and whether the rewritten version still has to do all of those things, it could cost millions&#8230; or more.</p>
+<p>Presented with the situation that the product could reach critical mass within a year &#8211; costing millions to replace &#8211; do you think &#8220;the business&#8221; would start to think it is worth investing in reducing the cost of change? Obviously, I would advise teams to avoid this situation in the first place:</p>
+<p><img src="http://img.skitch.com/20100119-8r1gf1x3mkm3b14jp9hrsa9r66.jpg" alt="" /></p>
+<p>The reality for many teams I&#8217;ve encountered is that they don&#8217;t feel empowered to push back on the business&#8217; demands for that next feature in half the time it takes to do it properly. If we could present back the impact of that choice as shortening the time to Critical Mass and bringing about costs to replace the software far in excess of the value gained by delivering that feature a month early then perhaps the business would be better informed.</p>
+<p><img src="http://img.skitch.com/20100119-t8ja7txse61akjrpren2g3jhy1.jpg" alt="" /></p>
+<p>A big visible chart on the wall, showing the estimated point at which Critical Mass was reached could play a big role in getting the business more interested in sustainable change, or at least inspire a conversation on the subject.</p>
+<p>Convincing &#8220;the business&#8221; to invest in some remedial refactoring or allowing three times as long for each feature to facilitate enough remedial refactoring for each new feature and refactoring-as-we-go for the new feature might be easier if we could represent this idea visually:</p>
+<p><img src="http://img.skitch.com/20100119-bfqa6xmexm3qjk5kh19issd1mc.jpg" alt="" /></p>
+<p>The problem with this idea is how do we credibly determine when Critical Mass is going to be reached? Many experienced practitioners could probably reasonably accurately estimate when that was going to happen purely on gut feel but this would be torn to pieces by many product managers. I&#8217;ve not solved this problem yet because doing this would require a mathematical model, determined by empirical data.</p>
+<p>Perhaps someone will take inspiration from the ideas in these blog posts and find a solution. Perhaps someone has already done this or maybe this is an idea for a future PhD I might undertake? Maybe someone else will take inspiration from this article and undertake that work before I do. If so, they&#8217;re welcome to (with due attribution where applicable of course <img src="http://antonymarcano.com/blog/wp-includes/images/smilies/icon_wink.gif" alt=";-)" class="wp-smiley" /></p>
+<p>I think it is possible, however, to come up with a simple model based on the average complexity per unit of value (assuming that the team is using value and complexity). Trending this and keeping an estimate of a complete re-write up to date might allow the simple charts above to be maintained along side release-level burn-down charts.</p>
+<p>These ideas are still in their infancy for me. Has this problem been solved already? If not, I encourage others to explore my hypothesis and help take it from just an interesting idea to something more useful.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/06/old-favourite-more-sharks-and-delaying-critical-mass/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

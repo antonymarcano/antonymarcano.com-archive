@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>antonymarcano.com &#187; business analysis</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/business-analysis-2/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Fri, 22 May 2015 11:41:52 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.0.7</generator>
+	<item>
+		<title>It starts with a story&#8230;</title>
+		<link>http://antonymarcano.com/blog/2014/05/it-starts-with-a-story/</link>
+		<comments>http://antonymarcano.com/blog/2014/05/it-starts-with-a-story/#comments</comments>
+		<pubDate>Tue, 20 May 2014 10:16:40 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Lean]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[business analysis]]></category>
+		<category><![CDATA[user stories]]></category>
+		<category><![CDATA[User story]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=573</guid>
+		<description><![CDATA[If agility to you means maximising the opportunity of realising value early &#38; often while rapidly adapting and responding to market feedback then user stories, applied effectively, can facilitate that. However, one common misunderstanding of user stories seems to hinder teams from achieving the benefits they hope for&#8230; A user story is a &#8220;short descriptions of functionality–told [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>If agility to you means maximising the opportunity of realising value early &amp; often while rapidly adapting and responding to market feedback then user stories, applied effectively, can facilitate that. However, one common misunderstanding of user stories seems to hinder teams from achieving the benefits they hope for&#8230;</p>
+<p>A user story is a <em>&#8220;short descriptions of functionality–told from the perspective of a user–that are valuable to either a user of the software or the customer of the software&#8221;</em><a href="#footnotes">[1]</a>. You may first encounter stories in this form:</p>
+<blockquote><p>As a microblogger,<br />
+I want to <span style="text-decoration: underline;">find out as soon as others mention me</span>,<br />
+So that I can choose to respond while topics are current.</p></blockquote>
+<p>One common misunderstanding of user stories might result in the above example looking more like this&#8230;</p>
+<blockquote><p>As a microblogger,<br />
+I want a <span style="text-decoration: underline;">notifications screen showing my mentions</span>,<br />
+So that I can find out as soon as others interact with me.</p></blockquote>
+<p>The problem here is thinking of user stories in terms of <i>what the user will have, </i>rather than<i> what they&#8217;ll be able to do</i>. This can cause avoidable dependencies that limit your flexibility, reduce your speed to market and limit your ability to change direction based on market feedback.</p>
+<p>These dependencies can be dramatically reduced if our user stories steer the conversation towards <i>what the user will be able to do.</i> Let&#8217;s explore why&#8230;</p>
+<p><b>What the user will have (features)&#8230;</b><br />
+Let&#8217;s imagine we envision a house (which will be made of lego in this exercise). What stories would you write for your lego house? Here are some of the typical stories people write:</p>
+<ul>
+<li>As a cook,<br />
+I want a kitchen,<br />
+so that I can prepare food.</li>
+<li>As a parent,<br />
+I want a master bedroom,<br />
+so that I can sleep comfortably with my partner.</li>
+<li>As a car-owner,<br />
+I want a garage,<br />
+so that I can park my car off the street.</li>
+</ul>
+<p><span style="line-height: 1.5em;">Have a think about what&#8217;s involved in delivering these stories with a lego house, building our final vision of the kitchen, the bedroom, the garage. If our vision is to have the master bedroom on the top floor, then we can&#8217;t have a place to sleep until we&#8217;ve built the ground floor. To build our garage &#8216;iteratively&#8217; we will focus on building the walls first, then put the roof on. Essentially, the architecture drives the order of implementation, not what is of greatest value to us.</span></p>
+<p>The problem here is that these stories are encouraging us to fixate on specific solutions to each problem. Ideally, we want the story to be about <b><i>what the user will be able to do</i></b> (i.e. sleep comfortably together), <b><i>not what they&#8217;ll have</i></b> (a bedroom).</p>
+<p>In these examples, as is often the case, the problem we&#8217;re trying to solve is there, just in the &#8216;so that&#8217; part. Getting everyone to share in an understanding of the problem(s) we want solved helps us prioritise based on business value&#8230;</p>
+<p><b>What the user will be able to do (capabilities)&#8230;</b><br />
+Now, imagine if we had stories like this:</p>
+<ul>
+<li>As a cook,<br />
+I want to prepare hot food for the family,<br />
+so that we can safely enjoy various fresh foods.</li>
+<li>As a parent,<br />
+I want to sleep comfortably with my partner,<br />
+so that we can keep each other warm.</li>
+<li>As a car-owner,<br />
+I want to park somewhere safe,<br />
+so that I can keep my insurance premiums low.</li>
+</ul>
+<p>Have a think about the different ways we could initially solve these problems (from camping cookers, a mattress on the floor and a driveway to park the car). We can meet all of these needs rapidly without having to achieve the final vision but make it possible to layer on more and more refinement to each one evolving to the solution and enabling us to discover the solution we really need.</p>
+<blockquote><p><em><strong>when what we want is &#8220;a thing&#8221; then what we are describing is not a user story – it is a feature.</strong></em></p></blockquote>
+<p><strong><i>Features (&#8220;I want a&#8230;&#8221;) vs. Capabilities (&#8220;I want to&#8230;&#8221;) </i></strong></p>
+<p>Relatively recently, while running my user stories course (with Lego) to delegates at a well known company, one delegate pointed out a difference between the &#8216;template&#8217; for the two story styles above. They observed that in the case of stories that are really &#8220;Features&#8221; the format tended to be &#8220;I want a&#8230;&#8221; whereas for stories that were &#8220;Capabilities&#8221; the format tended to be &#8220;I want to&#8230;&#8221;. Some found ways around this by saying &#8220;<em>I want to</em> have a&#8230;&#8221;.</p>
+<p>Interestingly, the original &#8216;<a href="http://agilecoach.typepad.com/photos/connextra_user_story_2001/connextrastorycard.html">Conextra Template</a>&#8216; indeed followed &#8220;I want to&#8230;&#8221; and all of Mike Cohn&#8217;s examples in his book &#8220;User Stories Applied&#8221; are indeed capabilities (although sometimes in his explanations he does refer to stories as describing a feature, his examples are generally capabilities).</p>
+<p>In short, when what we want is &#8220;a thing&#8221; then what we are describing is not a user story – it is a feature.</p>
+<p><em>(This short section was added on: 22nd May 2015)</em></p>
+<p>&nbsp;</p>
+<p><a href="http://antonymarcano.com/blog/wp-content/uploads/2014/05/IMG_0875.jpg"><img class="aligncenter size-large wp-image-621" src="http://antonymarcano.com/blog/wp-content/uploads/2014/05/IMG_0875-1024x704.jpg" alt="A house made of lego" width="604" height="415" /></a></p>
+<p><b>Flexibility &amp; Adaptability&#8230;</b></p>
+<p>Each of these stories may be broken down even further. Let&#8217;s look at the garage and all the needs a garage might meet</p>
+<ul>
+<li>As a car-owner,<br />
+I want to <span style="text-decoration: underline;">park my car off the street</span>,<br />
+so that I can reduce my insurance premiums</li>
+<li>As a car-owner,<br />
+I want to <span style="text-decoration: underline;">shelter my car from the rain</span>,<br />
+so that I don&#8217;t have to wash it as often.</li>
+<li>As a car-owner,<br />
+I want to <span style="text-decoration: underline;">hide my car from onlookers</span>,<br />
+so that opportunists don&#8217;t think of stealing or vandalising it.</li>
+<li>As a car-owner,<br />
+I want to <span style="text-decoration: underline;">hinder thieves from driving my car away</span>,<br />
+so that I get the lowest insurance premiums.</li>
+<li>As a car-owner,<br />
+I want to <span style="text-decoration: underline;">securely store my tools near the car,</span><br />
+so that it&#8217;s easier to do basic maintenance.</li>
+<li>…and so on.</li>
+</ul>
+<p>Now think of the different ways we could meet those needs with our lego house?</p>
+<p>Most of these stories are largely independent of each other and can be delivered in almost any order. This allows us to prioritise the stories based on value rather than the architecture of the final vision.</p>
+<p>We&#8217;ll realise our first piece of value very quickly and continuously gain more and more value until eventually we&#8217;ll have a whole garage (if that&#8217;s what we really need). If this was something that makes us money, it would mean we&#8217;d be generating revenue sooner. Revenue would grow continuously as we continuously grow our product.</p>
+<p>It also means we can change direction at any time, for example if we were to start getting feedback taking the garage more in the direction of a workshop with space for a car rather than just a simple garage.</p>
+<p><strong>In the real world<br />
+</strong>I recently helped a client interview people who had from three to five years &#8220;experience&#8221; with user stories. During the interview I pulled out some index cards and pens. I described a simple product (which was surprisingly similar to early incarnations of Twitter) and invited them to help us write some user stories for our backlog.</p>
+<p>What each of them wrote was, essentially, a functional specification, split like use-cases into several cards, except using the above &#8220;<i>As a… I want… So that…</i>&#8221; template. They explained each story in terms of the screens in the user-journey such as Registration, Login, View Profile, Follow Other Users, Post a Status Update, View Status-Updates and so on. The real issue here isn&#8217;t in the name of the story, it&#8217;s in what the stories represented in their minds&#8230;</p>
+<p>I asked them to help us prioritise them based on value. &#8220;Registration is most valuable because without it we can&#8217;t do anything else&#8221;–one interviewee explained. This means that it would not be possible to obtain any feedback about the main value proposition of the product until a number of user stories are complete. Each candidate explained the stories as dependent steps in a journey that, essentially, had to be built in the same sequence as the journey <a href="#footnotes"><span style="text-decoration: underline;">[4]</span></a>.</p>
+<p>The main value proposition is sharing updates with people and seeing what others are saying. A simple screen-name (like in a chat room) will do  initially. Registration and login are largely about hindering others from pretending to be me. Could there be simpler ways of achieving this at first?</p>
+<p><span style="line-height: 1.5em;">Like I said, I&#8217;m not suggesting that any of the story titles that each candidate came up with are invalid, just that they thought of them in terms of the expected solution (what the user will have), not understanding the </span><i style="line-height: 1.5em;">real</i><span style="line-height: 1.5em;"> problem (what valuable thing the user will be able to do).</span></p>
+<p><b>In Closing&#8230;</b><br />
+With tractable mediums like lego or code (with the right engineering practices around it), we are able to evolve our product to meet each user-need in turn.  This is facilitated by thinking of our user stories in terms of the outcome (e.g. shelter from the rain) rather than one possible output (e.g. a roof and four pillars). Ultimately, this way of thinking is one of the key upstream enablers to realising value early &amp; often and brings more opportunity to rapidly adapt to feedback by dramatically reducing dependencies.<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
+<b>Experience this for yourself: </b>If you would like me to run this as a hands-on workshop with your team(s), <a href="mailto:talktous@riverglide.com?Subject=I'm Interested in your User Story Exercise">let me know</a>. We&#8217;ll explore how user stories work in practice, not only by writing the stories, but understanding the conversation and means of confirmation <a href="#footnotes">[3]</a> that complete the practice of user-stories. I can also wrap this in a simulation of Scrum and/or Kanban so that teams can experience how user stories work in practice. I make it accessible to all team members using lego as a metaphor for software, demonstrating the principles described above. We then explore how to apply this to your products, writing some stories or reviewing and refining your existing stories to take what we learn into the real world.</p>
+<p><strong>Acknowledgements:<br />
+</strong>The Lego House exercise that I run has been created by combining my experience with a number of other exercises, including the &#8220;XP Lego Game&#8221; and <a href="https://twitter.com/rachelcdavies">Rachel Davies</a>&#8216; Household Stories exercise.<strong><br />
+</strong></p>
+<p><a name="footnotes"></a><strong>Footnotes:</strong></p>
+<p>[1] &#8220;<a href="http://www.mountaingoatsoftware.com/articles/advantages-of-user-stories-for-requirements">Advantages of User Stories for Requirements</a>&#8221; by Mike Cohn (See also his book, &#8220;User Stories Applied&#8221;)<br />
+[2] Typical user story format: <a href="http://guide.agilealliance.org/guide/rolefeature.html"><span style="text-decoration: underline;">http://guide.agilealliance.org/guide/rolefeature.html</span></a><br />
+[3] There is a lot more to user stories than this three line statement. The simplest explanation is that this is just the &#8216;Card&#8217; in the three C&#8217;s of User Stories: <a href="http://guide.agilealliance.org/guide/threecs.html"><span style="text-decoration: underline;">http://guide.agilealliance.org/guide/threecs.html</span></a><br />
+[4] A key characteristic of user stories is there are few dependencies, if any, between them and each is valuable. This is explained by the mnemonic <strong>INVEST</strong>: <a href="http://guide.agilealliance.org/guide/invest.html">http://guide.agilealliance.org/guide/invest.html</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2014/05/it-starts-with-a-story/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+	</channel>
+</rss>

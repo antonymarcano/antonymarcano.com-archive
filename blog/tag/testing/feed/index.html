@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>testing &#8211; antonymarcano.com</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/testing/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Sat, 03 Sep 2016 10:48:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.14</generator>
+	<item>
+		<title>Sushi, Hibachi and Other Ways of Serving Software Delicacies</title>
+		<link>http://antonymarcano.com/blog/2011/07/sushi-hibachi-and-serving-software/</link>
+		<comments>http://antonymarcano.com/blog/2011/07/sushi-hibachi-and-serving-software/#comments</comments>
+		<pubDate>Fri, 01 Jul 2011 14:57:22 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[Business]]></category>
+		<category><![CDATA[People]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Agile software development]]></category>
+		<category><![CDATA[automation]]></category>
+		<category><![CDATA[business]]></category>
+		<category><![CDATA[dev-ops]]></category>
+		<category><![CDATA[software economics]]></category>
+		<category><![CDATA[Software project management]]></category>
+		<category><![CDATA[software teams]]></category>
+		<category><![CDATA[testing]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=372</guid>
+		<description><![CDATA[Let&#8217;s say you own a restaurant. Quite a large restaurant. You&#8217;ve hired a manager to run the place for you because you are about to take the fruits of your success and invest in opening three more around the country. You leave the manager with a budget to make any improvements he sees fit. After &#8230; <a href="http://antonymarcano.com/blog/2011/07/sushi-hibachi-and-serving-software/" class="more-link">Continue reading <span class="screen-reader-text">Sushi, Hibachi and Other Ways of Serving Software Delicacies</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Let&#8217;s say you own a restaurant. Quite a large restaurant. You&#8217;ve hired a manager to run the place for you because you are about to take the fruits of your success and invest in opening three more around the country. You leave the manager with a budget to make any improvements he sees fit.</p>
+<p>After being away for a few weeks, you return to your restaurant. It&#8217;s very busy thanks to the great reputation you had built for it. The kitchen has some new state of the art equipment and you can see that there are a lot of chefs and kitchen-staff preparing meals furiously. Obviously, with a restaurant this full you have to prepare a lot of meals.</p>
+<h3>Too many chefs?</h3>
+<p><strong></strong>But then, you notice that there are only a few service staff taking orders and delivering the meals to the customers. Tables are waiting a long time for their meals. You notice the service staff spending a lot of their time taking meals back to the kitchen because they have gone cold waiting so long to be served. You also overhear several customers complaining that the meal they received was not the one they ordered, increasing the demand for the preparation of more meals. You call the manager over and ask him what&#8217;s going on&#8230; he says &#8220;because we need to invest more in the kitchen&#8221;. You wonder why. He tells you &#8220;because there are so many meals to prepare and we can&#8217;t keep up&#8221;.</p>
+<p>At this point, it&#8217;s quite obvious that the constraint is not through lack of investment in the kitchen. Instead the lack of investment is in taking the right orders and getting the meals to the customers. To solve this, I think most people would increase the investment in getting the order right and in how the meals get to the customer not by investing more into the kitchen.</p>
+<p>Obvious, right? Despite this, time and again, I see organisations happy to grow their investment in more programmers writing more code and fixing more bugs and all but ignore the end-to-end process of finding out what people want and taking these needs through to <em>working </em>capabilities available to the customer. Business analysis, user-experience, testing and operations all seem to suffer in under investment. If it takes you four weeks to write some code for several new features and then another four weeks for that to become capabilities available to your customer, hiring more programmers to write more code is not going to make things any better.</p>
+<h3>Sushi and Hibachi</h3>
+<p>So, how would you advise the restaurant? In the short term, you can get some of the chefs to serve customers while you hire more service staff. Another solution is to invest in infrastructure that brings the meals closer to the customer, such as in hibachi restaurants where the chef takes the order and cooks the meal at the table or in sushi restaurants where meals are automatically transported via conveyor belt.</p>
+<p>In software teams, we can bring the preparation of features closer to our customers. We can involve a cross-functional team in the conversation with the customer (such as the chef being at the customer&#8217;s table). We can also automate a large proportion of the manual effort of getting features from a programmer&#8217;s terminal into the hands of the customer (as in with the conveyor belt). And, there is so much we can automate.</p>
+<p>Integration, scripted test execution, deployment and release management can largely be automated. Since speeding up these tasks has the potential to increase the throughput of an entire development organisation, it seems appropriate to invest in these activities as we would in automating any other significant business activity &#8211; such as stock-control or invoice processing.</p>
+<h3>Cooking for ourselves</h3>
+<p><strong></strong>Why not ask a good number of our programmers to take some time out from automating the rest of the business and automate more of our own part of the business? Taking this approach seems to be the exception rather than the rule. I see organisations having one or two dev-ops folks trying to create automated builds; and similar number of testers, with next to no programming experience, trying to automate a key part of the business &#8211; regression testing. And then asking them all to keep up with an army of developers churning out new code and testers churning out more scripted tests.</p>
+<h3>Serving up the capabilities</h3>
+<p><strong></strong>Instead, let&#8217;s stop looking so closely at one part of the process and look more at the whole system of getting from concept to capability. Let&#8217;s invest in automating for ourselves as much as we automate for others &#8211; and let&#8217;s dedicate some of our best people to doing so.</p>
+<p>In short, it&#8217;s not just about the speed at which we cook up new features. It&#8217;s as much about the speed at which we can serve new, working capabilities to our customers.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/07/sushi-hibachi-and-serving-software/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Old Favourite: QA / Testing &#8211; what&#8217;s the difference?</title>
+		<link>http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/</link>
+		<comments>http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/#comments</comments>
+		<pubDate>Fri, 19 Nov 2010 13:03:45 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Agile QA]]></category>
+		<category><![CDATA[old favourites]]></category>
+		<category><![CDATA[QA]]></category>
+		<category><![CDATA[Quality]]></category>
+		<category><![CDATA[testing]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=140</guid>
+		<description><![CDATA[Software is about the only industry one of the few industries that lumps testing and QA under one banner. It&#8217;s one of those things where common misuse of a term results in the community changing it&#8217;s meaning&#8230; this happens in mainstream language all the time. Testing something is actually more analogous to quality control or, &#8230; <a href="http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/" class="more-link">Continue reading <span class="screen-reader-text">Old Favourite: QA / Testing &#8211; what&#8217;s the difference?</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Software is <del datetime="2010-11-19T13:25:23+00:00">about the only industry</del> one of the few industries that lumps testing and QA under one banner. It&#8217;s one of those things where common misuse of a term results in the community changing it&#8217;s meaning&#8230; this happens in mainstream language all the time.</p>
+<p>Testing something is actually more analogous to quality control or, QC , [although it isn&#8217;t quality control].</p>
+<p>QA is more concerned with the process &#8211; collecting information about the performance of the process in order to determine if we are &#8216;assuring&#8217; (or more realistically increasing the probability of) quality. Statistical information about problems found in the product (during quality control) is just one of many pieces of info useful to someone concerned with QA (which really should be the whole project team)</p>
+<p>In short:</p>
+<p>QC helps us answer the question <em>&#8216;does our <strong>product</strong> work?&#8217;</em></p>
+<p>QA helps us answer the question <em>&#8216;does our <strong>process</strong> work?&#8217;</em></p>
+<p>Unfortunately, in the software industry, all too many teams don&#8217;t realise their <strong>process</strong> doesn&#8217;t work until the testers find all the ways in which the <strong>product</strong> doesn&#8217;t work&#8230; maybe that&#8217;s why software testing has come to be known as QA.</p>
+<p><em>This article originally appeared on my old blog in July 2008. I had already elaborated on this topic in <a href="http://antonymarcano.com/files/What's%20in%20a%20word%20-%20Marcano.pdf">the article &#8220;What&#8217;s in a word&#8221; in Better Software Magazine in March 2008</a>.</em></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/11/old-favourite-qa-testing-whats-the-difference/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Taking repetition to task</title>
+		<link>http://antonymarcano.com/blog/2010/07/taking-repetition-to-task/</link>
+		<comments>http://antonymarcano.com/blog/2010/07/taking-repetition-to-task/#comments</comments>
+		<pubDate>Thu, 08 Jul 2010 22:41:08 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[extreme programming]]></category>
+		<category><![CDATA[old favourites]]></category>
+		<category><![CDATA[TDD]]></category>
+		<category><![CDATA[testing]]></category>
+		<category><![CDATA[testingReflections]]></category>
+		<category><![CDATA[user stories]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=21</guid>
+		<description><![CDATA[This originally appeared on my old blog in March 2010. Others have talked about the virtues of stories as vertical slices of a problem (end-to-end capabilities) rather than horizontal slices (system layers or components). So, if we slice the problem with user stories, how do we slice the user-stories themselves? If, as I sometimes say, &#8230; <a href="http://antonymarcano.com/blog/2010/07/taking-repetition-to-task/" class="more-link">Continue reading <span class="screen-reader-text">Taking repetition to task</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><em>This originally appeared </em><a href="http://www.testingreflections.com/node/view/8489"><em>on my old blog in March 2010</em></a><em>.</em></p>
+<p>Others have talked about the virtues of <a href="http://blog.energizedwork.com/2005/05/slicing-cake.html">stories as vertical slices of a problem</a> (end-to-end capabilities) rather than horizontal slices (system layers or components). So, if we slice the problem <em>with</em> user stories, how do we slice the user-stories themselves?</p>
+<p>If, as I sometimes say, acceptance tests (a.k.a. examples/scenarios/acceptance-criteria) are the knife with which we slice a story into even thinner vertical slices, then I would say my observation of &#8216;tasks&#8217; is that they are used as the knife used to cut a story into horizontal slices. This feels wrong&#8230;</p>
+<p>Sometimes I also wonder, hasn&#8217;t anyone else noticed that the idea of counting the effort of completed tasks on burn-down/up charts is counter to the value that we measure progress only with working software? Surely it makes more sense to measure progress with passing tests (<a href="http://www.developsense.com/blog/2009/09/tests-vs-checks-should-we-call-test/">or &#8220;checks&#8221;</a> &#8211; whichever you prefer).</p>
+<p>These are two of the reasons I&#8217;ve never felt very comfortable with tasks, because:</p>
+<ul>
+<li>they&#8217;re often applied in such a way that the story is sliced horizontally</li>
+<li>they encourage measuring progress in a less meaningful way than working software</li>
+</ul>
+<p>Tasks are, however, very useful for teams at first. Just like anything else we learn how to do, learning how to do it on paper can often help us then discard the paper and do the workings in our heads. However, what I&#8217;ve noticed is that most teams I&#8217;ve worked with continue to write and estimate tasks long after the practice is useful or relevant to them.</p>
+<p>For example, there comes a time for many teams where tasks become repetitive. &#8220;Add x to the Model&#8221;, &#8220;Change View&#8221;&#8230; and so on. Is this adding value to the process or are you just doing it because the process says you should do it?</p>
+<p>Simply finding that your tasks are repetitive doesn&#8217;t mean the team is ready to stop using them. There is another important ingredient, meaningful acceptance criteria (scenarios / acceptance-tests / examples).</p>
+<p>I often see stories with acceptance criteria such as:</p>
+<ul>
+<li>Must have a link to save the profile</li>
+<li>Must have a drop down to select business sector</li>
+<li>Business sector must be mandatory</li>
+<li>&#8230;</li>
+</ul>
+<p>Although these are &#8220;acceptance criteria&#8221; they aren&#8217;t what we mean by acceptance criteria in the context of user stories. Firstly, they are talking about how the user interacts rather than what they need to achieve (I&#8217;ve <a href="http://www.testingreflections.com/node/view/6704">talked about this before</a>). Secondly, they aren&#8217;t examples. What we want are the variations that alter the behaviour or response of the product:</p>
+<ul>
+<li>Should create a new profile</li>
+<li>Profile cannot be saved with blank &#8220;business sector&#8221;</li>
+</ul>
+<p>As our product fulfils each of these criteria, we are making progress. Jason Gorman <a href="http://parlezuml.com/blog/?postid=683">illustrates one way of approaching this</a>.</p>
+<p>So, if you are using tasks, consider an alternative approach. First, look at your acceptance criteria, make sure they are more like examples and less like instructions. Once that&#8217;s achieved, consider slicing each criterion (or scenario) horizontally with the tasks rather than the story. Pretty soon, you&#8217;ll find that you don&#8217;t need tasks anymore and you can simply measure progress in terms of the new capabilities you add to your product.</p>
+<p><em><strong>Updated 30-02-2010:</strong> I&#8217;ve inserted a new paragraph as the opening paragraph referencing an article on slicing user-stories to add some background to the vertical slicing metaphor. I&#8217;ve provided a link but I&#8217;m not sure who first came up with the metaphor.</em></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/07/taking-repetition-to-task/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

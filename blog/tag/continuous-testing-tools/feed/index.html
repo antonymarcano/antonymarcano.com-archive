@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>antonymarcano.com &#187; continuous testing tools</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/continuous-testing-tools/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Fri, 22 May 2015 11:41:52 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.0.7</generator>
+	<item>
+		<title>Old Favourite &#8211; Developer Race-Tech: Continuous Testing</title>
+		<link>http://antonymarcano.com/blog/2011/06/developer-race-tech/</link>
+		<comments>http://antonymarcano.com/blog/2011/06/developer-race-tech/#comments</comments>
+		<pubDate>Mon, 06 Jun 2011 09:36:08 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Old Favourites]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[continuous testing tools]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[TDD]]></category>
+		<category><![CDATA[Technology/Internet]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=332</guid>
+		<description><![CDATA[The original version of this article appeared on my old blog on 28th April 2010. This version has had some edits&#8230; Gearboxes in competitive motor racing are designed to shift as fast as possible. A competitive race-car has computer controlled, hydraulically activated gear shifts that change gears up or down faster than you can blink [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><em>The original version of this article <a href="http://www.testingreflections.com/node/view/8537">appeared on my old blog on 28th April 2010</a>. This version has had some edits&#8230;</em></p>
+<p>Gearboxes in competitive motor racing are designed to shift as fast as possible. A competitive race-car has computer controlled, hydraulically activated gear shifts that change gears up or down faster than you can blink (literally)! In Formula One, each shift is so fast that the gearbox systems have been dubbed &#8220;seamless shift&#8221; gearboxes and can <a href="http://www.f1technical.net/articles/66">shift gear in around 2-4 100ths (0.02 &#8211; 0.04) of a second</a>. Compare that to the circa 1-2 second gear-shift a competent driver takes to manually de-clutch, change gear and re-clutch on a road car. Even automatic gearboxes on road cars can&#8217;t keep pace with the rapid gear changes that a race car delivers.</p>
+<h2>Competitive Edge</h2>
+<p>The race car is only saving fractions of a second with each accelerated up-shift, but the race-driver changes gear so often per lap and there are so many laps in a race that these fractions of a second can add up to a vital and significant lead over their competitors.<a href="#footnotes">[1]</a><br />
+<a title="mclaren-mercedes by thebestial_bultaco, on Flickr" href="http://www.flickr.com/photos/8289905@N04/497958556/"><img class="alignright" src="http://farm1.static.flickr.com/227/497958556_d2766839c2.jpg" alt="mclaren-mercedes" width="340" height="220" /></a></p>
+<p>Set aside the lap-time improvements for a moment from spending at least half a second more on the power per up-shift than with a manual box&#8230; The modern F1 driver has much more to do in the cockpit too than the comparative tedium of changing gear <a href="#footnotes">[2]</a>.</p>
+<h2>Developer race-tech</h2>
+<p>Now, in motor racing, such gearboxes are taken for granted. No serious Formula One racing team would put their car on the track without one.</p>
+<p>In a world where a lot of software development is for companies competing in the economical equivalent of a race, it seems that development teams aren&#8217;t taking full advantage of their own metaphorical millisecond gear-shifts.</p>
+<p>There are tools that are a developer&#8217;s equivalent of a racing gearbox. The simplest example is background compilation. Other examples are refactoring tools that make widespread changes with a simple key-stroke. What once took minutes or hours with global find &amp; replace or even scripting, we can complete in seconds. IDEs that automatically complete class-names and method names are another example. These are tools that many of us take for granted, like the racing driver and automated gear-shift.</p>
+<h2>Falling behind</h2>
+<p>But there are other places where we are still not taking full advantage of the technology. I am still encountering surprisingly few people using <strong>continuous testing tools</strong>, where tests are run automatically in the background every time a file is saved, and not just the test I&#8217;m working on, all my tests. There are a few tools available for this, including <a href="http://improvingworks.com/products/infinitest/">Infinitest</a> and <a href="http://rubygems.org/gems/ZenTest">ZenTest</a>.</p>
+<p>Despite the availability of such tools, I still see many developers using keyboard shortcuts to execute tests. Or, worse, reaching for the mouse, right-clicking, navigating another menu level down and running the tests with a left-click, or worse still, forgetting to run them altogether. I want rapid feedback with minimum friction to obtaining it. Much like background compilation, unit tests should just run, and run often, alerting us when a problem occurs. The easier they are to run, the more likely we are to run them&#8230; How much easier could it be than it happening automagically each time we save a file?</p>
+<h2>Need for Speed</h2>
+<p>Try it for a while and, like me, even keyboard-shortcut executed tests start to feel like you&#8217;re stuck in traffic rather than being in a competitive race to the finish&#8230; Or, maybe it&#8217;s just me and my <a href="http://www.youtube.com/watch?v=bKPSEIpEx0U">need for speed</a>&#8230;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p><iframe width="560" height="349" src="http://www.youtube.com/embed/bKPSEIpEx0U?rel=0" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align: center;"><em>The video is of me on the Silverstone Southern Circuit (part of the F1 GP circuit) taking my UK National Class B Racing License Test in a Nissan R35 GTR &#8211; approx 480+bhp, 0-62mph (0-100kmh) in 3.5secs, using it&#8217;s double-clutch, paddle-operated gear-shift providing gear changes in about 0.2 of a second. I passed&#8230; despite being very cautious on the brakes&#8230; and was noticeably quicker than the other person doing their test&#8230; which you see towards the end as I pass them <img src="http://antonymarcano.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" /></em></p>
+<p><a name="footnotes"></a></p>
+<p>[1] At the Monaco GP, an F1 driver will change gear around 50-60 times in one lap. Over 78 laps, this adds up to as many as 4680 gear changes over the whole race (up and down-shifts).</p>
+<p>[2] The comparative tedium of de-clutching, shifting and re-engaging the clutch is something that a race-driver should not need to worry about as they approach 200mph while adjusting the brake-balance lever, switching to a new fuel-air mixture setting, pressing the KERS boost button and/or deactivating the Drag Reduction System.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/06/developer-race-tech/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+	</channel>
+</rss>

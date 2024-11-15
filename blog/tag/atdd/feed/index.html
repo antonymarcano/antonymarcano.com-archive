@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ATDD &#8211; antonymarcano.com</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/atdd/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Sat, 03 Sep 2016 10:48:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.14</generator>
+	<item>
+		<title>Scenario-Oriented vs. Rules-Oriented Acceptance Criteria</title>
+		<link>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/</link>
+		<comments>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/#comments</comments>
+		<pubDate>Sun, 02 Oct 2011 13:59:19 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Acceptance testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[extreme programming]]></category>
+		<category><![CDATA[Software testing]]></category>
+		<category><![CDATA[TDD]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=393</guid>
+		<description><![CDATA[Acceptance Criteria, Scenarios, Acceptance Tests are, in my experience, often a source of confusion. Such confusion results in questions like the one asked of Rachel Davies recently, i.e. &#8220;When to write story tests&#8221; (sometimes also known as &#8220;Acceptance Tests&#8221; or in BDD parlance &#8220;Scenarios&#8221;). In her answer, Rachel highlighted that: &#8220;&#8230;acceptance criteria and example scenarios &#8230; <a href="http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/" class="more-link">Continue reading <span class="screen-reader-text">Scenario-Oriented vs. Rules-Oriented Acceptance Criteria</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Acceptance Criteria, Scenarios, Acceptance Tests are, in my experience, often a source of confusion.</p>
+<p>Such confusion results in questions like the one <a href="http://agilecoach.typepad.com/agile-coaching/2011/07/when-to-write-story-tests.html ">asked of Rachel Davies recently</a>, i.e. &#8220;When to write story tests&#8221; (sometimes also known as &#8220;Acceptance Tests&#8221; or in BDD parlance &#8220;Scenarios&#8221;).</p>
+<p>In her answer, Rachel highlighted that:</p>
+<blockquote><p><em>&#8220;</em><em>&#8230;acceptance criteria and example scenarios are a bit like the chicken and the egg &#8211; it&#8217;s not always clear which comes first so iterate!&#8221;</em></p></blockquote>
+<p>In that article, Rachel distinguishes between acceptance criteria and example scenarios by reference to <a href="http://lizkeogh.com/2011/06/20/acceptance-criteria-vs-scenarios/">Liz Keogh&#8217;s blog post on the subject of &#8220;Acceptance Criteria vs. Scenarios&#8221;</a>:</p>
+<blockquote><p><em>&#8220;</em><em>where she explains that acceptance criteria are general rules covering system behaviour from which executable examples (Scenarios) can be derived</em>&#8220;</p></blockquote>
+<p>Seeing the acceptance criteria as rules and the scenarios as something else, is one way of looking at it. There&#8217;s another way too&#8230;</p>
+<p>Instead of Acceptance Criteria that are rules and Acceptance Tests that are scenarios&#8230; I often find it useful to arrive at Acceptance Criteria that are scenarios, of which the Acceptance Tests are just a more detailed expression.</p>
+<p>I.e. Scenario-Oriented Acceptance Criteria.</p>
+<h3>Expressing the Intent of the Story</h3>
+<p>Many teams I encounter, especially newer ones, place higher importance on the things we label &#8220;acceptance criteria&#8221; than on the things we label &#8220;acceptance tests&#8221; or &#8220;scenarios&#8221;.</p>
+<p>By this I mean that, such a team might ultimately determine whether the intent of the story was fulfilled by evaluating the product against these rules-oriented criteria. Worse still, I&#8217;ve observed some teams also have:</p>
+<ul>
+<li>Overheads of checking that these rule-based criteria are fulfilled as well as the scenario-oriented acceptance tests</li>
+<li>Teams working in silos where BAs take sole responsibility of criteria and testers take sole responsibility for scenarios</li>
+<li>A desire to have traceability from the acceptance tests back to the acceptance criteria</li>
+<li>Rules expressed as rules in two places &#8211; the criteria and the code</li>
+<li>Criteria treated as the specification, rather than using specification by example</li>
+</ul>
+<p>If we take the approach of not distinguishing between acceptance criteria and acceptance tests (i.e. see the acceptance tests as the acceptance criteria) then we can encourage teams away from these kinds of problems.</p>
+<p>I&#8217;m not saying it solves the problem &#8211; it&#8217;s just easier, in my experience, to move the team towards collaboratively arriving at a shared understanding of the intent of the story this way.</p>
+<p>To do this, we need to iteratively evolve our acceptance criteria from rules-oriented to scenario-oriented criteria.</p>
+<h3>Acceptance Criteria: from rules-oriented to scenario-oriented:</h3>
+<p>Let&#8217;s say we had this user story:</p>
+<pre>As a snapshot photographer</pre>
+<pre>I want some photo albums to be private</pre>
+<pre>So that I have a backup of my personal photos online</pre>
+<p>And let&#8217;s say the product owner first expresses the Acceptance Criteria as rules:</p>
+<ul>
+<li>Must have a way to set the privacy of photo albums</li>
+<li>Private albums must be visible to me</li>
+<li>Private albums must not be visible to others</li>
+</ul>
+<p>We might discuss those to identify scenarios (as vertical slices through the above criteria):</p>
+<ul>
+<li>Create new private album</li>
+<li>Make public album private</li>
+<li>Make private album public</li>
+</ul>
+<p>Here, many teams would retain both acceptance criteria and scenarios. That&#8217;s ok but I&#8217;d only do that if we collectively understood that the information from these two will come together in the acceptance tests&#8230; And that whatever we agree in those acceptance tests supersede the previously discussed criteria.</p>
+<p>This understanding tends to occur in highly collaborative teams. In newer teams, where disciplines (Business Analysts, Testers, Developers) are working more independently this tends to be harder to achieve.</p>
+<p>In those situations (and often even in highly collaborative teams) I&#8217;d continue the discussion to iterate over the rules-oriented criteria to arrive at scenario-oriented criteria, carrying over any information captured in the rules, discarding the original rules-based criteria as we go. This might leave me with the following scenarios:</p>
+<ul>
+<li>Create new private album (visible to me, not to others)</li>
+<li>Make public album private (visible to me, not to others)</li>
+<li>Make private album public (visible to me, &amp; others)</li>
+</ul>
+<p>Which, with a subtle change to the wording, become the acceptance criteria. I.e. the story is complete when we:</p>
+<ul>
+<li>Can create new private album (visible to me, not to others)</li>
+<li>Can make public album private (visible to me, not to others)</li>
+<li>Can make private album public (visible to me, &amp; others)</li>
+</ul>
+<p>Once the story is &#8216;in-play&#8217; (e.g. during a time-box/iteration/sprint) I&#8217;d elaborate these one at a time, implementing just enough to get each one passing as I go. By doing this we might arrive at:</p>
+<pre>Scenario: Can Create new private album
+When I create a new private album called "Weekend in Brighton"
+Then I should be able to see the album
+And others should not be able to see it
+
+Scenario: Can Make public album private
+Given there is a public album called "Friday Night"
+When I make that album private
+Then I should be able to see the album
+And others should not be able to see it
+
+Scenario: Can Make private album public
+Given there is a private album called "Friday Night"
+When I make that album public
+Then I should be able to see the album
+And others should be able to see it</pre>
+<p>By being an elaboration of the scenario-oriented acceptance criteria there&#8217;s no implied need to also check the implementation against the original &#8216;rules-oriented&#8217; criteria.</p>
+<p>Agreeing that this is how we&#8217;ll work, it encourages more collaborative working &#8211; at least between the Business Analysts and Testers.</p>
+<p>These new scenario-based criteria become the only means of determining whether the intent of the story has been fulfilled, avoiding much of the confusion that can occur when we have rules-oriented acceptance criteria as well as separate acceptance test scenarios.</p>
+<p>In short, more often than not, I find these things much easier when the criteria and the scenarios are essentially one and the same.</p>
+<p>Why not  give it a try?</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>Cucumber &#8211; with step-free access</title>
+		<link>http://antonymarcano.com/blog/2011/05/introducing_cukesalad/</link>
+		<comments>http://antonymarcano.com/blog/2011/05/introducing_cukesalad/#respond</comments>
+		<pubDate>Sun, 29 May 2011 09:35:58 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Acceptance Test Driven Development]]></category>
+		<category><![CDATA[Acceptance testing]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Behaviour Driven Development]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[Cukes]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=273</guid>
+		<description><![CDATA[A while back I wrote about writing feature specs (acceptance tests) at the right level of abstraction. I explained how we want to pitch our scenarios at the &#8220;task&#8221; level&#8230; Goal: What we’re trying to achieve which has one or more… Tasks: The high-level work-item that we complete to fulfil the goal, each having one &#8230; <a href="http://antonymarcano.com/blog/2011/05/introducing_cukesalad/" class="more-link">Continue reading <span class="screen-reader-text">Cucumber &#8211; with step-free access</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>A while back I wrote about <a href="http://antonymarcano.com/blog/2011/03/goals-tasks-action/">writing feature specs (acceptance tests) at the right level of abstraction</a>. I explained how we want to pitch our scenarios at the &#8220;task&#8221; level&#8230;</p>
+<blockquote><p><strong>Goal:</strong> What we’re trying to achieve which has one or more…<br />
+<strong>Tasks:</strong> The high-level work-item that we complete to fulfil the goal, each having one or more…<br />
+<strong>Actions:</strong> The specific steps or interactions we execute to complete the task.</p></blockquote>
+<p>I showed how many scenarios (acceptance tests) are pitched at too low a level. They&#8217;re often at the <strong>action </strong>level, detailing every field filled in and every button clicked. This is too low-level.</p>
+<p>Instead, we want to express the business process&#8230; the tasks involved in fulfilling a goal. The actions should be expressed in the code (or step-definitions), not the plain-text scenarios. Pitching the scenarios at the <strong>action</strong> level makes scenarios much harder to maintain &#8211; especially when the user-interface changes. But, perhaps more importantly, they don&#8217;t express what&#8217;s of interest to the business.</p>
+<p>There are other <a href="https://github.com/RiverGlide/CukeSalad/wiki/Who-is-this-for">challenges faced by teams using cucumber</a>:</p>
+<blockquote>
+<ul>
+<li>Over-wordsmithing scenarios</li>
+<li>Limited regular-expression expertise</li>
+<li>Unmaintainably large step-definition files</li>
+<li>Fragmented step-definition files</li>
+<li>Coverage vs. Speed tradeoffs of running scenarios through or below the GUI (respectively)</li>
+</ul>
+</blockquote>
+<p>We&#8217;ve taken many of the lessons we&#8217;ve learned using BDD tools to address these problems and begun to distill the various heuristics and design ideas (patterns) that emerged into a single open-source extension to cucumber &#8211; <a href="http://cukesalad.info">cukesalad</a>.</p>
+<p><a href="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1.jpg"><img class="size-full wp-image-274 alignnone" title="GitHub Snapshot" src="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1.jpg" alt="Photo of the github page" width="664" height="310" srcset="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1.jpg 664w, http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1-300x140.jpg 300w" sizes="(max-width: 664px) 100vw, 664px" /></a></p>
+<p>Many of the heuristics and design ideas expressed in the project can be used on your existing projects without using cukesalad:</p>
+<ul>
+<li>Treat each step-definition as a class of task. Like other classes, have one file per step-definition and organise them so they&#8217;re easy to find. Name each file using the text used in the scenario.</li>
+<p><a href="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Gist.jpg"><img class="alignnone size-full wp-image-281" title="Task Tree" src="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Gist.jpg" alt="Screen Capture of Task folder Hierarchy" width="229" height="169" /></a></p>
+<li>Abstract the API that drives your application behind something representing the role or type of role involved in the story</li>
+<li>Write scenarios like a narrative for someone in the role relevant to the user-story</li>
+<li>Write the actions within the task (or step-definition) as if they&#8217;re instructions on how to complete that task</li>
+<li>And more&#8230;</li>
+</ul>
+<p>Cukesalad is the ongoing expression of us mercilessly refactoring a &#8216;typical&#8217; Cucumber project. At the moment, it is more of an illustration of the concepts and ideas&#8230; but some are already using it on their day-to-day projects. Check it out&#8230; try it out&#8230; and let us know what you think.</p>
+<p>Go to <a href="http://cukesalad.info">http://cukesalad.info</a> &#8211; for more info, or checkout the <a href="http://skillsmatter.com/podcast/agile-testing/marcano-cukesalad">talk I gave at CukeUp, hosted at SkillsMatter</a>.</p>
+<p>And if you&#8217;re wondering why it&#8217;s called cukesalad&#8230; It&#8217;s cucumber, washed and ready to eat.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/05/introducing_cukesalad/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Putting Cucumber where it&#8217;s not supposed to go will hurt!</title>
+		<link>http://antonymarcano.com/blog/2011/03/cucumber-pains/</link>
+		<comments>http://antonymarcano.com/blog/2011/03/cucumber-pains/#respond</comments>
+		<pubDate>Mon, 07 Mar 2011 13:24:25 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[automated tests]]></category>
+		<category><![CDATA[BDD]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=244</guid>
+		<description><![CDATA[Today, I came across this post by Ryan Bigg where he talks of the pains he&#8217;s experienced with Cucumber. Fortunately for Ryan, the outcome was a positive one, he ended up finding what appears to be a nice looking API for automating test-execution. The experience he had with Cucumber, however, is a common one. Often &#8230; <a href="http://antonymarcano.com/blog/2011/03/cucumber-pains/" class="more-link">Continue reading <span class="screen-reader-text">Putting Cucumber where it&#8217;s not supposed to go will hurt!</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Today, I came across <a href="http://ryanbigg.com/2011/03/when-to-cuke">this post by Ryan Bigg</a> where he talks of the pains he&#8217;s experienced with Cucumber.</p>
+<p>Fortunately for Ryan, the outcome was a positive one, he ended up finding what appears to be a nice looking API for automating test-execution.</p>
+<p>The experience he had with Cucumber, however, is a common one. Often teams start using Cucumber in an effort to reduce the need for programming skills when writing automated tests.</p>
+<p>This isn&#8217;t the problem that Cucumber and other BDD tools are trying to solve and this is why so many teams who misuse it in this way experience difficulty and frustration.</p>
+<p>BDD tools like Cucumber are designed to help teams and their customers arrive at a shared understanding of the problem they wish to solve (in terms of the user&#8217;s goals and tasks). It&#8217;s not really intended to describe the solution (i.e. step-by-step interactions with the GUI).</p>
+<p>If your Cucumber scenarios have words such as &#8220;click&#8221; or &#8220;type&#8221; or mention field names and the like, it&#8217;s probable that you&#8217;re either:<br />
+a) Using Cucumber to automate test-execution (not what it was intended for) or<br />
+b) Trying to do BDD but writing the scenarios at too low a level of detail.</p>
+<p>If you&#8217;re doing the latter (b)&#8230; then you may find <a href="http://antonymarcano.com/blog/2011/03/goals-tasks-action/">the post I wrote over the weekend useful</a>.</p>
+<p>If what you&#8217;re doing is (a) then <a href="http://antonymarcano.com/blog/2011/03/goals-tasks-action/">the post I wrote over the weekend</a> might help you go down a path where automating your tests will make the transition to BDD that much easier.</p>
+<p>If you really, really only want to automate test-execution then you might find that you&#8217;re putting Cucumber where it&#8217;s not supposed to go&#8230; and just so you know &#8211; that&#8217;s probably going to hurt <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/03/cucumber-pains/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>A bit of UCD for BDD &#038; ATDD: Goals -&gt; Tasks -&gt; Actions</title>
+		<link>http://antonymarcano.com/blog/2011/03/goals-tasks-action/</link>
+		<comments>http://antonymarcano.com/blog/2011/03/goals-tasks-action/#comments</comments>
+		<pubDate>Sun, 06 Mar 2011 20:01:22 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[lean]]></category>
+		<category><![CDATA[Technology]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=209</guid>
+		<description><![CDATA[There&#8217;s something wrong with many behaviour specs (or acceptance tests). It&#8217;s been this way for some time. I&#8217;ve written about this once or twice before, referencing this post by Kevin Lawrence from 2007. So, first things first, I want to take this opportunity to update the terminology I use&#8230; Goals -&#62; Tasks -&#62; Actions A &#8230; <a href="http://antonymarcano.com/blog/2011/03/goals-tasks-action/" class="more-link">Continue reading <span class="screen-reader-text">A bit of UCD for BDD &#038; ATDD: Goals -> Tasks -> Actions</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>There&#8217;s something wrong with many behaviour specs (or acceptance tests). It&#8217;s been this way for some time. I&#8217;ve written about this <a href="http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/">once</a> or <a href="http://www.testingreflections.com/node/view/6704">twice</a> before, referencing this <a href="http://www.developertesting.com/archives/month200710/20071013-In%20Praise%20of%20Abstraction.html">post by Kevin Lawrence from 2007</a>.</p>
+<p>So, first things first, I want to take this opportunity to update the terminology I use&#8230;</p>
+<p><strong>Goals -&gt; Tasks -&gt; Actions</strong><br />
+A useful technique used in User-Centred Design (UCD) and Human Computer Interface (HCI) design is Task Analysis. There are three layers of detail often talked about in Task Analysis:</p>
+<p><strong>Goal:</strong> What we&#8217;re trying to achieve which has one or more&#8230;<br />
+<strong>Tasks:</strong> The high-level work-item that we complete to fulfil the goal, each having one or more&#8230;<br />
+<strong>Actions:</strong> The specific steps or interactions we execute to complete the task.</p>
+<p>Previously, the terms used by Kevin, myself (and several others) were Goal-&gt;Activities-&gt;Tasks. From now on, I&#8217;m going to use the UCD/HCI/Task Analysis terms Goal-&gt;Task-&gt;Action. It&#8217;s exactly the same model &#8211; just with different labels at the three layers of detail.</p>
+<p><strong>What&#8217;s wrong with your average behaviour spec?</strong><br />
+Let&#8217;s look at a common example&#8230; The calculator. For convenience, I&#8217;m going to borrow this one from <a href="http://cukes.info">the cucumber website[1]</a>.</p>
+<p><code>Scenario: Add two numbers<br />
+Given I have entered 10 into the calculator<br />
+And I have entered 5 into the calculator<br />
+When I press add<br />
+Then the result should be 15 on the screen<br />
+</code><br />
+[1]<em>note: I&#8217;m using this example for convenience and simplicity. The value of the example on the cucumber website is to demonstrate how easy cucumber is to use and not necessarily as an exemplar feature spec</em></p>
+<p>What would you say the scenario&#8217;s name and steps are representing? Goals and Tasks or Tasks and Actions?</p>
+<p>I’d argue that adding two numbers is a task and the steps shown above are actions.</p>
+<p>Instead, I try to write the spec (or test) with a scenario-specific goal and the steps as tasks.</p>
+<p><code>Scenario: sum of two numbers<br />
+When I add 10 and 5<br />
+Then I should see the answer 15<br />
+</code></p>
+<p>I.e.:<br />
+<code>Scenario: &lt;A scenario specific goal&gt;<br />
+Given &lt;Something that needs to have happened or be true&gt;<br />
+When &lt;Some task I must do&gt;<br />
+Then &lt;Some way I know I've achieved my goal&gt;<br />
+</code></p>
+<p><strong>Another Typical Example</strong><br />
+Let&#8217;s apply this to another typical example that might be closer to what some people are used to seeing:</p>
+<p><code>Scenario: Search for the cucumber homepage<br />
+Given I am at http://google.com<br />
+When I enter "cucumber" into the search field<br />
+and click "Search"<br />
+Then the top result should say "Cucumber - Making BDD fun"<br />
+</code></p>
+<p>Again this is talking in terms of <strong>actions</strong>. As soon as I&#8217;m talking in terms of click, enter, type or other user-action, I know I&#8217;m going into too much detail. Instead, I write this:</p>
+<p><code>Scenario: Find the Cucumber home page<br />
+When I search for "Cucumber"<br />
+Then the top result should say "Cucumber - Making BDD fun"<br />
+</code></p>
+<p><strong>Why does it matter?</strong><br />
+In the calculator example, the outcome the business is interested in for the first scenario is that we get the correct sum of two numbers. The steps in the scenario should help us arrive at a shared understanding of what &#8216;correct&#8217; means. How we solve the problem of getting the numbers into the calculator and choosing the operator is a separate issue. That&#8217;s detail we can defer. It may be better to explore the specifics of the workflow using, sketches, conversation, wire-frames or by seeing and using our new calculator.</p>
+<p>So, expressing our scenarios in terms of goals and tasks helps the delivery team and the business arrive at a shared understanding of the problem we&#8217;re trying to solve in that scenario.</p>
+<p>Expressing the scenario in terms of the clicks, presses and even fields we&#8217;re typing into is focusing on a solution, not the problem we&#8217;re trying to solve.</p>
+<p>But there&#8217;s another benefit to doing it this way&#8230;</p>
+<p><strong>A Practical Concern &#8211; Maintainability</strong><br />
+The first calculator example follows reverse-polish notation for the sequence of <strong>actions</strong>:</p>
+<ol>
+<li>enter the first number</li>
+<li>enter the second number</li>
+<li>press add</li>
+</ol>
+<p>If we put that detail in the scenarios, that workflow will be repeated everywhere &#8211; for addition, subtraction, division, multiplication&#8230; and anywhere any calculation is described.</p>
+<p>What happens if the workflow for this calculator (such as the UI or API) changes from a reverse-polish notation to a more conventional workflow for a calculator? Like this:</p>
+<ol>
+<li>enter the first number</li>
+<li>press add</li>
+<li>enter the second number</li>
+<li>press equals</li>
+</ol>
+<p>The correct answer hasn&#8217;t changed &#8211; i.e. the &#8216;business rule&#8217; is the same &#8211; it&#8217;s just the sequence of actions has changed.</p>
+<p>Now we have to go through all the feature files and update all the scenarios. In the case of our calculator that may only be a few files covering add, subtract, divide, multiply. For something larger and more complex this could be a lot of work.</p>
+<p>Instead, putting this in the code of the step-definition means that this:<br />
+<code><br />
+When ^I (add|subtract|divide|multiply) (.*) (?:and|from|by)? (.*) do |operator, first_number, second_number|<br />
+@calc = @calc ||= Calculator.new<br />
+@calc.enter first_number<br />
+@calc.enter second_number<br />
+@calc.send operator.to_sym<br />
+end<br />
+</code></p>
+<p>Would have to change to this:<br />
+<code><br />
+When ^I (add|subtract|divide|multiply) (.*) (?:and|from|by)? (.*) do |operator, first_number, second_number|<br />
+@calc = @calc ||= Calculator.new<br />
+@calc.enter first_number<br />
+@calc.send operator.to_sym #moved up from the bottom<br />
+@calc.enter second_number<br />
+@calc.calculate                     #new action for the conventional calculator workflow<br />
+end<br />
+</code></p>
+<p>Nothing else would need to change &#8211; other than the product of course. By writing the steps as tasks, all of our feature files would still accurately illustrate the business rule even though the workflow of the interface (gui or api) has changed.</p>
+<p><strong>Taking your scenario-steps to task</strong><br />
+So, taking this approach helps us to reduce our maintenance overheads. Putting the Actions inside the step definition makes our tests less brittle. When the workflow changes we only need to update our specs in one place &#8211; the step-definitions.</p>
+<p>Of, perhaps, greater importance &#8211; by capturing the user&#8217;s scenario-specific goal as the scenario name and the tasks as the steps, the team are working towards a shared understanding of the part of the problem we&#8217;re trying to solve not a solution we might be prematurely settling upon. When rolled up with the broader context (expressed in the user-story and its other scenarios) it gives us a focus on solving the wider problem rather than biasing the solution.</p>
+<p>Sometimes, at first, it&#8217;s hard to see how to express the scenario and is easier when people start by talking of clicks, presses and what they&#8217;re entering. And that&#8217;s ok. Maybe that&#8217;s where the team needs to start the conversation. Just because that&#8217;s where you start, ask &#8220;why are we doing those actions&#8221; a few times, and it doesn&#8217;t have to be where you end up.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/03/goals-tasks-action/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>You&#8217;re almost cuking it&#8230;</title>
+		<link>http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/</link>
+		<comments>http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/#comments</comments>
+		<pubDate>Wed, 25 Aug 2010 06:15:29 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[Software development]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=85</guid>
+		<description><![CDATA[In &#8220;You&#8217;re Cuking it Wrong&#8221;, Jonas Nicklas, shows several examples of bad scenarios (or acceptance tests whichever term you prefer) and demonstrates better approaches. This is an excellent post on common mistakes made when writing example scenarios with Cucumber. I think, however, he could have gone further in one case. One of his examples of &#8230; <a href="http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/" class="more-link">Continue reading <span class="screen-reader-text">You&#8217;re almost cuking it&#8230;</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><a title="cut cuke" href="http://flickr.com/photos/33602849@N00/11084274"><img class="alignleft" src="http://farm1.static.flickr.com/6/11084274_aa716b21eb_t.jpg" alt="" width="100" height="100" /></a> In <a href="http://elabs.se/b/15">&#8220;You&#8217;re Cuking it Wrong&#8221;</a>,  Jonas Nicklas, shows several examples of bad scenarios (or acceptance tests whichever term you prefer) and demonstrates better approaches. This is an excellent post on common mistakes made when writing example scenarios with Cucumber.</p>
+<p>I think, however, he could have gone further in one case. One of his examples of a bad scenario looks like this:</p>
+<blockquote><p><code>Scenario: Adding a subpage<br />
+Given I am logged in<br />
+Given a microsite with a Home page<br />
+When I click the Add Subpage button<br />
+And I fill in "Gallery" for "Title" within "#document_form_container"<br />
+And I press "Ok" within ".ui-dialog-buttonpane"<br />
+Then I should see /Gallery/ within "#documents"</code></p></blockquote>
+<p>(Dude &#8211; yep, seen these&#8230; I agree&#8230; not good). He goes on to suggest it should really look like this:</p>
+<blockquote><p><code>Scenario: Adding a subpage<br />
+Given I am logged in<br />
+Given a microsite with a home page<br />
+When I press "Add subpage"<br />
+And I fill in "Title" with "Gallery"<br />
+And I press "Ok"<br />
+Then I should see a document called "Gallery"</code></p></blockquote>
+<p>This is a massive improvement. It keeps the specifics that inform the reader and give them some context (like filling in the &#8220;Title&#8221; with &#8220;Gallery&#8221;) and takes them further away from the implementation. Although it gets closer to expressing customer intent, I think it could go further. At the moment, it is describing the &#8216;what&#8217; and some of the &#8216;how&#8217;. This example makes complete sense if what we are exploring is the design of the UI. I&#8217;ve not found these scenarios to be a good place to do that, however.</p>
+<p>Instead, in these specifications we want our examples to illustrate the customer intent. The &#8216;what&#8217; not the &#8216;how&#8217;. There are other places we can capture the &#8216;how&#8217; &#8211; i.e. in the step methods.</p>
+<p>Instead, I would write it like this:</p>
+<p><code>Scenario: Adding a subpage<br />
+Given a microsite with a home page<br />
+Given I am logged in<br />
+When I Add a Subpage with a Title of "Gallery"<br />
+Then I should see a document called "Gallery"</code></p>
+<p>I&#8217;ve removed all the &#8220;Tasks&#8221; and left only &#8220;Activities&#8221;. This leaves the user experience completely open. This ensures that when there are UI changes, I only change the code that performs the tasks (clicking, pressing, etc.) and my scenarios evaluate whether the customer intent is still fulfilled &#8211; without having to go back and change a lot of files.</p>
+<p>Otherwise &#8211; great post Jonas <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/08/youre-almost-cuking-it/feed/</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+		<item>
+		<title>Being a youDevise Developer &#8211; Week 1</title>
+		<link>http://antonymarcano.com/blog/2010/07/being-a-youdevise-developer-week-1/</link>
+		<comments>http://antonymarcano.com/blog/2010/07/being-a-youdevise-developer-week-1/#respond</comments>
+		<pubDate>Sun, 18 Jul 2010 10:09:24 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[legacy code]]></category>
+		<category><![CDATA[TDD]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=51</guid>
+		<description><![CDATA[In my previous post, I gave the background to me spending the next month or two as a developer on a youDevise product. I&#8217;ve just completed my first &#8216;official&#8217; week working with them. It was one of, if not, the smoothest of inductions I&#8217;ve ever experienced. I arrived and was shown a desk to work &#8230; <a href="http://antonymarcano.com/blog/2010/07/being-a-youdevise-developer-week-1/" class="more-link">Continue reading <span class="screen-reader-text">Being a youDevise Developer &#8211; Week 1</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>In my <a href="http://antonymarcano.com/blog/2010/07/being-a-youdevise-developer-introduction">previous post</a>, I gave the background to me spending the next month or two as a developer on a youDevise product.</p>
+<p>I&#8217;ve just completed my first &#8216;official&#8217; week working with them. It was one of, if not, <em>the</em> smoothest of inductions I&#8217;ve ever experienced. I arrived and was shown a desk to work at. There was a welcome letter in front of a dual screen developer machine with Ubuntu installed. The letter told me everything I needed to get logged in, access e-mail and wiki links telling me where to find the rest of the information I needed to configure the machine. For the project I was about to work on.</p>
+<p>Their CEO sent out an introduction e-mail telling everyone about me and others who started that day on the development team and in other non-technical departments. I also experienced a warm welcome from the team and was assigned a youDevise mentor to help me settle in.<br />
+My first few days involved several presentations &#8211; mostly demonstrative &#8211;  introducing me to youDevise products and their business model. Yet I still got to work on code almost immediately.</p>
+<p>I was very lucky to get to pair with their summer intern, Marius Cobzarenco, on a part of an all-new reporting capability for one of their products.  I am so impressed with Marius. He left Cambridge University only three weeks ago and I have to say he is one of the most competent graduates that I&#8217;ve ever met! He has a level of technical competence that rivals many much more experienced developers and he has a passion and aptitude for learning that is rare. He became competent in Behaviour Driven Development after working with me for only an hour or two and <a href="http://twitter.com/AntonyMarcano/status/18509864114">fell in love with the approach</a>. I was so impressed with him that I decided to sponsor his attendance at a TDD workshop this weekend with <a href="http://parlezuml.com/blog/">Jason Gorman</a>.</p>
+<p>Marius is a reflection of the high standards youDevise sets for itself. Whenever I&#8217;m there, I never feel like the smartest person in the room.</p>
+<p>Speaking of smart people, other youDevisers I&#8217;ve also had the opportunity to work with include <a href="http://www.exubero.com/joe/">Joe Schmetzer</a> and Stephen Siard.</p>
+<p>Joe is a great guy &#8211; extraordinarily capable yet incredibly humble. Joe really knows his stuff! I&#8217;m looking forward to sharing with him, but mostly, learning from him. Stephen &#8211; who I have secretly, in my mind, nicknamed &#8216;the professor&#8217; simply because his intellect is especially humbling for me &#8211; is another who I have been very lucky to work with. He has a way with algorithms that is tantamount to wizardry &#8211; but he is far too scientific to be called &#8220;the wizard&#8221; <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>These guys stand alongside other similarly impressive and diverse individuals that I&#8217;ll mention in future posts &#8211; each with their unique talents.</p>
+<p>Next week, we start a new iteration. I&#8217;ll be seeing what it&#8217;s like working with some of their legacy code. Based on what I&#8217;ve seen so far, at least I know they recognise where they have legacy and that they are passionate about writing tests and cleaning the code up as they go.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/07/being-a-youdevise-developer-week-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Monsters, Names, Pot-Roast &#038; The Waterfall Model</title>
+		<link>http://antonymarcano.com/blog/2010/07/monsters-names-pot-roast-the-waterfall-model/</link>
+		<comments>http://antonymarcano.com/blog/2010/07/monsters-names-pot-roast-the-waterfall-model/#comments</comments>
+		<pubDate>Mon, 12 Jul 2010 23:33:33 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[Agile software development]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[computing]]></category>
+		<category><![CDATA[Information technology management]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[Software engineering]]></category>
+		<category><![CDATA[Software project management]]></category>
+		<category><![CDATA[software requirements]]></category>
+		<category><![CDATA[TDD]]></category>
+		<category><![CDATA[Technology/Internet]]></category>
+		<category><![CDATA[Waterfall]]></category>
+		<category><![CDATA[Waterfall model]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=33</guid>
+		<description><![CDATA[&#8220;Antony&#8221; (without the &#8216;H&#8217;) is the anglicised version of Antonius. In victorian times (there or thereabouts I&#8217;m guessing), among those wishing to appear oh so intelligent, gossip spread that the spelling of &#8220;Antony&#8221; was wrong&#8230; For, so they would say, it is born of the greek word &#8220;anthos&#8221; (meaning &#8220;flower&#8221;) &#8211; oh dear&#8230; so many &#8230; <a href="http://antonymarcano.com/blog/2010/07/monsters-names-pot-roast-the-waterfall-model/" class="more-link">Continue reading <span class="screen-reader-text">Monsters, Names, Pot-Roast &#038; The Waterfall Model</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<div>&#8220;Antony&#8221; (without the &#8216;H&#8217;) is the anglicised version of Antonius. In victorian times (there or thereabouts I&#8217;m guessing), among those wishing to appear <em>oh so intelligent</em>, gossip spread that the spelling of &#8220;Antony&#8221; was wrong&#8230; For, so they would say, it is born of the greek word &#8220;anthos&#8221; (meaning &#8220;flower&#8221;) &#8211; oh dear&#8230; so many poor children with misspelt names&#8230;&nbsp;</p>
+<p>Despite being completely wrong, the world forgot of my name&#8217;s etruscan origin and spelt it with an &#8216;H&#8217;&#8230; This misinformation established itself through the eras so much so that, today, the de-facto spelling is &#8220;An<strong>th</strong>ony&#8221;. It has even found it&#8217;s way into the American pronunciation of the name as: &#8220;An-thon-ee&#8221;.</p>
+<p>Waterfall development has something in common with this story&#8230; somehow, through misinformation, what it once was has been warped, into something else.</p>
+<p>The key difference is that Waterfall is now increasingly represented as was originally intended. Unfortunately for me, my name is not&#8230;</p>
+<p>&nbsp;</p>
+</div>
+<p><strong>Monsters &amp; Legends</strong></p>
+<div id="_mcePaste">Some might think that the Waterfall Model is an approach to software development, first explained (but not named) in <a href="http://leadinganswers.typepad.com/leading_answers/files/original_waterfall_paper_winston_royce.pdf">Winston Royce&#8217;s 1970 Paper &#8220;Managing the Development of Large Software Systems&#8221; (PDF)</a>, but they could be wrong&#8230;</div>
+<p><img class="alignleft" src="http://farm1.static.flickr.com/154/352550317_b423336ea9_m.jpg" alt="" width="240" height="168" /></p>
+<div id="_mcePaste">Somehow, it seems to have become something else&#8230; it became the way (many) people thought software should be developed&#8230; the norm for software &#8216;professionals&#8217;. Years of anecdotal failure followed and Waterfall became a legend &#8211; told time and again much like a scary camp-fire story&#8230; The enemy of effective software development&#8230; A monster that will consume all the resources it can, spewing out nothing but documentation, rarely concluding in working software &#8211; at best 20% of the time.</div>
+<p>This negative view, to what was once the de-facto approach to software development, is actually far closer to Royce&#8217;s original words on Waterfall than many seem to know&#8230;</p>
+<p>&nbsp;</p>
+<p><strong>The Truth &amp; Technology</strong></p>
+<p>In Royce&#8217;s original paper, he shows a progression of activities, that came to be known as the waterfall model.</p>
+<p>What we rarely hear of is Royce&#8217;s original words on the subject:</p>
+<blockquote><p>&#8220;&#8230;the implementation described above is risky and invites failure.&#8221;</p></blockquote>
+<p>Further to this, Royce goes on to explain that the reason that this cannot work is because there are too many things we cannot analyse up-front:</p>
+<blockquote><p>&#8220;The testing phase which occurs at the end of the development cycle is the first event for which timing, storage, input/output transfers, etc., are experienced as distinguished from analyzed. These phenomena are not precisely analyzable. They are not the solutions to the standard partial differential equations of mathematical physics for instance.&#8221;</p></blockquote>
+<p>He explains that we need feedback loops. He goes on to warn of (a conservative) 100% overrun in schedule and costs:</p>
+<blockquote><p>&#8220;&#8230;invariably a major redesign is required. A simple octal patch or redo of some isolated code will not fix these kinds of difficulties. The required design changes are likely to be so disruptive that the software requirements upon which the design is based and which provides the rationale for everything are violated. Either the requirements must be modified, or a substantial change in the design is required. In effect the development process has returned to the origin and one can expect up to a 100-percent overrun in schedule and/or costs.&#8221;</p></blockquote>
+<p>Some of Royce&#8217;s strategies, like &#8220;Involve the customer&#8221; and obtaining early feedback, have lived on in modern (Agile) methodologies. Beyond that, we should remember that his specific recommendations on how to solve the problems of a waterfall model were all based on the technology of the time.</p>
+<p>&nbsp;</p>
+<p><strong>Pot-Roast &amp; The Cost of Change</strong></p>
+<p>In 1970, computing was much more expensive than it is today. In those days, changing software was far more expensive than changing pictures and words on paper. It was also much harder to express your design in a human-friendly way in the programming languages of that time. As a result of these and other factors, documentation was a major part of how Royce tried to solve the inherent problems of the Waterfall model.</p>
+<p>&nbsp;</p>
+<p>Technology, tools &amp; thinking have moved on and our documentation no longer needs to be static. It lives. It can breath. The specification can automatically verify that the implementation does what we said it should do (e.g. as in BDD Specs or ATDD/TDD Tests). Modern programming languages allow us to express the design and our understanding of the domain far more clearly, negating the need to first detail our thoughts on paper in natural language. We simply <a href="http://mikeschinkel.com/blog/conventionalwisdomassumptionsandpotroast/">don&#8217;t have to cut the ends off that pot-roast anymore</a>.</p>
+<p>&nbsp;</p>
+<p><strong>Only now, at the end&#8230;</strong></p>
+<p>Waterfall, thanks to the popularity of Agile, has gone from something I was shown at school as &#8220;how software is developed&#8221; to being seen in the light that it was originally presented &#8211; how software should <strong>not</strong> be implemented.</p>
+<p>This is despite those who still profess the legitimacy of Waterfall and those still shocked and surprised when they hear of Royce&#8217;s own words against the monster he unintentionally created.</p>
+<p>As for my name, I hold out little hope for change. I doubt that the world will use my name as it was originally intended and so I have resigned myself to needing two domain names&#8230; one with an &#8216;H&#8217; in it, and the correct one without &#8211; I wonder which one brought you here.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/07/monsters-names-pot-roast-the-waterfall-model/feed/</wfw:commentRss>
+		<slash:comments>11</slash:comments>
+		</item>
+		<item>
+		<title>Taking repetition to task</title>
+		<link>http://antonymarcano.com/blog/2010/07/taking-repetition-to-task/</link>
+		<comments>http://antonymarcano.com/blog/2010/07/taking-repetition-to-task/#comments</comments>
+		<pubDate>Thu, 08 Jul 2010 22:41:08 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[extreme programming]]></category>
+		<category><![CDATA[old favourites]]></category>
+		<category><![CDATA[TDD]]></category>
+		<category><![CDATA[testing]]></category>
+		<category><![CDATA[testingReflections]]></category>
+		<category><![CDATA[user stories]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=21</guid>
+		<description><![CDATA[This originally appeared on my old blog in March 2010. Others have talked about the virtues of stories as vertical slices of a problem (end-to-end capabilities) rather than horizontal slices (system layers or components). So, if we slice the problem with user stories, how do we slice the user-stories themselves? If, as I sometimes say, &#8230; <a href="http://antonymarcano.com/blog/2010/07/taking-repetition-to-task/" class="more-link">Continue reading <span class="screen-reader-text">Taking repetition to task</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><em>This originally appeared </em><a href="http://www.testingreflections.com/node/view/8489"><em>on my old blog in March 2010</em></a><em>.</em></p>
+<p>Others have talked about the virtues of <a href="http://blog.energizedwork.com/2005/05/slicing-cake.html">stories as vertical slices of a problem</a> (end-to-end capabilities) rather than horizontal slices (system layers or components). So, if we slice the problem <em>with</em> user stories, how do we slice the user-stories themselves?</p>
+<p>If, as I sometimes say, acceptance tests (a.k.a. examples/scenarios/acceptance-criteria) are the knife with which we slice a story into even thinner vertical slices, then I would say my observation of &#8216;tasks&#8217; is that they are used as the knife used to cut a story into horizontal slices. This feels wrong&#8230;</p>
+<p>Sometimes I also wonder, hasn&#8217;t anyone else noticed that the idea of counting the effort of completed tasks on burn-down/up charts is counter to the value that we measure progress only with working software? Surely it makes more sense to measure progress with passing tests (<a href="http://www.developsense.com/blog/2009/09/tests-vs-checks-should-we-call-test/">or &#8220;checks&#8221;</a> &#8211; whichever you prefer).</p>
+<p>These are two of the reasons I&#8217;ve never felt very comfortable with tasks, because:</p>
+<ul>
+<li>they&#8217;re often applied in such a way that the story is sliced horizontally</li>
+<li>they encourage measuring progress in a less meaningful way than working software</li>
+</ul>
+<p>Tasks are, however, very useful for teams at first. Just like anything else we learn how to do, learning how to do it on paper can often help us then discard the paper and do the workings in our heads. However, what I&#8217;ve noticed is that most teams I&#8217;ve worked with continue to write and estimate tasks long after the practice is useful or relevant to them.</p>
+<p>For example, there comes a time for many teams where tasks become repetitive. &#8220;Add x to the Model&#8221;, &#8220;Change View&#8221;&#8230; and so on. Is this adding value to the process or are you just doing it because the process says you should do it?</p>
+<p>Simply finding that your tasks are repetitive doesn&#8217;t mean the team is ready to stop using them. There is another important ingredient, meaningful acceptance criteria (scenarios / acceptance-tests / examples).</p>
+<p>I often see stories with acceptance criteria such as:</p>
+<ul>
+<li>Must have a link to save the profile</li>
+<li>Must have a drop down to select business sector</li>
+<li>Business sector must be mandatory</li>
+<li>&#8230;</li>
+</ul>
+<p>Although these are &#8220;acceptance criteria&#8221; they aren&#8217;t what we mean by acceptance criteria in the context of user stories. Firstly, they are talking about how the user interacts rather than what they need to achieve (I&#8217;ve <a href="http://www.testingreflections.com/node/view/6704">talked about this before</a>). Secondly, they aren&#8217;t examples. What we want are the variations that alter the behaviour or response of the product:</p>
+<ul>
+<li>Should create a new profile</li>
+<li>Profile cannot be saved with blank &#8220;business sector&#8221;</li>
+</ul>
+<p>As our product fulfils each of these criteria, we are making progress. Jason Gorman <a href="http://parlezuml.com/blog/?postid=683">illustrates one way of approaching this</a>.</p>
+<p>So, if you are using tasks, consider an alternative approach. First, look at your acceptance criteria, make sure they are more like examples and less like instructions. Once that&#8217;s achieved, consider slicing each criterion (or scenario) horizontally with the tasks rather than the story. Pretty soon, you&#8217;ll find that you don&#8217;t need tasks anymore and you can simply measure progress in terms of the new capabilities you add to your product.</p>
+<p><em><strong>Updated 30-02-2010:</strong> I&#8217;ve inserted a new paragraph as the opening paragraph referencing an article on slicing user-stories to add some background to the vertical slicing metaphor. I&#8217;ve provided a link but I&#8217;m not sure who first came up with the metaphor.</em></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/07/taking-repetition-to-task/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

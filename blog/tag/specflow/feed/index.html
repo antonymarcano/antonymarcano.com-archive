@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>antonymarcano.com &#187; specflow</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/specflow/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Fri, 22 May 2015 11:41:52 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.0.7</generator>
+	<item>
+		<title>Segue Steps</title>
+		<link>http://antonymarcano.com/blog/2014/05/segue-steps/</link>
+		<comments>http://antonymarcano.com/blog/2014/05/segue-steps/#comments</comments>
+		<pubDate>Fri, 02 May 2014 12:25:06 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[gherkin]]></category>
+		<category><![CDATA[specflow]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=556</guid>
+		<description><![CDATA[Sometimes customer scenarios using Gherkin (Cucumber, SpecFlow etc.) can be harder to read than necessary. Once there&#8217;s more than one &#8220;And&#8221; line in a row, I find that there&#8217;s more clutter than I&#8217;d like and it doesn&#8217;t flow as well when I read it. Let&#8217;s take this example scenario of upgrading a fremium service. Scenario: [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Sometimes customer scenarios using Gherkin (Cucumber, SpecFlow etc.) can be harder to read than necessary. Once there&#8217;s more than one &#8220;And&#8221; line in a row, I find that there&#8217;s more clutter than I&#8217;d like and it doesn&#8217;t flow as well when I read it. Let&#8217;s take this example scenario of upgrading a fremium service.</p>
+<p><code>Scenario: Upgrade my SomeService subscription from Basic to Pro.<br />
+Given I am on the Basic plan<br />
+When I upgrade to the Pro plan<br />
+Then I see a message confirming the upgrade<br />
+And I see that I am now on the Pro plan<br />
+And I receive a personal thank you by email<br />
+And SomeService keeps a record of when the upgrade happened<br />
+And SomeService keeps a record of payment</code></p>
+<p>There&#8217;s a feature I rarely see used, the ability to use bullets (with asterisks &#8216;*&#8217;). I&#8217;ve found that using this among steps with Given/When/Then can remove some of the clutter, making the scenario easier on the eye&#8230;</p>
+<p><code>Scenario: Upgrade my SomeService subscription from Basic to Pro.<br />
+Given I am on the Basic plan<br />
+When I upgrade to the Pro plan<br />
+Then I see a message confirming the upgrade, and:<br />
+* I see that I am now on the Pro plan<br />
+* I receive a personal thank you by email<br />
+* SomeService keeps a record of when the upgrade happened<br />
+* SomeService keeps a record of payment</code></p>
+<p>What I don&#8217;t like about this, however, is how the &#8216;Then&#8217; step appears in a different context to the bullets and seems less important. To make sure that all the steps are seen as equally important, I can do this:</p>
+<p><code>Scenario: Upgrade my SomeService subscription from Basic to Pro.<br />
+Given I am on the Basic plan<br />
+When I upgrade to the Pro plan<br />
+Then the following occurs:<br />
+* I see a message confirming the upgrade<br />
+* I see that I am now on the Pro plan<br />
+* I receive a personal thank you by email<br />
+* SomeService keeps a record of when the upgrade happened<br />
+* SomeService keeps a record of payment</code></p>
+<p>Note how I&#8217;ve put in a &#8220;Then&#8221; step that segues from the &#8220;When&#8221; to the actual expectations.<br />
+A &#8216;Segue Step&#8217; doesn&#8217;t have to do anything, other than transition the reader from the previous steps to a list of expectations:</p>
+<p><code>Then /^the following occurs:$/ do #nothing<br />
+  #just segue to the next step<br />
+end</code></p>
+<p>Another way of using a Segue Step could be like this:</p>
+<p><code>Then I should:<br />
+* See a message confirming the upgrade<br />
+* See that I am now on the Pro plan<br />
+* Receive a personal thank you by email<br />
+And SomeService should:<br />
+* Keep a record of when the upgrade happened<br />
+* Keep a record of payment</code></p>
+<p>Asterisks can replace the opening keyword of any type of step, but using them in this way for Given or When steps could be a scenario-smell, suggesting that the scenario has too much detail or those steps are at the wrong level of abstraction. Using asterisks and Segue Steps are most appropriate in &#8220;Then&#8221; statements with two or more &#8220;And&#8221; lines.</p>
+<p>After doing this, reading scenarios without asterisks and &#8216;Segue Steps&#8217; now feels like the &#8220;And Then&#8221; scene from &#8220;Dude, Where&#8217;s my Car&#8221;&#8230;And then? I hope you find it useful to write better scenarios too&#8230; And then? And then? And theeeeeeeeeeeeen! And thenandthenandthen!<br />
+<iframe src="//www.youtube.com/embed/Kp5nUQkgWIc" height="315" width="420" allowfullscreen="" frameborder="0"></iframe></p>
+<p>&nbsp;</p>
+<p>Special thanks to <a href="https://twitter.com/andypalmer">Andy Palmer</a> for reviewing this blog post and helping me say it with fewer words.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2014/05/segue-steps/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+	</channel>
+</rss>

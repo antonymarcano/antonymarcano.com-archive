@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: To hack, or not to hack</title>
+	<atom:link href="http://antonymarcano.com/blog/2011/06/to-hack-or-not-to-hack/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog/2011/06/to-hack-or-not-to-hack/</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Sun, 24 May 2015 01:54:00 +0000</lastBuildDate>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.0.7</generator>
+	<item>
+		<title>By: Antony Marcano</title>
+		<link>http://antonymarcano.com/blog/2011/06/to-hack-or-not-to-hack/comment-page-1/#comment-3193</link>
+		<dc:creator><![CDATA[Antony Marcano]]></dc:creator>
+		<pubDate>Fri, 23 Aug 2013 00:36:00 +0000</pubDate>
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=361#comment-3193</guid>
+		<description><![CDATA[Sorry it&#039;s taken so long to get back to you on this Salim. Somehow I missed this comment.
+
+Indeed, that gives us a formalised approach. 
+
+It still requires the discipline to put an experiment that has worked into the backlog in order to repay the debt. This is not immune to the pressures I outlined in the article above.
+
+Kent Beck talked of how he went about writing JUnitMax, a commercial IDE plugin that continuously ran unit tests in the background. He didn&#039;t write any tests for it in the first month because he wanted to get feedback from people as quickly as possible [1]. He, of course, had the discipline to go back to it later. He was also &#039;the business&#039; and &#039;the developer&#039; and had all the understanding necessary to generally make the right choice... sustainable or disposable.
+
+When we were working on http://papyr.me, which is now on hold indefinitely  [2], James Martin started out in much the same way as Kent Beck did. Everything we were doing was an experiment. He soon encountered a situation where progress on evolving an experiment became very difficult and this meant slowing down in order to speed up again by writing tests and refactoring because it was no longer safe to progress that experiment.
+
+The problem that arises is when you want to add an experimental feature where the feedback needs you to evolve it again and again and again. Suddenly realise that it works the way your customers want it to. Should we then write tests and refactor it? Will the demand for the next experiment to evolve allow us to do this? This can be solved using continuous-rewriting [3] but there may come a point where having unit tests and well factored code will make each evolution faster and faster. So, having some guidance around when to have disposable experiments and when to have evolving experiments (where we write tests and refactor) would be useful for many. For me, if the experiment has resulted in feedback such that I&#039;m evolving it, it should go through the sustainable &#039;backlog&#039; route in the forked Kanban approach. If I have no basis for an idea then that would go down the disposable experiment route.
+
+There is also the challenge of untangling experimental code from the core code. If, however, you have evolved a sustainable approach to feature toggling then this is much easier to do and will improve the speed at which you can migrate experimental code to become part of the product&#039;s core or ditch the code altogether.
+
+This all ignores the value of trying to express our understanding as tests which in itself can evolve our ideas or quickly highlight the gaps in our thinking.
+
+The Forked Kanban approach is a nice way to visualise and distinguish between user stories that are a certain refinement to an existing product or a potentially disposable experiment. In XP this was done with &#039;spike&#039; stories [4]. The only difference being that the code for a spike was often thrown away or retained temporarily for only for reference purposes. In Kent Beck&#039;s story, he was essentially &#039;spiking&#039; but actually released the code.
+
+In a world where I have feature toggling I&#039;d treat each user story as an experiment. I&#039;d be more inclined to not have a fork and just place the experimental lane to the left so that there is a single, linear path. I might choose different wording...
+
+&#124; ideas / needs &#124; developing &#124; learning (active experiment) &#124; removing / improving &#124; review / accept &#124;
+
+
+I&#039;d also want this to be supported by a continuous delivery pipeline.
+
+I&#039;d then make a judgement call on where I needed tests and where I should be refactoring in the earlier stages and, for any item that we decide to improve, agree higher expectations on tests and internal code quality.
+
+In short, I can see the value of the forked Kanban approach. I think it doesn&#039;t necessarily solve some of the problems I&#039;ve outlined in the article but it does help the team see which things probably need a sustainable approach vs those things that can be treated as potentially disposable. Either way, to be most successful, it requires a fair amount of maturity in both the people and the tech.
+
+How do you see the forked Kanban approach? (Given that a lot of time has passed since your comment)
+
+[1] Kent Beck&#039;s JUnitMax story: http://www.infoq.com/news/2009/06/test-or-not
+
+[2] papyr.me – no more: http://on.papyr.me/post/32407029242/the-end
+
+[3] Continuous Rewriting: http://www.citconf.com/wiki/index.php?title=Continuous_rewriting
+
+[4] Spike solution: http://www.extremeprogramming.org/rules/spike.html]]></description>
+		<content:encoded><![CDATA[<p>Sorry it&#8217;s taken so long to get back to you on this Salim. Somehow I missed this comment.</p>
+<p>Indeed, that gives us a formalised approach. </p>
+<p>It still requires the discipline to put an experiment that has worked into the backlog in order to repay the debt. This is not immune to the pressures I outlined in the article above.</p>
+<p>Kent Beck talked of how he went about writing JUnitMax, a commercial IDE plugin that continuously ran unit tests in the background. He didn&#8217;t write any tests for it in the first month because he wanted to get feedback from people as quickly as possible [1]. He, of course, had the discipline to go back to it later. He was also &#8216;the business&#8217; and &#8216;the developer&#8217; and had all the understanding necessary to generally make the right choice&#8230; sustainable or disposable.</p>
+<p>When we were working on <a href="http://papyr.me" rel="nofollow">http://papyr.me</a>, which is now on hold indefinitely  [2], James Martin started out in much the same way as Kent Beck did. Everything we were doing was an experiment. He soon encountered a situation where progress on evolving an experiment became very difficult and this meant slowing down in order to speed up again by writing tests and refactoring because it was no longer safe to progress that experiment.</p>
+<p>The problem that arises is when you want to add an experimental feature where the feedback needs you to evolve it again and again and again. Suddenly realise that it works the way your customers want it to. Should we then write tests and refactor it? Will the demand for the next experiment to evolve allow us to do this? This can be solved using continuous-rewriting [3] but there may come a point where having unit tests and well factored code will make each evolution faster and faster. So, having some guidance around when to have disposable experiments and when to have evolving experiments (where we write tests and refactor) would be useful for many. For me, if the experiment has resulted in feedback such that I&#8217;m evolving it, it should go through the sustainable &#8216;backlog&#8217; route in the forked Kanban approach. If I have no basis for an idea then that would go down the disposable experiment route.</p>
+<p>There is also the challenge of untangling experimental code from the core code. If, however, you have evolved a sustainable approach to feature toggling then this is much easier to do and will improve the speed at which you can migrate experimental code to become part of the product&#8217;s core or ditch the code altogether.</p>
+<p>This all ignores the value of trying to express our understanding as tests which in itself can evolve our ideas or quickly highlight the gaps in our thinking.</p>
+<p>The Forked Kanban approach is a nice way to visualise and distinguish between user stories that are a certain refinement to an existing product or a potentially disposable experiment. In XP this was done with &#8216;spike&#8217; stories [4]. The only difference being that the code for a spike was often thrown away or retained temporarily for only for reference purposes. In Kent Beck&#8217;s story, he was essentially &#8216;spiking&#8217; but actually released the code.</p>
+<p>In a world where I have feature toggling I&#8217;d treat each user story as an experiment. I&#8217;d be more inclined to not have a fork and just place the experimental lane to the left so that there is a single, linear path. I might choose different wording&#8230;</p>
+<p>| ideas / needs | developing | learning (active experiment) | removing / improving | review / accept |</p>
+<p>I&#8217;d also want this to be supported by a continuous delivery pipeline.</p>
+<p>I&#8217;d then make a judgement call on where I needed tests and where I should be refactoring in the earlier stages and, for any item that we decide to improve, agree higher expectations on tests and internal code quality.</p>
+<p>In short, I can see the value of the forked Kanban approach. I think it doesn&#8217;t necessarily solve some of the problems I&#8217;ve outlined in the article but it does help the team see which things probably need a sustainable approach vs those things that can be treated as potentially disposable. Either way, to be most successful, it requires a fair amount of maturity in both the people and the tech.</p>
+<p>How do you see the forked Kanban approach? (Given that a lot of time has passed since your comment)</p>
+<p>[1] Kent Beck&#8217;s JUnitMax story: <a href="http://www.infoq.com/news/2009/06/test-or-not" rel="nofollow">http://www.infoq.com/news/2009/06/test-or-not</a></p>
+<p>[2] papyr.me – no more: <a href="http://on.papyr.me/post/32407029242/the-end" rel="nofollow">http://on.papyr.me/post/32407029242/the-end</a></p>
+<p>[3] Continuous Rewriting: <a href="http://www.citconf.com/wiki/index.php?title=Continuous_rewriting" rel="nofollow">http://www.citconf.com/wiki/index.php?title=Continuous_rewriting</a></p>
+<p>[4] Spike solution: <a href="http://www.extremeprogramming.org/rules/spike.html" rel="nofollow">http://www.extremeprogramming.org/rules/spike.html</a></p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Salim Virani</title>
+		<link>http://antonymarcano.com/blog/2011/06/to-hack-or-not-to-hack/comment-page-1/#comment-256</link>
+		<dc:creator><![CDATA[Salim Virani]]></dc:creator>
+		<pubDate>Mon, 13 Jun 2011 19:00:00 +0000</pubDate>
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=361#comment-256</guid>
+		<description><![CDATA[Hi Antony, would be interesting to know how you see the forked Kanban approach fitting here. http://agilefocus.com/2010/04/26/the-lean-startup-kanban-board/]]></description>
+		<content:encoded><![CDATA[<p>Hi Antony, would be interesting to know how you see the forked Kanban approach fitting here. http://agilefocus.com/2010/04/26/the-lean-startup-kanban-board/</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

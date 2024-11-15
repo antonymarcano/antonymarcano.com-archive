@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Software testing &#8211; antonymarcano.com</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/software-testing/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Sat, 03 Sep 2016 10:48:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.14</generator>
+	<item>
+		<title>Scenario-Oriented vs. Rules-Oriented Acceptance Criteria</title>
+		<link>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/</link>
+		<comments>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/#comments</comments>
+		<pubDate>Sun, 02 Oct 2011 13:59:19 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Acceptance testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[extreme programming]]></category>
+		<category><![CDATA[Software testing]]></category>
+		<category><![CDATA[TDD]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=393</guid>
+		<description><![CDATA[Acceptance Criteria, Scenarios, Acceptance Tests are, in my experience, often a source of confusion. Such confusion results in questions like the one asked of Rachel Davies recently, i.e. &#8220;When to write story tests&#8221; (sometimes also known as &#8220;Acceptance Tests&#8221; or in BDD parlance &#8220;Scenarios&#8221;). In her answer, Rachel highlighted that: &#8220;&#8230;acceptance criteria and example scenarios &#8230; <a href="http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/" class="more-link">Continue reading <span class="screen-reader-text">Scenario-Oriented vs. Rules-Oriented Acceptance Criteria</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Acceptance Criteria, Scenarios, Acceptance Tests are, in my experience, often a source of confusion.</p>
+<p>Such confusion results in questions like the one <a href="http://agilecoach.typepad.com/agile-coaching/2011/07/when-to-write-story-tests.html ">asked of Rachel Davies recently</a>, i.e. &#8220;When to write story tests&#8221; (sometimes also known as &#8220;Acceptance Tests&#8221; or in BDD parlance &#8220;Scenarios&#8221;).</p>
+<p>In her answer, Rachel highlighted that:</p>
+<blockquote><p><em>&#8220;</em><em>&#8230;acceptance criteria and example scenarios are a bit like the chicken and the egg &#8211; it&#8217;s not always clear which comes first so iterate!&#8221;</em></p></blockquote>
+<p>In that article, Rachel distinguishes between acceptance criteria and example scenarios by reference to <a href="http://lizkeogh.com/2011/06/20/acceptance-criteria-vs-scenarios/">Liz Keogh&#8217;s blog post on the subject of &#8220;Acceptance Criteria vs. Scenarios&#8221;</a>:</p>
+<blockquote><p><em>&#8220;</em><em>where she explains that acceptance criteria are general rules covering system behaviour from which executable examples (Scenarios) can be derived</em>&#8220;</p></blockquote>
+<p>Seeing the acceptance criteria as rules and the scenarios as something else, is one way of looking at it. There&#8217;s another way too&#8230;</p>
+<p>Instead of Acceptance Criteria that are rules and Acceptance Tests that are scenarios&#8230; I often find it useful to arrive at Acceptance Criteria that are scenarios, of which the Acceptance Tests are just a more detailed expression.</p>
+<p>I.e. Scenario-Oriented Acceptance Criteria.</p>
+<h3>Expressing the Intent of the Story</h3>
+<p>Many teams I encounter, especially newer ones, place higher importance on the things we label &#8220;acceptance criteria&#8221; than on the things we label &#8220;acceptance tests&#8221; or &#8220;scenarios&#8221;.</p>
+<p>By this I mean that, such a team might ultimately determine whether the intent of the story was fulfilled by evaluating the product against these rules-oriented criteria. Worse still, I&#8217;ve observed some teams also have:</p>
+<ul>
+<li>Overheads of checking that these rule-based criteria are fulfilled as well as the scenario-oriented acceptance tests</li>
+<li>Teams working in silos where BAs take sole responsibility of criteria and testers take sole responsibility for scenarios</li>
+<li>A desire to have traceability from the acceptance tests back to the acceptance criteria</li>
+<li>Rules expressed as rules in two places &#8211; the criteria and the code</li>
+<li>Criteria treated as the specification, rather than using specification by example</li>
+</ul>
+<p>If we take the approach of not distinguishing between acceptance criteria and acceptance tests (i.e. see the acceptance tests as the acceptance criteria) then we can encourage teams away from these kinds of problems.</p>
+<p>I&#8217;m not saying it solves the problem &#8211; it&#8217;s just easier, in my experience, to move the team towards collaboratively arriving at a shared understanding of the intent of the story this way.</p>
+<p>To do this, we need to iteratively evolve our acceptance criteria from rules-oriented to scenario-oriented criteria.</p>
+<h3>Acceptance Criteria: from rules-oriented to scenario-oriented:</h3>
+<p>Let&#8217;s say we had this user story:</p>
+<pre>As a snapshot photographer</pre>
+<pre>I want some photo albums to be private</pre>
+<pre>So that I have a backup of my personal photos online</pre>
+<p>And let&#8217;s say the product owner first expresses the Acceptance Criteria as rules:</p>
+<ul>
+<li>Must have a way to set the privacy of photo albums</li>
+<li>Private albums must be visible to me</li>
+<li>Private albums must not be visible to others</li>
+</ul>
+<p>We might discuss those to identify scenarios (as vertical slices through the above criteria):</p>
+<ul>
+<li>Create new private album</li>
+<li>Make public album private</li>
+<li>Make private album public</li>
+</ul>
+<p>Here, many teams would retain both acceptance criteria and scenarios. That&#8217;s ok but I&#8217;d only do that if we collectively understood that the information from these two will come together in the acceptance tests&#8230; And that whatever we agree in those acceptance tests supersede the previously discussed criteria.</p>
+<p>This understanding tends to occur in highly collaborative teams. In newer teams, where disciplines (Business Analysts, Testers, Developers) are working more independently this tends to be harder to achieve.</p>
+<p>In those situations (and often even in highly collaborative teams) I&#8217;d continue the discussion to iterate over the rules-oriented criteria to arrive at scenario-oriented criteria, carrying over any information captured in the rules, discarding the original rules-based criteria as we go. This might leave me with the following scenarios:</p>
+<ul>
+<li>Create new private album (visible to me, not to others)</li>
+<li>Make public album private (visible to me, not to others)</li>
+<li>Make private album public (visible to me, &amp; others)</li>
+</ul>
+<p>Which, with a subtle change to the wording, become the acceptance criteria. I.e. the story is complete when we:</p>
+<ul>
+<li>Can create new private album (visible to me, not to others)</li>
+<li>Can make public album private (visible to me, not to others)</li>
+<li>Can make private album public (visible to me, &amp; others)</li>
+</ul>
+<p>Once the story is &#8216;in-play&#8217; (e.g. during a time-box/iteration/sprint) I&#8217;d elaborate these one at a time, implementing just enough to get each one passing as I go. By doing this we might arrive at:</p>
+<pre>Scenario: Can Create new private album
+When I create a new private album called "Weekend in Brighton"
+Then I should be able to see the album
+And others should not be able to see it
+
+Scenario: Can Make public album private
+Given there is a public album called "Friday Night"
+When I make that album private
+Then I should be able to see the album
+And others should not be able to see it
+
+Scenario: Can Make private album public
+Given there is a private album called "Friday Night"
+When I make that album public
+Then I should be able to see the album
+And others should be able to see it</pre>
+<p>By being an elaboration of the scenario-oriented acceptance criteria there&#8217;s no implied need to also check the implementation against the original &#8216;rules-oriented&#8217; criteria.</p>
+<p>Agreeing that this is how we&#8217;ll work, it encourages more collaborative working &#8211; at least between the Business Analysts and Testers.</p>
+<p>These new scenario-based criteria become the only means of determining whether the intent of the story has been fulfilled, avoiding much of the confusion that can occur when we have rules-oriented acceptance criteria as well as separate acceptance test scenarios.</p>
+<p>In short, more often than not, I find these things much easier when the criteria and the scenarios are essentially one and the same.</p>
+<p>Why not  give it a try?</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>Old Favourite: Taking Repetition To Task</title>
+		<link>http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/</link>
+		<comments>http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/#comments</comments>
+		<pubDate>Mon, 13 Dec 2010 13:02:41 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Business Analysis]]></category>
+		<category><![CDATA[Old Favourites]]></category>
+		<category><![CDATA[Project Management]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Acceptance testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[Agile Planning]]></category>
+		<category><![CDATA[Agile QA]]></category>
+		<category><![CDATA[kanban]]></category>
+		<category><![CDATA[project management]]></category>
+		<category><![CDATA[Software engineering]]></category>
+		<category><![CDATA[Software testing]]></category>
+		<category><![CDATA[User story]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=168</guid>
+		<description><![CDATA[This originally appeared on my old blog on 16th March 2010&#8230; Others have talked about the virtues of stories as vertical slices of a problem (end-to-end capabilities) rather than horizontal slices (system layers or components). So, if we slice the problem with user stories, how do we slice the user-stories themselves? If, as I sometimes &#8230; <a href="http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/" class="more-link">Continue reading <span class="screen-reader-text">Old Favourite: Taking Repetition To Task</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><em>This originally appeared on my old blog on 16th March 2010&#8230;</em></p>
+<p>Others have talked about the virtues of <a href="http://blog.energizedwork.com/2005/05/slicing-cake.html">stories as vertical slices of a problem</a> (end-to-end capabilities) rather than horizontal slices (system layers or components). So, if we slice the problem <em>with</em> user stories, how do we slice the user-stories themselves?</p>
+<p>If, as I sometimes say, acceptance tests (a.k.a. examples/scenarios/acceptance-criteria) are the knife with which we slice a story into even thinner vertical slices, then I would say my observation of &#8216;tasks&#8217; is that they are used as the knife used to cut a story into horizontal slices. This feels wrong&#8230;</p>
+<p>Sometimes I also wonder, hasn&#8217;t anyone else noticed that the idea of counting the effort of completed tasks on burn-down/up charts is counter to the value that we measure progress only with working software? Surely it makes more sense to measure progress with passing tests (<a href="http://www.developsense.com/blog/2009/09/tests-vs-checks-should-we-call-test/">or &#8220;checks&#8221;</a> &#8211; whichever you prefer).</p>
+<p>These are two of the reasons I&#8217;ve never felt very comfortable with tasks, because:</p>
+<ul>
+<li>they&#8217;re often applied in such a way that the story is sliced horizontally</li>
+<li>they encourage measuring progress in a less meaningful way than working software</li>
+</ul>
+<p>Tasks are, however, very useful for teams at first. Just like anything else we learn how to do, learning how to do it on paper can often help us then discard the paper and do the workings in our heads. However, what I&#8217;ve noticed is that most teams I&#8217;ve worked with continue to write and estimate tasks long after the practice is useful or relevant to them.</p>
+<p>For example, there comes a time for many teams where tasks become repetitive. &#8220;Add x to the Model&#8221;, &#8220;Change View&#8221;&#8230; and so on. Is this adding value to the process or are you just doing it because the process says you should do it?</p>
+<p>Simply finding that your tasks are repetitive doesn&#8217;t mean the team is ready to stop using them. There is another important ingredient, meaningful acceptance criteria (scenarios / acceptance-tests / examples).</p>
+<p>I often see stories with acceptance criteria such as:</p>
+<ul>
+<li>Must have a link to save the profile</li>
+<li>Must have a drop down to select business sector</li>
+<li>Business sector must be mandatory</li>
+<li>&#8230;</li>
+</ul>
+<p>Although these are &#8220;acceptance criteria&#8221; they aren&#8217;t what we mean by acceptance criteria in the context of user stories. Firstly, they are talking about how the user interacts rather than what they need to achieve (I&#8217;ve <a href="http://www.testingreflections.com/node/view/6704">talked about this before</a>). Secondly, they aren&#8217;t examples. What we want are the variations that alter the behaviour or response of the product:</p>
+<ul>
+<li>Should create a new profile</li>
+<li>Profile cannot be saved with blank &#8220;business sector&#8221;</li>
+</ul>
+<p>As our product fulfils each of these criteria, we are making progress. Jason Gorman <a href="http://parlezuml.com/blog/?postid=683">illustrates one way of approaching this</a>.</p>
+<p>So, if you are using tasks, consider an alternative approach. First, look at your acceptance criteria, make sure they are more like examples and less like instructions. Once that&#8217;s achieved, consider slicing each criterion (or scenario) horizontally with the tasks rather than the story. Pretty soon, you&#8217;ll find that you don&#8217;t need tasks anymore and you can simply measure progress in terms of the new capabilities you add to your product.</p>
+<p><strong><em><br />
+</em></strong></p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/12/old-favourite-taking-repetition-to-task/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Boredom: a Testing Smell?</title>
+		<link>http://antonymarcano.com/blog/2010/07/boredom-a-testing-smell/</link>
+		<comments>http://antonymarcano.com/blog/2010/07/boredom-a-testing-smell/#respond</comments>
+		<pubDate>Fri, 09 Jul 2010 10:18:48 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[automated tests]]></category>
+		<category><![CDATA[Boredom]]></category>
+		<category><![CDATA[old favourites]]></category>
+		<category><![CDATA[Software testing]]></category>
+		<category><![CDATA[testingReflections]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=27</guid>
+		<description><![CDATA[This first appeared on my old blog in June 2005. Somebody I know who was doing some (unscripted) testing spoke of being bored the other day&#8230; I have always found boredom to be a sign that something is wrong. I believe, as has been said by Kaner et al, that testing is a brain-engaged activity. &#8230; <a href="http://antonymarcano.com/blog/2010/07/boredom-a-testing-smell/" class="more-link">Continue reading <span class="screen-reader-text">Boredom: a Testing Smell?</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><em>This first appeared <a href="http://www.testingreflections.com/node/view/2255">on my old blog in June 2005</a>.</em></p>
+<p>Somebody I know who was doing some (unscripted) testing spoke of being bored the other day&#8230; I have always found boredom to be a sign that something is wrong.</p>
+<p><img class="alignright" src="http://farm3.static.flickr.com/2636/3749350596_2365bbe912_m.jpg" alt="" width="240" height="160" /></p>
+<p>I believe, as has been said by Kaner et al, that testing is a brain-engaged activity. If that is the case, why would I ever be bored?</p>
+<p>Borrowing the <a href="http://c2.com/cgi/wiki?CodeSmell ">Smell</a> metaphor&#8230;<!--break--> I would say that boredom is a Bad Testing Smell. If it isn&#8217;t a bad smell, it is a whiff of an underlying bad-smell for sure.</p>
+<p>If on the rare occasion I find that I am bored, I&#8217;d ask myself:</p>
+<ol>
+<li>Am I testing this area more than I need to? (if so, why?)</li>
+<li>Am I losing concentration because my brain is tired? Do I need a break?</li>
+<li>Is what I am doing so repetitive that perhaps it should be automated?</li>
+<li>Is there a better way of testing this feature?</li>
+</ol>
+<p>If I answer &#8220;yes&#8221; to any of these, I know that perhaps I need to do something differently. Whether that is feasible in a given context, might be a different story.</p>
+<p><strong>Update 9th July 2010:</strong> This applies to scripted testing as much as it does to exploratory testing. Generally, I&#8217;ve found that boredom during scripted testing is because we&#8217;re asking a human to do something we should be asking a computer to do&#8230; The main barrier to this, in my experience, is that it is harder to write the automated tests than to write manual scripted tests&#8230; so, I look for ways to make automated tests as easy to write as manual scripted ones. Usually, I can achieve this with a little effort and have found it makes a huge difference.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2010/07/boredom-a-testing-smell/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

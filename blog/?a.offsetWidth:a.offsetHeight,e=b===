@@ -1,0 +1,591 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>antonymarcano.com</title>
+
+<link rel="alternate" type="application/rss+xml" title="antonymarcano.com RSS Feed" href="http://antonymarcano.com/blog/feed/" />
+<link rel="alternate" type="application/atom+xml" title="antonymarcano.com Atom Feed" href="http://antonymarcano.com/blog/feed/atom/" />
+<link rel="pingback" href="http://antonymarcano.com/blog/xmlrpc.php" />
+<link rel="shortcut icon" href="http://antonymarcano.com/blog/wp-content/themes/fusion/favicon.ico" />
+
+<style type="text/css" media="all">
+@import "http://antonymarcano.com/blog/wp-content/themes/fusion/style.css";
+</style>
+
+
+<!--[if lte IE 6]>
+<script type="text/javascript">
+/* <![CDATA[ */
+   blankimgpath = 'http://antonymarcano.com/blog/wp-content/themes/fusion/images/blank.gif';
+ /* ]]> */
+</script>
+<style type="text/css" media="screen">
+  @import "http://antonymarcano.com/blog/wp-content/themes/fusion/ie6.css";
+  body{ behavior:url("http://antonymarcano.com/blog/wp-content/themes/fusion/js/ie6hoverfix.htc"); }
+  img{ behavior: url("http://antonymarcano.com/blog/wp-content/themes/fusion/js/ie6pngfix.htc"); }
+</style>
+<![endif]-->
+
+
+  
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><script type='text/javascript' src='http://antonymarcano.com/blog/wp-includes/js/jquery/jquery.js?ver=1.7.2'></script>
+<script type='text/javascript' src='http://antonymarcano.com/blog/wp-content/themes/fusion/js/fusion.js?ver=3.4.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://antonymarcano.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://antonymarcano.com/blog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.4.1" />
+
+<script type="text/javascript">
+/* <![CDATA[ */
+ jQuery(document).ready(function(){
+  // body .safari class
+  if (jQuery.browser.safari) jQuery('body').addClass('safari');
+
+  // layout controls
+     jQuery("#layoutcontrol a").click(function() {
+     switch (jQuery(this).attr("class")) {
+	   case 'setFont' : setFontSize();	break;
+	   case 'setLiquid'	: setPageWidth();	break;
+	 }
+	 return false;
+    });
+   // set the font size from cookie
+   var font_size = jQuery.cookie('fontSize');
+   if (font_size == '.70em') { jQuery('body').css("font-size",".70em"); }
+   if (font_size == '.95em') { jQuery('body').css("font-size",".95em"); }
+   if (font_size == '.75em') { jQuery('body').css("font-size",".75em"); }
+
+   // set the page width from cookie
+   var page_width = jQuery.cookie('pageWidth');
+   if (page_width) jQuery('#page').css('width', page_width);
+  
+  jQuery('#post-extra-content').minitabs(333, 'slide');
+
+  if (document.all && !window.opera && !window.XMLHttpRequest && jQuery.browser.msie) { var isIE6 = true; }
+  else { var isIE6 = false;} ;
+  jQuery.browser.msie6 = isIE6;
+  if (!isIE6) {
+    initTooltips({
+		timeout: 6000
+   });
+  }
+  tabmenudropdowns();
+
+  // some jquery effects...
+  jQuery('#sidebar ul.nav li ul li a').mouseover(function () {
+   	jQuery(this).animate({ marginLeft: "4px" }, 100 );
+  });
+  jQuery('#sidebar ul.nav li ul li a').mouseout(function () {
+    jQuery(this).animate({ marginLeft: "0px" }, 100 );
+  });
+  // scroll to top
+  jQuery("a#toplink").click(function(){
+    jQuery('html').animate({scrollTop:0}, 'slow');
+  });
+
+  // set roles on some elements (for accessibility)
+  jQuery("#tabs").attr("role","navigation");
+  jQuery("#mid-content").attr("role","main");
+  jQuery("#sidebar").attr("role","complementary");
+  jQuery("#searchform").attr("role","search");
+
+ });
+
+ /* ]]> */
+</script>
+
+</head>
+<body class="home">
+  <!-- page wrappers (100% width) -->
+  <div id="page-wrap1">
+    <div id="page-wrap2">
+      <!-- page (actual site content, custom width) -->
+      <div id="page" class="with-sidebar">
+
+       <!-- main wrapper (side & main) -->
+       <div id="main-wrap">
+        <!-- mid column wrap -->
+    	<div id="mid-wrap">
+          <!-- sidebar wrap -->
+          <div id="side-wrap">
+            <!-- mid column -->
+    	    <div id="mid">
+              <!-- header -->
+              <div id="header">
+                <div id="topnav" class="description"> Thinking through writing&#8230; on innovation, business, technology and more</div>
+
+                                <h1 id="title"><a href="http://antonymarcano.com/blog/">antonymarcano.com</a></h1>
+                
+                <!-- top tab navigation -->
+                <div id="tabs">
+                 <ul>
+                                     <li id="nav-homelink" class="current_page_item"><a href="http://antonymarcano.com/blog" title="You are Home"><span><span>Home</span></span></a></li>
+                                                     </ul>
+                </div>
+                <!-- /top tabs -->
+
+              </div><!-- /header -->
+<!-- mid content -->
+<div id="mid-content">
+     <!-- post -->
+    <div id="post-477" class="post-477 post type-post status-publish format-standard hentry category-agile-2 category-business-2 tag-business tag-creativity tag-serendipity">
+
+        <h3 class="title"><a href="http://antonymarcano.com/blog/2012/07/serendipity-work/" rel="bookmark" title="Permanent Link: Knowledge-work, is serendipity-work">Knowledge-work, is serendipity-work</a></h3>
+
+        <!-- story header -->
+        <div class="postheader">
+          <div class="postinfo">
+            <p>Posted by <a href="http://antonymarcano.com/blog/author/antonymarcano/" title="Posts by AntonyMarcano ">AntonyMarcano</a> in <a href="http://antonymarcano.com/blog/category/agile-2/" title="View all posts in Agile" rel="category tag">Agile</a>, <a href="http://antonymarcano.com/blog/category/business-2/" title="View all posts in Business" rel="category tag">Business</a> on July 26, 2012 </p>
+          </div>
+        </div>
+        <!-- /story header -->
+
+        <div class="postbody entry clearfix">
+         <p>Serendipity is core to the success of modern companies. While some may not have articulated their insights as facilitating serendipity, it was certainly what they were thinking, even if they didn&#8217;t realise it. Enabling Serendipity For example, Google&#8217;s 20% time, where employees can spend 20% of their time working on anything they like, has resulted [...]</p>
+        </div>
+                  <p class="tags"><a href="http://antonymarcano.com/blog/tag/business/" rel="tag">business</a>, <a href="http://antonymarcano.com/blog/tag/creativity/" rel="tag">Creativity</a>, <a href="http://antonymarcano.com/blog/tag/serendipity/" rel="tag">Serendipity</a></p>
+                <p class="postcontrols">
+                    <a class="no comments" href="http://antonymarcano.com/blog/2012/07/serendipity-work/#comments"><span class="dsq-postid" rel="477 http://antonymarcano.com/blog/?p=477">No Comments</span></a>
+        </p>
+        <div class="clear"></div>
+    </div>
+    <!-- /post -->
+     <!-- post -->
+    <div id="post-473" class="post-473 post type-post status-publish format-standard hentry category-uncategorized tag-google-chrome tag-javascript tag-selenium tag-technologyinternet tag-webkit">
+
+        <h3 class="title"><a href="http://antonymarcano.com/blog/2012/06/ghostdriver/" rel="bookmark" title="Permanent Link: GhostDriver – Headless Selenium RemoteWebDriver">GhostDriver – Headless Selenium RemoteWebDriver</a></h3>
+
+        <!-- story header -->
+        <div class="postheader">
+          <div class="postinfo">
+            <p>Posted by <a href="http://antonymarcano.com/blog/author/antonymarcano/" title="Posts by AntonyMarcano ">AntonyMarcano</a> in <a href="http://antonymarcano.com/blog/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> on June 21, 2012 </p>
+          </div>
+        </div>
+        <!-- /story header -->
+
+        <div class="postbody entry clearfix">
+         <p>GhostDriver is a Selenium server that can be connected to via a RemoteWebDriver. It runs completely heedlessly on PhantomJS but still behaves (mostly) like a typical webkit browser. By avoiding the overhead of actually rendering the page in a GUI it can run standard Selenium tests noticeably faster and on a headless build server too. [...]</p>
+        </div>
+                  <p class="tags"><a href="http://antonymarcano.com/blog/tag/google-chrome/" rel="tag">Google Chrome</a>, <a href="http://antonymarcano.com/blog/tag/javascript/" rel="tag">JavaScript</a>, <a href="http://antonymarcano.com/blog/tag/selenium/" rel="tag">Selenium</a>, <a href="http://antonymarcano.com/blog/tag/technologyinternet/" rel="tag">Technology/Internet</a>, <a href="http://antonymarcano.com/blog/tag/webkit/" rel="tag">WebKit</a></p>
+                <p class="postcontrols">
+                    <a class="no comments" href="http://antonymarcano.com/blog/2012/06/ghostdriver/#comments"><span class="dsq-postid" rel="473 http://antonymarcano.com/blog/?p=473">No Comments</span></a>
+        </p>
+        <div class="clear"></div>
+    </div>
+    <!-- /post -->
+     <!-- post -->
+    <div id="post-431" class="post-431 post type-post status-publish format-standard hentry category-agile-2 category-lean-2 category-project-management-2 category-software-development-2 category-software-testing-2 tag-agile tag-agile-software-development tag-lean tag-scrum tag-software-developer tag-software-development tag-software-development-team tag-software-engineering tag-sprint tag-story-points tag-this-is-not-a-manifesto tag-throughput">
+
+        <h3 class="title"><a href="http://antonymarcano.com/blog/2012/02/throughput-over-utilisation/" rel="bookmark" title="Permanent Link: This is not a manifesto: Valuing Throughput over Utilisation">This is not a manifesto: Valuing Throughput over Utilisation</a></h3>
+
+        <!-- story header -->
+        <div class="postheader">
+          <div class="postinfo">
+            <p>Posted by <a href="http://antonymarcano.com/blog/author/antonymarcano/" title="Posts by AntonyMarcano ">AntonyMarcano</a> in <a href="http://antonymarcano.com/blog/category/agile-2/" title="View all posts in Agile" rel="category tag">Agile</a>, <a href="http://antonymarcano.com/blog/category/lean-2/" title="View all posts in Lean" rel="category tag">Lean</a>, <a href="http://antonymarcano.com/blog/category/project-management-2/" title="View all posts in Project Management" rel="category tag">Project Management</a>, <a href="http://antonymarcano.com/blog/category/software-development-2/" title="View all posts in Software Development" rel="category tag">Software Development</a>, <a href="http://antonymarcano.com/blog/category/software-testing-2/" title="View all posts in Software Testing" rel="category tag">Software Testing</a> on February 11, 2012 </p>
+          </div>
+        </div>
+        <!-- /story header -->
+
+        <div class="postbody entry clearfix">
+         <p>In a previous article, This is not a manifesto, I expressed the values I hold as a software development team member. Today, I’m going to talk about the first of these values. Before I do, I’d like to say what I mean by “software development team”. I mean a cross-discipline team with the combined skills [...]</p>
+        </div>
+                  <p class="tags"><a href="http://antonymarcano.com/blog/tag/agile/" rel="tag">agile</a>, <a href="http://antonymarcano.com/blog/tag/agile-software-development/" rel="tag">Agile software development</a>, <a href="http://antonymarcano.com/blog/tag/lean/" rel="tag">lean</a>, <a href="http://antonymarcano.com/blog/tag/scrum/" rel="tag">scrum</a>, <a href="http://antonymarcano.com/blog/tag/software-developer/" rel="tag">Software developer</a>, <a href="http://antonymarcano.com/blog/tag/software-development/" rel="tag">Software development</a>, <a href="http://antonymarcano.com/blog/tag/software-development-team/" rel="tag">software development team</a>, <a href="http://antonymarcano.com/blog/tag/software-engineering/" rel="tag">Software engineering</a>, <a href="http://antonymarcano.com/blog/tag/sprint/" rel="tag">Sprint</a>, <a href="http://antonymarcano.com/blog/tag/story-points/" rel="tag">Story points</a>, <a href="http://antonymarcano.com/blog/tag/this-is-not-a-manifesto/" rel="tag">this is not a manifesto</a>, <a href="http://antonymarcano.com/blog/tag/throughput/" rel="tag">Throughput</a></p>
+                <p class="postcontrols">
+                    <a class="comments" href="http://antonymarcano.com/blog/2012/02/throughput-over-utilisation/#comments"><span class="dsq-postid" rel="431 http://antonymarcano.com/blog/?p=431">2 Comments</span></a>
+        </p>
+        <div class="clear"></div>
+    </div>
+    <!-- /post -->
+     <!-- post -->
+    <div id="post-413" class="post-413 post type-post status-publish format-standard hentry category-agile-2 category-lean-2 category-people tag-agile-manifesto tag-agile-software-development tag-behaviours tag-lean tag-this-is-not-a-manifesto tag-values">
+
+        <h3 class="title"><a href="http://antonymarcano.com/blog/2012/02/this-is-not-a-manifesto/" rel="bookmark" title="Permanent Link: This is not a manifesto">This is not a manifesto</a></h3>
+
+        <!-- story header -->
+        <div class="postheader">
+          <div class="postinfo">
+            <p>Posted by <a href="http://antonymarcano.com/blog/author/antonymarcano/" title="Posts by AntonyMarcano ">AntonyMarcano</a> in <a href="http://antonymarcano.com/blog/category/agile-2/" title="View all posts in Agile" rel="category tag">Agile</a>, <a href="http://antonymarcano.com/blog/category/lean-2/" title="View all posts in Lean" rel="category tag">Lean</a>, <a href="http://antonymarcano.com/blog/category/people/" title="View all posts in People" rel="category tag">People</a> on February 4, 2012 </p>
+          </div>
+        </div>
+        <!-- /story header -->
+
+        <div class="postbody entry clearfix">
+         <p>Recently, I had cause to ponder the values I hold as a member of a software development team. Values that, alongside other values I hold, drive my choices and behaviours. They sit behind the things I do and how I do them. They underly my thinking when considering how we can improve as a team [...]</p>
+        </div>
+                  <p class="tags"><a href="http://antonymarcano.com/blog/tag/agile-manifesto/" rel="tag">Agile Manifesto</a>, <a href="http://antonymarcano.com/blog/tag/agile-software-development/" rel="tag">Agile software development</a>, <a href="http://antonymarcano.com/blog/tag/behaviours/" rel="tag">behaviours</a>, <a href="http://antonymarcano.com/blog/tag/lean/" rel="tag">lean</a>, <a href="http://antonymarcano.com/blog/tag/this-is-not-a-manifesto/" rel="tag">this is not a manifesto</a>, <a href="http://antonymarcano.com/blog/tag/values/" rel="tag">Values</a></p>
+                <p class="postcontrols">
+                    <a class="comments" href="http://antonymarcano.com/blog/2012/02/this-is-not-a-manifesto/#comments"><span class="dsq-postid" rel="413 http://antonymarcano.com/blog/?p=413">4 Comments</span></a>
+        </p>
+        <div class="clear"></div>
+    </div>
+    <!-- /post -->
+     <!-- post -->
+    <div id="post-406" class="post-406 post type-post status-publish format-standard hentry category-uncategorized tag-agile-software-development tag-moon-landing">
+
+        <h3 class="title"><a href="http://antonymarcano.com/blog/2011/11/mission-critical-agility-at-nasa/" rel="bookmark" title="Permanent Link: Mission Critical Agility at NASA">Mission Critical Agility at NASA</a></h3>
+
+        <!-- story header -->
+        <div class="postheader">
+          <div class="postinfo">
+            <p>Posted by <a href="http://antonymarcano.com/blog/author/antonymarcano/" title="Posts by AntonyMarcano ">AntonyMarcano</a> in <a href="http://antonymarcano.com/blog/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> on November 10, 2011 </p>
+          </div>
+        </div>
+        <!-- /story header -->
+
+        <div class="postbody entry clearfix">
+         <p>Yesterday at Better Software and Agile Development Practices East in Orlando, I enjoyed a great keynote talk from Dr Jeff Norris, of Nasa, on Mission Critical Agility. Among the things talked about was the decision to use a lunar orbit rendezvous method, rather than the direct ascent method. One opportunity that was missed during the [...]</p>
+        </div>
+                  <p class="tags"><a href="http://antonymarcano.com/blog/tag/agile-software-development/" rel="tag">Agile software development</a>, <a href="http://antonymarcano.com/blog/tag/moon-landing/" rel="tag">Moon landing</a></p>
+                <p class="postcontrols">
+                    <a class="comments" href="http://antonymarcano.com/blog/2011/11/mission-critical-agility-at-nasa/#comments"><span class="dsq-postid" rel="406 http://antonymarcano.com/blog/?p=406">1 Comment</span></a>
+        </p>
+        <div class="clear"></div>
+    </div>
+    <!-- /post -->
+     <!-- post -->
+    <div id="post-393" class="post-393 post type-post status-publish format-standard hentry category-agile-2 category-bddatdd category-business-analysis category-software-development-2 category-software-testing-2 category-uncategorized tag-acceptance-testing tag-agile tag-atdd tag-bdd tag-extreme-programming tag-software-testing tag-tdd">
+
+        <h3 class="title"><a href="http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/" rel="bookmark" title="Permanent Link: Scenario-Oriented vs. Rules-Oriented Acceptance Criteria">Scenario-Oriented vs. Rules-Oriented Acceptance Criteria</a></h3>
+
+        <!-- story header -->
+        <div class="postheader">
+          <div class="postinfo">
+            <p>Posted by <a href="http://antonymarcano.com/blog/author/antonymarcano/" title="Posts by AntonyMarcano ">AntonyMarcano</a> in <a href="http://antonymarcano.com/blog/category/agile-2/" title="View all posts in Agile" rel="category tag">Agile</a>, <a href="http://antonymarcano.com/blog/category/bddatdd/" title="View all posts in BDD/ATDD" rel="category tag">BDD/ATDD</a>, <a href="http://antonymarcano.com/blog/category/business-analysis/" title="View all posts in Business Analysis" rel="category tag">Business Analysis</a>, <a href="http://antonymarcano.com/blog/category/software-development-2/" title="View all posts in Software Development" rel="category tag">Software Development</a>, <a href="http://antonymarcano.com/blog/category/software-testing-2/" title="View all posts in Software Testing" rel="category tag">Software Testing</a>, <a href="http://antonymarcano.com/blog/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> on October 2, 2011 </p>
+          </div>
+        </div>
+        <!-- /story header -->
+
+        <div class="postbody entry clearfix">
+         <p>Acceptance Criteria, Scenarios, Acceptance Tests are, in my experience, often a source of confusion. Such confusion results in questions like the one asked of Rachel Davies recently, i.e. &#8220;When to write story tests&#8221; (sometimes also known as &#8220;Acceptance Tests&#8221; or in BDD parlance &#8220;Scenarios&#8221;). In her answer, Rachel highlighted that: &#8220;&#8230;acceptance criteria and example scenarios [...]</p>
+        </div>
+                  <p class="tags"><a href="http://antonymarcano.com/blog/tag/acceptance-testing/" rel="tag">Acceptance testing</a>, <a href="http://antonymarcano.com/blog/tag/agile/" rel="tag">agile</a>, <a href="http://antonymarcano.com/blog/tag/atdd/" rel="tag">ATDD</a>, <a href="http://antonymarcano.com/blog/tag/bdd/" rel="tag">BDD</a>, <a href="http://antonymarcano.com/blog/tag/extreme-programming/" rel="tag">extreme programming</a>, <a href="http://antonymarcano.com/blog/tag/software-testing/" rel="tag">Software testing</a>, <a href="http://antonymarcano.com/blog/tag/tdd/" rel="tag">TDD</a></p>
+                <p class="postcontrols">
+                    <a class="comments" href="http://antonymarcano.com/blog/2011/10/scenario-oriented-vs-rules-oriented-acceptance-criteria/#comments"><span class="dsq-postid" rel="393 http://antonymarcano.com/blog/?p=393">4 Comments</span></a>
+        </p>
+        <div class="clear"></div>
+    </div>
+    <!-- /post -->
+     <!-- post -->
+    <div id="post-372" class="post-372 post type-post status-publish format-standard hentry category-agile-2 category-business-2 category-people category-project-management-2 category-software-development-2 category-software-testing-2 tag-agile-software-development tag-automation tag-business tag-dev-ops tag-software-economics tag-software-project-management tag-software-teams tag-testing">
+
+        <h3 class="title"><a href="http://antonymarcano.com/blog/2011/07/sushi-hibachi-and-serving-software/" rel="bookmark" title="Permanent Link: Sushi, Hibachi and Other Ways of Serving Software Delicacies">Sushi, Hibachi and Other Ways of Serving Software Delicacies</a></h3>
+
+        <!-- story header -->
+        <div class="postheader">
+          <div class="postinfo">
+            <p>Posted by <a href="http://antonymarcano.com/blog/author/antonymarcano/" title="Posts by AntonyMarcano ">AntonyMarcano</a> in <a href="http://antonymarcano.com/blog/category/agile-2/" title="View all posts in Agile" rel="category tag">Agile</a>, <a href="http://antonymarcano.com/blog/category/business-2/" title="View all posts in Business" rel="category tag">Business</a>, <a href="http://antonymarcano.com/blog/category/people/" title="View all posts in People" rel="category tag">People</a>, <a href="http://antonymarcano.com/blog/category/project-management-2/" title="View all posts in Project Management" rel="category tag">Project Management</a>, <a href="http://antonymarcano.com/blog/category/software-development-2/" title="View all posts in Software Development" rel="category tag">Software Development</a>, <a href="http://antonymarcano.com/blog/category/software-testing-2/" title="View all posts in Software Testing" rel="category tag">Software Testing</a> on July 1, 2011 </p>
+          </div>
+        </div>
+        <!-- /story header -->
+
+        <div class="postbody entry clearfix">
+         <p>Let&#8217;s say you own a restaurant. Quite a large restaurant. You&#8217;ve hired a manager to run the place for you because you are about to take the fruits of your success and invest in opening three more around the country. You leave the manager with a budget to make any improvements he sees fit. After [...]</p>
+        </div>
+                  <p class="tags"><a href="http://antonymarcano.com/blog/tag/agile-software-development/" rel="tag">Agile software development</a>, <a href="http://antonymarcano.com/blog/tag/automation/" rel="tag">automation</a>, <a href="http://antonymarcano.com/blog/tag/business/" rel="tag">business</a>, <a href="http://antonymarcano.com/blog/tag/dev-ops/" rel="tag">dev-ops</a>, <a href="http://antonymarcano.com/blog/tag/software-economics/" rel="tag">software economics</a>, <a href="http://antonymarcano.com/blog/tag/software-project-management/" rel="tag">Software project management</a>, <a href="http://antonymarcano.com/blog/tag/software-teams/" rel="tag">software teams</a>, <a href="http://antonymarcano.com/blog/tag/testing/" rel="tag">testing</a></p>
+                <p class="postcontrols">
+                    <a class="comments" href="http://antonymarcano.com/blog/2011/07/sushi-hibachi-and-serving-software/#comments"><span class="dsq-postid" rel="372 http://antonymarcano.com/blog/?p=372">2 Comments</span></a>
+        </p>
+        <div class="clear"></div>
+    </div>
+    <!-- /post -->
+     <!-- post -->
+    <div id="post-361" class="post-361 post type-post status-publish format-standard hentry category-agile-2 category-business-2 category-project-management-2 category-software-development-2 category-software-testing-2 tag-agile tag-agile-s tag-lean tag-lean-startup tag-software-bug tag-technology tag-technologyinternet">
+
+        <h3 class="title"><a href="http://antonymarcano.com/blog/2011/06/to-hack-or-not-to-hack/" rel="bookmark" title="Permanent Link: To hack, or not to hack">To hack, or not to hack</a></h3>
+
+        <!-- story header -->
+        <div class="postheader">
+          <div class="postinfo">
+            <p>Posted by <a href="http://antonymarcano.com/blog/author/antonymarcano/" title="Posts by AntonyMarcano ">AntonyMarcano</a> in <a href="http://antonymarcano.com/blog/category/agile-2/" title="View all posts in Agile" rel="category tag">Agile</a>, <a href="http://antonymarcano.com/blog/category/business-2/" title="View all posts in Business" rel="category tag">Business</a>, <a href="http://antonymarcano.com/blog/category/project-management-2/" title="View all posts in Project Management" rel="category tag">Project Management</a>, <a href="http://antonymarcano.com/blog/category/software-development-2/" title="View all posts in Software Development" rel="category tag">Software Development</a>, <a href="http://antonymarcano.com/blog/category/software-testing-2/" title="View all posts in Software Testing" rel="category tag">Software Testing</a> on June 7, 2011 </p>
+          </div>
+        </div>
+        <!-- /story header -->
+
+        <div class="postbody entry clearfix">
+         <p>Recently, Engadget reported that Nokia had decided to abandon MeeGo in favour of Windows Mobile. What was interesting is the reported process used to make this decision: Elop drew out what he knew about the plans for MeeGo on a whiteboard, with a different color marker for the products being developed, their target date for [...]</p>
+        </div>
+                  <p class="tags"><a href="http://antonymarcano.com/blog/tag/agile/" rel="tag">agile</a>, <a href="http://antonymarcano.com/blog/tag/agile-s/" rel="tag">agile s</a>, <a href="http://antonymarcano.com/blog/tag/lean/" rel="tag">lean</a>, <a href="http://antonymarcano.com/blog/tag/lean-startup/" rel="tag">lean startup</a>, <a href="http://antonymarcano.com/blog/tag/software-bug/" rel="tag">Software bug</a>, <a href="http://antonymarcano.com/blog/tag/technology/" rel="tag">Technology</a>, <a href="http://antonymarcano.com/blog/tag/technologyinternet/" rel="tag">Technology/Internet</a></p>
+                <p class="postcontrols">
+                    <a class="comments" href="http://antonymarcano.com/blog/2011/06/to-hack-or-not-to-hack/#comments"><span class="dsq-postid" rel="361 http://antonymarcano.com/blog/?p=361">1 Comment</span></a>
+        </p>
+        <div class="clear"></div>
+    </div>
+    <!-- /post -->
+     <!-- post -->
+    <div id="post-352" class="post-352 post type-post status-publish format-standard hentry category-agile-2 category-business-2 category-business-analysis category-old-favourite category-project-management-2 category-software-development-2 category-software-testing-2 tag-agile tag-agile-project-management tag-agile-software-development tag-bdd tag-tdd tag-technical-debt">
+
+        <h3 class="title"><a href="http://antonymarcano.com/blog/2011/06/old-favourite-more-sharks-and-delaying-critical-mass/" rel="bookmark" title="Permanent Link: Old Favourite &#8211; More Sharks and Delaying Critical Mass">Old Favourite &#8211; More Sharks and Delaying Critical Mass</a></h3>
+
+        <!-- story header -->
+        <div class="postheader">
+          <div class="postinfo">
+            <p>Posted by <a href="http://antonymarcano.com/blog/author/antonymarcano/" title="Posts by AntonyMarcano ">AntonyMarcano</a> in <a href="http://antonymarcano.com/blog/category/agile-2/" title="View all posts in Agile" rel="category tag">Agile</a>, <a href="http://antonymarcano.com/blog/category/business-2/" title="View all posts in Business" rel="category tag">Business</a>, <a href="http://antonymarcano.com/blog/category/business-analysis/" title="View all posts in Business Analysis" rel="category tag">Business Analysis</a>, <a href="http://antonymarcano.com/blog/category/old-favourite/" title="View all posts in Old Favourites" rel="category tag">Old Favourites</a>, <a href="http://antonymarcano.com/blog/category/project-management-2/" title="View all posts in Project Management" rel="category tag">Project Management</a>, <a href="http://antonymarcano.com/blog/category/software-development-2/" title="View all posts in Software Development" rel="category tag">Software Development</a>, <a href="http://antonymarcano.com/blog/category/software-testing-2/" title="View all posts in Software Testing" rel="category tag">Software Testing</a> on June 7, 2011 </p>
+          </div>
+        </div>
+        <!-- /story header -->
+
+        <div class="postbody entry clearfix">
+         <p>This article originally featured on my old blog on 19th January 2010. In a previous post I talked about Critical Mass of software. I showed how an ever-increasing cost of change resulted in it becoming more economical to completely rewrite the system than to enhance and maintain the original. I explained how this could be [...]</p>
+        </div>
+                  <p class="tags"><a href="http://antonymarcano.com/blog/tag/agile/" rel="tag">agile</a>, <a href="http://antonymarcano.com/blog/tag/agile-project-management/" rel="tag">agile project management</a>, <a href="http://antonymarcano.com/blog/tag/agile-software-development/" rel="tag">Agile software development</a>, <a href="http://antonymarcano.com/blog/tag/bdd/" rel="tag">BDD</a>, <a href="http://antonymarcano.com/blog/tag/tdd/" rel="tag">TDD</a>, <a href="http://antonymarcano.com/blog/tag/technical-debt/" rel="tag">technical debt</a></p>
+                <p class="postcontrols">
+                    <a class="no comments" href="http://antonymarcano.com/blog/2011/06/old-favourite-more-sharks-and-delaying-critical-mass/#comments"><span class="dsq-postid" rel="352 http://antonymarcano.com/blog/?p=352">No Comments</span></a>
+        </p>
+        <div class="clear"></div>
+    </div>
+    <!-- /post -->
+     <!-- post -->
+    <div id="post-350" class="post-350 post type-post status-publish format-standard hentry category-agile-2 category-bddatdd category-business-2 category-business-analysis category-old-favourite category-project-management-2 category-software-development-2 category-software-testing-2 tag-agile tag-agile-software-development tag-bdd tag-software-economics tag-tdd">
+
+        <h3 class="title"><a href="http://antonymarcano.com/blog/2011/06/sharks-debts-critical-mass/" rel="bookmark" title="Permanent Link: Old Favourite &#8211; Sharks, Debts, Critical Mass and other reasons to Sustain Quality">Old Favourite &#8211; Sharks, Debts, Critical Mass and other reasons to Sustain Quality</a></h3>
+
+        <!-- story header -->
+        <div class="postheader">
+          <div class="postinfo">
+            <p>Posted by <a href="http://antonymarcano.com/blog/author/antonymarcano/" title="Posts by AntonyMarcano ">AntonyMarcano</a> in <a href="http://antonymarcano.com/blog/category/agile-2/" title="View all posts in Agile" rel="category tag">Agile</a>, <a href="http://antonymarcano.com/blog/category/bddatdd/" title="View all posts in BDD/ATDD" rel="category tag">BDD/ATDD</a>, <a href="http://antonymarcano.com/blog/category/business-2/" title="View all posts in Business" rel="category tag">Business</a>, <a href="http://antonymarcano.com/blog/category/business-analysis/" title="View all posts in Business Analysis" rel="category tag">Business Analysis</a>, <a href="http://antonymarcano.com/blog/category/old-favourite/" title="View all posts in Old Favourites" rel="category tag">Old Favourites</a>, <a href="http://antonymarcano.com/blog/category/project-management-2/" title="View all posts in Project Management" rel="category tag">Project Management</a>, <a href="http://antonymarcano.com/blog/category/software-development-2/" title="View all posts in Software Development" rel="category tag">Software Development</a>, <a href="http://antonymarcano.com/blog/category/software-testing-2/" title="View all posts in Software Testing" rel="category tag">Software Testing</a> on June 7, 2011 </p>
+          </div>
+        </div>
+        <!-- /story header -->
+
+        <div class="postbody entry clearfix">
+         <p>This article originally featured on my old blog on 18th January 2010. A while back I tweeted about critical mass of software: Critical Mass of Code &#8211; past which the changeability of the code is infeasible, requiring that it be completely rewritten. An elaboration of this might be: Critical Mass of Software: the state of [...]</p>
+        </div>
+                  <p class="tags"><a href="http://antonymarcano.com/blog/tag/agile/" rel="tag">agile</a>, <a href="http://antonymarcano.com/blog/tag/agile-software-development/" rel="tag">Agile software development</a>, <a href="http://antonymarcano.com/blog/tag/bdd/" rel="tag">BDD</a>, <a href="http://antonymarcano.com/blog/tag/software-economics/" rel="tag">software economics</a>, <a href="http://antonymarcano.com/blog/tag/tdd/" rel="tag">TDD</a></p>
+                <p class="postcontrols">
+                    <a class="no comments" href="http://antonymarcano.com/blog/2011/06/sharks-debts-critical-mass/#comments"><span class="dsq-postid" rel="350 http://antonymarcano.com/blog/?p=350">No Comments</span></a>
+        </p>
+        <div class="clear"></div>
+    </div>
+    <!-- /post -->
+     <script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'antonymarcano';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+                        s.src = 'http' + '://' + 'disqus.com/forums/' + disqus_shortname + '/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    //]]>
+    </script>
+    <div class="navigation" id="pagenavi">
+  	     <div class="alignleft"><a href="http://antonymarcano.com/blog/page/2/?a_offsetWidth:a_offsetHeight,e=b%3D%3D%3D" >&laquo; Older Entries</a></div>
+     <div class="alignright"></div>
+     <div class="clear"></div>
+        </div>
+ </div>
+<!-- mid content -->
+</div>
+<!-- /mid -->
+
+
+<!-- sidebar -->
+<div id="sidebar">
+ <!-- sidebar 1st container -->
+ <div id="sidebar-wrap1">
+  <!-- sidebar 2nd container -->
+  <div id="sidebar-wrap2">
+     <ul id="sidelist">
+     	
+        <li><div id="fusion-search" class="widget fusion_SearchWidget">         <!-- wp search form -->
+          <div id="searchtab">
+            <div class="inside">
+              <form method="get" id="searchform" action="http://antonymarcano.com/blog/">
+              <fieldset>
+                <input type="text" name="s" id="searchbox" class="searchfield" value="Search" onfocus="if(this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
+                 <input type="submit" value="Go" class="searchbutton" />
+              </fieldset>
+              </form>
+            </div>
+          </div>
+         <!-- /wp search form -->
+  </div></li><li><div id="text-3" class="widget widget_text"><h2 class="title">About</h2>			<div class="textwidget"><img style="float:left;padding-right:10px;" src="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Photo-1-e1306656178634.jpg" alt="photo of <p>Antony Marcano"/> Antony Marcano is a consultant in software craftsmanship, effective software processes, software quality and software testing. He has over fifteen years experience with... <a href="http://antonymarcano.com/about">(read more)</a></p>
+<br/><br/><br/>
+</div>
+		</div></li><li><div id="rss-4" class="widget widget_rss"><h2 class="title"><a class='rsswidget' href='http://twitter.com/statuses/user_timeline/16712333.rss' title='Syndicate this content' onclick="pageTracker._trackPageview('/outgoing/twitter.com/statuses/user_timeline/16712333.rss?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');"><img style='border:0' width='14' height='14' src='http://antonymarcano.com/blog/wp-includes/images/rss.png' alt='RSS' /></a> <a class='rsswidget' href='' title=''>@AntonyMarcano on Twitter</a></h2></div></li><li><div id="linkcat-2" class="widget widget_links"><h2 class="title">Blogroll</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://testingreflections.com/blog/2" rel="me" title="My old blog has hundreds of articles. I&#8217;ll bring some of my favourites over to this one over time." onclick="pageTracker._trackPageview('/outgoing/testingreflections.com/blog/2?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">.My Old Blog</a></li>
+<li><a href="http://andypalmer.com" onclick="pageTracker._trackPageview('/outgoing/andypalmer.com?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">Andy Palmer</a></li>
+<li><a href="http://jmrtn.com/notes/" rel="friend co-worker colleague" title="@jmrtn &#8211; another RiverGlider" onclick="pageTracker._trackPageview('/outgoing/jmrtn.com/notes/?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">James Martin</a></li>
+<li><a href="http://testingreflections.com" onclick="pageTracker._trackPageview('/outgoing/testingreflections.com?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">testingReflections</a></li>
+
+	</ul>
+</div></li>
+<li><div id="linkcat-5" class="widget widget_links"><h2 class="title">Pair With Us</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://pairwith.us/facebook" onclick="pageTracker._trackPageview('/outgoing/pairwith.us/facebook?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">PairWith.Us on Facebook</a></li>
+<li><a href="http://pairwith.us/twitter" onclick="pageTracker._trackPageview('/outgoing/pairwith.us/twitter?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">PairWith.Us on Twitter</a></li>
+<li><a href="http://pairwith.us/" rel="me" onclick="pageTracker._trackPageview('/outgoing/pairwith.us/?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">PairWith.Us: About</a></li>
+<li><a href="http://pairwith.us/live" onclick="pageTracker._trackPageview('/outgoing/pairwith.us/live?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">PairWIth.Us: Live</a></li>
+<li><a href="http://pairwith.us/tv" onclick="pageTracker._trackPageview('/outgoing/pairwith.us/tv?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">PairWith.Us: TV</a></li>
+
+	</ul>
+</div></li>
+<li><div id="linkcat-4" class="widget widget_links"><h2 class="title">RiverGlide</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.facebook.com/pages/RiverGlide/337928499545" onclick="pageTracker._trackPageview('/outgoing/www.facebook.com/pages/RiverGlide/337928499545?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">RiverGlide on Facebook</a></li>
+<li><a href="http://twitter.com/RiverGlide" onclick="pageTracker._trackPageview('/outgoing/twitter.com/RiverGlide?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">RiverGlide on Twitter</a></li>
+<li><a href="http://riverglide.com" rel="me" onclick="pageTracker._trackPageview('/outgoing/riverglide.com?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">RiverGlide Website</a></li>
+
+	</ul>
+</div></li>
+<li><div id="tag_cloud-3" class="widget widget_tag_cloud"><h2 class="title">Tags</h2><div class="tagcloud"><a href='http://antonymarcano.com/blog/tag/acceptance-testing/' class='tag-link-57' title='3 topics' style='font-size: 12.7727272727pt;'>Acceptance testing</a>
+<a href='http://antonymarcano.com/blog/tag/agile/' class='tag-link-12' title='14 topics' style='font-size: 22pt;'>agile</a>
+<a href='http://antonymarcano.com/blog/tag/agile-planning/' class='tag-link-58' title='2 topics' style='font-size: 10.8636363636pt;'>Agile Planning</a>
+<a href='http://antonymarcano.com/blog/tag/agile-qa/' class='tag-link-48' title='2 topics' style='font-size: 10.8636363636pt;'>Agile QA</a>
+<a href='http://antonymarcano.com/blog/tag/agile-software-development/' class='tag-link-32' title='11 topics' style='font-size: 20.4090909091pt;'>Agile software development</a>
+<a href='http://antonymarcano.com/blog/tag/atdd/' class='tag-link-18' title='8 topics' style='font-size: 18.3409090909pt;'>ATDD</a>
+<a href='http://antonymarcano.com/blog/tag/automated-tests/' class='tag-link-20' title='2 topics' style='font-size: 10.8636363636pt;'>automated tests</a>
+<a href='http://antonymarcano.com/blog/tag/bdd/' class='tag-link-16' title='11 topics' style='font-size: 20.4090909091pt;'>BDD</a>
+<a href='http://antonymarcano.com/blog/tag/boredom/' class='tag-link-22' title='1 topic' style='font-size: 8pt;'>Boredom</a>
+<a href='http://antonymarcano.com/blog/tag/business/' class='tag-link-7' title='5 topics' style='font-size: 15.6363636364pt;'>business</a>
+<a href='http://antonymarcano.com/blog/tag/computing/' class='tag-link-31' title='1 topic' style='font-size: 8pt;'>computing</a>
+<a href='http://antonymarcano.com/blog/tag/cucumber/' class='tag-link-40' title='3 topics' style='font-size: 12.7727272727pt;'>Cucumber</a>
+<a href='http://antonymarcano.com/blog/tag/exception-handling/' class='tag-link-36' title='1 topic' style='font-size: 8pt;'>Exception handling</a>
+<a href='http://antonymarcano.com/blog/tag/exception-handling-syntax/' class='tag-link-35' title='1 topic' style='font-size: 8pt;'>Exception handling syntax</a>
+<a href='http://antonymarcano.com/blog/tag/extreme-programming/' class='tag-link-15' title='3 topics' style='font-size: 12.7727272727pt;'>extreme programming</a>
+<a href='http://antonymarcano.com/blog/tag/information-technology-management/' class='tag-link-26' title='2 topics' style='font-size: 10.8636363636pt;'>Information technology management</a>
+<a href='http://antonymarcano.com/blog/tag/java/' class='tag-link-37' title='1 topic' style='font-size: 8pt;'>Java</a>
+<a href='http://antonymarcano.com/blog/tag/junit/' class='tag-link-38' title='1 topic' style='font-size: 8pt;'>junit</a>
+<a href='http://antonymarcano.com/blog/tag/kanban/' class='tag-link-10' title='2 topics' style='font-size: 10.8636363636pt;'>kanban</a>
+<a href='http://antonymarcano.com/blog/tag/lean/' class='tag-link-11' title='5 topics' style='font-size: 15.6363636364pt;'>lean</a>
+<a href='http://antonymarcano.com/blog/tag/legacy-code/' class='tag-link-34' title='1 topic' style='font-size: 8pt;'>legacy code</a>
+<a href='http://antonymarcano.com/blog/tag/old-favourites/' class='tag-link-6' title='6 topics' style='font-size: 16.75pt;'>old favourites</a>
+<a href='http://antonymarcano.com/blog/tag/programming/' class='tag-link-39' title='1 topic' style='font-size: 8pt;'>programming</a>
+<a href='http://antonymarcano.com/blog/tag/project-management/' class='tag-link-9' title='5 topics' style='font-size: 15.6363636364pt;'>project management</a>
+<a href='http://antonymarcano.com/blog/tag/risk-management/' class='tag-link-8' title='1 topic' style='font-size: 8pt;'>risk management</a>
+<a href='http://antonymarcano.com/blog/tag/riverglide/' class='tag-link-4' title='1 topic' style='font-size: 8pt;'>RiverGlide</a>
+<a href='http://antonymarcano.com/blog/tag/scrum/' class='tag-link-13' title='3 topics' style='font-size: 12.7727272727pt;'>scrum</a>
+<a href='http://antonymarcano.com/blog/tag/software-development/' class='tag-link-27' title='4 topics' style='font-size: 14.3636363636pt;'>Software development</a>
+<a href='http://antonymarcano.com/blog/tag/software-economics/' class='tag-link-78' title='2 topics' style='font-size: 10.8636363636pt;'>software economics</a>
+<a href='http://antonymarcano.com/blog/tag/software-engineering/' class='tag-link-29' title='4 topics' style='font-size: 14.3636363636pt;'>Software engineering</a>
+<a href='http://antonymarcano.com/blog/tag/software-project-management/' class='tag-link-25' title='3 topics' style='font-size: 12.7727272727pt;'>Software project management</a>
+<a href='http://antonymarcano.com/blog/tag/software-requirements/' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>software requirements</a>
+<a href='http://antonymarcano.com/blog/tag/software-teams/' class='tag-link-64' title='2 topics' style='font-size: 10.8636363636pt;'>software teams</a>
+<a href='http://antonymarcano.com/blog/tag/software-testing/' class='tag-link-21' title='3 topics' style='font-size: 12.7727272727pt;'>Software testing</a>
+<a href='http://antonymarcano.com/blog/tag/story-points/' class='tag-link-59' title='2 topics' style='font-size: 10.8636363636pt;'>Story points</a>
+<a href='http://antonymarcano.com/blog/tag/tdd/' class='tag-link-17' title='8 topics' style='font-size: 18.3409090909pt;'>TDD</a>
+<a href='http://antonymarcano.com/blog/tag/technology/' class='tag-link-62' title='2 topics' style='font-size: 10.8636363636pt;'>Technology</a>
+<a href='http://antonymarcano.com/blog/tag/technologyinternet/' class='tag-link-28' title='4 topics' style='font-size: 14.3636363636pt;'>Technology/Internet</a>
+<a href='http://antonymarcano.com/blog/tag/testing/' class='tag-link-19' title='3 topics' style='font-size: 12.7727272727pt;'>testing</a>
+<a href='http://antonymarcano.com/blog/tag/testingreflections/' class='tag-link-3' title='5 topics' style='font-size: 15.6363636364pt;'>testingReflections</a>
+<a href='http://antonymarcano.com/blog/tag/this-is-not-a-manifesto/' class='tag-link-90' title='2 topics' style='font-size: 10.8636363636pt;'>this is not a manifesto</a>
+<a href='http://antonymarcano.com/blog/tag/user-stories/' class='tag-link-14' title='1 topic' style='font-size: 8pt;'>user stories</a>
+<a href='http://antonymarcano.com/blog/tag/values/' class='tag-link-52' title='2 topics' style='font-size: 10.8636363636pt;'>Values</a>
+<a href='http://antonymarcano.com/blog/tag/waterfall/' class='tag-link-23' title='1 topic' style='font-size: 8pt;'>Waterfall</a>
+<a href='http://antonymarcano.com/blog/tag/waterfall-model/' class='tag-link-24' title='1 topic' style='font-size: 8pt;'>Waterfall model</a></div>
+</div></li><li><div id="calendar-3" class="widget widget_calendar"><h2 class="title">Archive</h2><div id="calendar_wrap"><table id="wp-calendar">
+	<caption>January 2013</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://antonymarcano.com/blog/2012/07/" title="View posts for July 2012">&laquo; Jul</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="1" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+	</tr>
+	<tr>
+		<td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+	</tr>
+	<tr>
+		<td id="today">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+	</tr>
+	<tr>
+		<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+	</tr>
+	<tr>
+		<td>28</td><td>29</td><td>30</td><td>31</td>
+		<td class="pad" colspan="3">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></div></li>     </ul>
+  </div>
+  <!-- /sidebar 2nd container -->
+ </div>
+ <!-- /sidebar 1st container -->
+</div>
+<!-- /sidebar -->
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17391315-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </div>
+  <!-- /side wrap -->
+ </div>
+ <!-- /mid column wrap -->
+</div>
+<!-- /main wrapper -->
+
+<!-- clear main & sidebar sections -->
+<div class="clearcontent"></div>
+<!-- /clear main & sidebar sections -->
+
+ 
+<!-- footer -->
+ <div id="footer">
+
+      <div class="add-content">
+    <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" onclick="pageTracker._trackPageview('/outgoing/creativecommons.org/licenses/by/3.0/?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" onclick="pageTracker._trackPageview('/outgoing/creativecommons.org/licenses/by/3.0/?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">Creative Commons Attribution 3.0 Unported License</a>.<br/>
+(Which basically means: do what you like, just play nice and give me a mention :-)   </div>
+   
+   <!-- please do not remove this. respect the authors :) -->
+   <p>
+    Fusion theme by <a href="http://digitalnature.ro/projects/fusion" onclick="pageTracker._trackPageview('/outgoing/digitalnature.ro/projects/fusion?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">digitalnature</a> | powered by <a href="http://wordpress.org/" onclick="pageTracker._trackPageview('/outgoing/wordpress.org/?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">WordPress</a>    <br />
+   <a class="rss" href="http://antonymarcano.com/blog/feed/">Entries (RSS)</a> and <a href="http://antonymarcano.disqus.com/latest.rss" onclick="pageTracker._trackPageview('/outgoing/antonymarcano.disqus.com/latest.rss?referer=http%3A%2F%2Fantonymarcano.com%2Fblog%2Fwp-includes%2Fjs%2Fjquery%2Fjquery.js%3Fver%3D1.7.2');">Comments (RSS)</a> <a href="javascript:void(0);" id="toplink">^</a>
+   <!-- 27 queries. 1.500 seconds. -->
+   </p>
+ </div>
+ <!-- /footer -->
+   <div id="layoutcontrol">
+   <a href="javascript:void(0);" class="setFont" title="Increase/Decrease text size"><span>SetTextSize</span></a>
+   <a href="javascript:void(0);" class="setLiquid" title="Switch between full and fixed width"><span>SetPageWidth</span></a>
+ </div>
+ </div>
+<!-- /page -->
+
+</div>
+</div>
+<!-- /page wrappers -->
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>antonymarcano.com &#187; Cukes</title>
+	<atom:link href="http://antonymarcano.com/blog/tag/cukes/feed/" rel="self" type="application/rss+xml" />
+	<link>http://antonymarcano.com/blog</link>
+	<description>Thinking through writing... on innovation, business, technology and more</description>
+	<lastBuildDate>Fri, 22 May 2015 11:41:52 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.0.7</generator>
+	<item>
+		<title>Cucumber &#8211; with step-free access</title>
+		<link>http://antonymarcano.com/blog/2011/05/introducing_cukesalad/</link>
+		<comments>http://antonymarcano.com/blog/2011/05/introducing_cukesalad/#comments</comments>
+		<pubDate>Sun, 29 May 2011 09:35:58 +0000</pubDate>
+		<dc:creator><![CDATA[AntonyMarcano]]></dc:creator>
+				<category><![CDATA[Agile]]></category>
+		<category><![CDATA[BDD/ATDD]]></category>
+		<category><![CDATA[Software Development]]></category>
+		<category><![CDATA[Software Testing]]></category>
+		<category><![CDATA[Acceptance Test Driven Development]]></category>
+		<category><![CDATA[Acceptance testing]]></category>
+		<category><![CDATA[ATDD]]></category>
+		<category><![CDATA[BDD]]></category>
+		<category><![CDATA[Behaviour Driven Development]]></category>
+		<category><![CDATA[Cucumber]]></category>
+		<category><![CDATA[Cukes]]></category>
+
+		<guid isPermaLink="false">http://antonymarcano.com/blog/?p=273</guid>
+		<description><![CDATA[A while back I wrote about writing feature specs (acceptance tests) at the right level of abstraction. I explained how we want to pitch our scenarios at the &#8220;task&#8221; level&#8230; Goal: What we’re trying to achieve which has one or more… Tasks: The high-level work-item that we complete to fulfil the goal, each having one [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>A while back I wrote about <a href="http://antonymarcano.com/blog/2011/03/goals-tasks-action/">writing feature specs (acceptance tests) at the right level of abstraction</a>. I explained how we want to pitch our scenarios at the &#8220;task&#8221; level&#8230;</p>
+<blockquote><p><strong>Goal:</strong> What we’re trying to achieve which has one or more…<br />
+<strong>Tasks:</strong> The high-level work-item that we complete to fulfil the goal, each having one or more…<br />
+<strong>Actions:</strong> The specific steps or interactions we execute to complete the task.</p></blockquote>
+<p>I showed how many scenarios (acceptance tests) are pitched at too low a level. They&#8217;re often at the <strong>action </strong>level, detailing every field filled in and every button clicked. This is too low-level.</p>
+<p>Instead, we want to express the business process&#8230; the tasks involved in fulfilling a goal. The actions should be expressed in the code (or step-definitions), not the plain-text scenarios. Pitching the scenarios at the <strong>action</strong> level makes scenarios much harder to maintain &#8211; especially when the user-interface changes. But, perhaps more importantly, they don&#8217;t express what&#8217;s of interest to the business.</p>
+<p>There are other <a href="https://github.com/RiverGlide/CukeSalad/wiki/Who-is-this-for">challenges faced by teams using cucumber</a>:</p>
+<blockquote>
+<ul>
+<li>Over-wordsmithing scenarios</li>
+<li>Limited regular-expression expertise</li>
+<li>Unmaintainably large step-definition files</li>
+<li>Fragmented step-definition files</li>
+<li>Coverage vs. Speed tradeoffs of running scenarios through or below the GUI (respectively)</li>
+</ul>
+</blockquote>
+<p>We&#8217;ve taken many of the lessons we&#8217;ve learned using BDD tools to address these problems and begun to distill the various heuristics and design ideas (patterns) that emerged into a single open-source extension to cucumber &#8211; <a href="http://cukesalad.info">cukesalad</a>.</p>
+<p><a href="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1.jpg"><img class="size-full wp-image-274 alignnone" title="GitHub Snapshot" src="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Home-GitHub-1.jpg" alt="Photo of the github page" width="664" height="310" /></a></p>
+<p>Many of the heuristics and design ideas expressed in the project can be used on your existing projects without using cukesalad:</p>
+<ul>
+<li>Treat each step-definition as a class of task. Like other classes, have one file per step-definition and organise them so they&#8217;re easy to find. Name each file using the text used in the scenario.</li>
+<p><a href="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Gist.jpg"><img class="alignnone size-full wp-image-281" title="Task Tree" src="http://antonymarcano.com/blog/wp-content/uploads/2011/05/Gist.jpg" alt="Screen Capture of Task folder Hierarchy" width="229" height="169" /></a></p>
+<li>Abstract the API that drives your application behind something representing the role or type of role involved in the story</li>
+<li>Write scenarios like a narrative for someone in the role relevant to the user-story</li>
+<li>Write the actions within the task (or step-definition) as if they&#8217;re instructions on how to complete that task</li>
+<li>And more&#8230;</li>
+</ul>
+<p>Cukesalad is the ongoing expression of us mercilessly refactoring a &#8216;typical&#8217; Cucumber project. At the moment, it is more of an illustration of the concepts and ideas&#8230; but some are already using it on their day-to-day projects. Check it out&#8230; try it out&#8230; and let us know what you think.</p>
+<p>Go to <a href="http://cukesalad.info">http://cukesalad.info</a> &#8211; for more info, or checkout the <a href="http://skillsmatter.com/podcast/agile-testing/marcano-cukesalad">talk I gave at CukeUp, hosted at SkillsMatter</a>.</p>
+<p>And if you&#8217;re wondering why it&#8217;s called cukesalad&#8230; It&#8217;s cucumber, washed and ready to eat.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://antonymarcano.com/blog/2011/05/introducing_cukesalad/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
